@@ -1,0 +1,37 @@
+@import url('https://fonts.cdnfonts.com/css/brittany-signature');
+@import url('https://fonts.cdnfonts.com/css/glacial-indifference-2');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Glacial Indifference', sans-serif;
+}
+
+// body {
+//   background-image: url('~/assets/img/background.webp');
+//   background-repeat: no-repeat;
+//   background-attachment: fixed;
+//   background-size: cover;
+// }
+
+.title {
+  font-family: 'Brittany Signature', sans-serif;
+  font-size: 40px;
+  letter-spacing: 0;
+}
+
+.subtitle {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 40px;
+  letter-spacing: 0;
+}
+
+.text-space-10 {
+  padding: 10px;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 1px;
+}

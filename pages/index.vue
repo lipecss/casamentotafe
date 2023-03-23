@@ -1,0 +1,202 @@
+<template>
+  <section class="w-full h-screen">
+    <div class="cover-image" />
+    <img 
+      src="~/assets/img/cover-image.jpg"
+      class="object-cover w-full h-full"
+      alt="Felipe e Taina cover image"
+      title="Felipe e Taina cover image"
+    />
+  </section>
+
+  <section class="text-center place-items-center">
+    <div className="w-1/2 m-auto flex justify-center items-center gap-x-3 py-28">
+      <div className="flex flex-col text-right">
+        <div className="text-4xl lg:text-6xl font-bold">Felipe</div>
+        <div className="text-4xl lg:text-6xl font-black">Santos</div>
+        <div className="text-4xl lg:text-6xl font-black">Santos</div>
+      </div>
+
+      <div className="grid text-xl place-items-center">e</div>
+
+      <div className="flex flex-col gap-x-2 text-left">
+        <div className="text-4xl lg:text-6xl font-black">Tatiana</div>
+        <div className="text-4xl lg:text-6xl font-black">de Souza</div>
+        <div className="text-4xl lg:text-6xl font-black">Crivelaro</div>
+      </div>
+    </div>
+
+    <section>
+      <p class="text-2xl mb-10">#casamentoTaFe</p>
+    </section>
+
+    <div class="grid grid-rows-1 text-center grid-flow-col gap-1 mb-10">
+      <div>
+        <p class="subtitle">06 de Agosto de 2023</p>
+        <p class="mt-6">São Paulo, SP</p>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <VgCountdown
+        vg-id="vg-countdown"
+        :day="6"
+        month="aug"
+        :year="2023"
+        :hour="10"
+        :minute="0"
+        :second="0"
+        daysText="dias"
+        hoursText="horas"
+        minutesText="minutos"
+        secondsText="segundos"
+        text-color="#141414"
+        separator
+        separator-type=":"
+      />
+    </div>
+  </section>
+
+  <section>
+    <div class="flex items-center justify-center pt-10">
+      <button 
+        class="text-white bg-gray-800 focus:ring-4 focus:ring-gray-300 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:border-gray-700 w-60 lg:w-80"
+        @click="goToRsvpRoute"
+        >
+        RSVP
+      </button>
+  </div>
+  </section>
+  
+  <Divider type="floral"/>
+
+  <section class="grid text-center place-items-center">
+    <div class="items-center max-w-2xl relative mb-6">
+      <h2 class="title">Como nos conhecemos</h2>
+      <p class="pb-3">02.02.17</p>
+
+      <div>
+        <p class="about-text">Olá, seja bem-vindo ao nosso site de casamento!</p>
+        
+        <p class="about-text">
+          Aqui vamos contar à vocês, queridos amigos e familiares, sobre um pouquinho da nossa vida antes desse momento especial em que daremos esse passo a mais para unirmos nossas vidas. É um prazer compartilhar esse momento com vocês!
+        </p>
+
+        <p class="about-text">
+          No início trabalhávamos juntos na mesma empresa e nos conhecemos do nada (mais precisamente no meu aniversário), então uma grande amizade surgiu, não imaginaríamos nunca que seria desse jeito, mas depois essa amizade acabou se tornando algo que rendeu um fruto de amor que cresceu e floresceu.
+        </p>
+
+        <p class="about-text mb-6">
+          Nossa história juntos começou no dia 02 de Fevereiro de 2017 e depois de quase 7 anos (da minha menina me enrolando) nós vamos casar! A contagem regressiva começa, o frio na barriga e toda a ansiedade do dia mais esperado de nossas vidas nos enche de alegria, o dia em que uniremos nossas almas e corpos para sempre, o dia do nosso casamento.
+        </p>
+
+        <button 
+          class="outline outline-offset-2 hover:text-white py-1 px-1 lg:py-2 lg:px-2 hover:bg-tuscany active:bg-red-500 outline-1 lg:absolute lg:right-0">
+          Ver o texto da noiva (ela escreve muito hehe)
+        </button>
+      </div>
+    </div>
+
+    <div class="items-center max-w-2xl mt-10">
+      <h2 class="title">A proposta</h2>
+      <p class="pb-3">02.04.22</p>
+     
+      <p class="about-text">
+        No aniversário de quando nos conhecemos, marcamos um encontro com toda a família. Depois de quase 1 hora de atraso minha (achando meia pro meu <span class="font-black">Yeezy</span>) e muita diversão, o noivo chega. Quando a música de repente acabou, estava lá eu pedindo minha menina em casamento. Ela chorou, a família chorou e ela disse "SIM", e estávamos noivos.
+      </p>
+    </div>
+  </section>
+
+  <img 
+    class="mx-auto mt-10"
+    src="~/assets/img/separador2.png"
+    alt="Separador"
+    title="Separador"
+    style="height: 190px;"
+  />
+
+  <section class="py-6 md:py-6">
+    <div class="container px-4 mx-auto">
+      <div class="text-center max-w-2xl mx-auto">
+        <div class="mt-4">
+          <img 
+            src="~/assets/img/home_felipe_tatiana.jpg"
+            alt="mockup"
+            class="d-block max-w-full rounded shadow-md"
+          >
+        </div>
+      </div>
+      </div>
+  </section>
+</template>
+
+<script setup>
+definePageMeta({
+  middleware: ['general']
+})
+
+const position = ref(0)
+
+function logScroll() {
+  position.value = Math.round(window.scrollY)
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', logScroll)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', logScroll)
+})
+
+const goToRsvpRoute = () => {
+  const router = useRouter()
+  router.push({ path: '/rsvp' })
+}
+</script>
+
+<style lang="scss">
+
+.noivos-title {
+  color: #141414;
+  font-weight: bold;
+  text-transform: none;
+  line-height: 1.21;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.cover-image {
+  position: absolute;
+  top: -5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0000007d;
+}
+
+.vg-countdown__items .vg-countdown__items-number {
+  line-height: unset !important;
+  font-size: 60px !important;
+  height: unset !important;
+}
+
+.vg-countdown__items .vg-countdown__items-text {
+  font-size: 22px !important;
+}
+
+.vg-countdown__separator {
+  font-size: 50px !important;
+}
+
+.about-text {
+  padding: 15px;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+</style>
+
+
+
+

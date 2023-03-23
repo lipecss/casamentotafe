@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.6.0",
+    "@pinia-plugin-persistedstate/nuxt": "^1.1.1",
+    "mapbox-gl": "^2.13.0",
+    "nuxt": "^3.3.1",
+    "nuxt-mapbox": "^1.2.2",
+    "sass": "^1.59.3",
+    "sass-loader": "10"
+  },
+  "dependencies": {
+    "@mapbox/mapbox-gl-directions": "^4.1.1",
+    "@mapbox/mapbox-gl-geocoder": "^5.0.1",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@pinia/nuxt": "^0.4.7",
+    "@types/mapbox-gl": "^2.7.10",
+    "@types/mapbox__mapbox-gl-geocoder": "^4.7.3",
+    "@vemlavaraloucagamers/vg-countdown": "^2.0.1",
+    "@vueuse/core": "^9.13.0",
+    "aos": "^2.3.4",
+    "pinia": "^2.0.33"
+  }
+}
