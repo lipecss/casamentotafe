@@ -39,7 +39,6 @@ const paddingContent = computed(() => {
 const { data, error } = await fetchApi('/friends')
 
 if (!error.value) {
-  console.log('aaaaa')
   padrinhosList = data.value.friends
 } else {
   padrinhosList = []
