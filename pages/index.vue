@@ -135,6 +135,13 @@ definePageMeta({
   middleware: ['general']
 })
 
+useHead({
+  title: 'My App',
+  meta: [
+    { name: 'description', content: 'My amazing site.' }
+  ]
+})
+
 const position = ref(0)
 
 function logScroll() {

@@ -1,16 +1,26 @@
-import { onBeforeUnmount, onMounted } from 'vue'
+import { onBeforeUnmount, onMounted, toRef, watch } from 'vue'
 
 export default function useDetectOutsideClick(component, callback) {
-  if (!component) return
+  const componentRef = toRef(component, 'el')
+
   const listener = (event) => {
-    if (event.target !== component.value && event.composedPath().includes(component.value)) {
+    const clickedInside = componentRef.value && componentRef.value.contains(event.target)
+    if (clickedInside) {
       return
     }
     if (typeof callback === 'function') {
       callback()
     }
   }
-  onMounted(() => { window.addEventListener('click', listener) })
+
+  watch(componentRef, (newValue, oldValue) => {
+    if (newValue) {
+      window.addEventListener('click', listener)
+    } else {
+      window.removeEventListener('click', listener)
+    }
+  })
+
   onBeforeUnmount(() => { window.removeEventListener('click', listener) })
 
   return { listener }

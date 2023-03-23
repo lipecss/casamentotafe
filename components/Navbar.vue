@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-white py-7 mx-auto flex flex-col items-center z-50 justify-between fixed w-full z-10 top-0">
+  <nav class="bg-white py-7 mx-auto flex flex-col items-center z-50 justify-between fixed w-full top-0">
     <Transition name="slide">
       <div v-if="showTitle" class="text-center pb-3 block">
         <h6 class="title">Tatiana e Felipe</h6>
@@ -12,7 +12,19 @@
           v-for="(menu, index) in menuList" :key="index" 
           :to="menu.path" class="px-2 text-gray-400 hover:text-tuscany">
           {{ menu.text }}
+        </NuxtLink>
+
+        <NuxtLink
+          v-if="!isAuthenticated"
+          to="/login" class="px-2 text-gray-400 hover:text-tuscany">
+          Logar
         </NuxtLink>      
+
+        <NuxtLink
+          v-else
+          to="/dashboard" class="px-2 text-gray-400 hover:text-tuscany">
+          Dashboard
+        </NuxtLink>    
       </div>
 
       <div @click="toggleNav" class="flex md:hidden">
@@ -37,20 +49,25 @@
     <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
     <ul 
       :class="showMenu ? 'flex' : 'hidden'"
-      class="
-        md:hidden
-        flex-col
-        mt-8
-        space-y-4
-        flex
-        flex-row
-        items-center
-        "
-      >
+      class="md:hidden flex-col mt-8 space-y-4 flex items-center">
         <li v-for="(menu, index) in menuList" :key="index">
           <NuxtLink :to="menu.path" class="px-2 text-gray-400 hover:text-tuscany">
             {{ menu.text }}
           </NuxtLink>   
+        </li>
+
+        <li v-if="!isAuthenticated">
+          <NuxtLink
+            to="/login" class="px-2 text-gray-400 hover:text-tuscany">
+            Logar
+          </NuxtLink>   
+        </li>
+
+        <li v-else>
+          <NuxtLink
+          to="/dashboard" class="px-2 text-gray-400 hover:text-tuscany">
+          Dashboard
+        </NuxtLink>   
         </li>
     </ul>
   </nav>
@@ -61,6 +78,7 @@
 const props = defineProps({ position: Number })
 
 const route = useRoute()
+const { isAuthenticated } = useAuth()
 
 // watchers 
 watch(route, () => {
@@ -74,8 +92,7 @@ const menuList = reactive([
   { path: '/', text: 'Inicio'},
   { path: '/padrinhos', text: 'Padrinhos'},
   { path: '/cerimonia', text: 'Cerimônia & Festa'},
-  { path: '/rsvp', text: 'RSVP'},
-  { path: '/login', text: 'Login'}
+  { path: '/rsvp', text: 'RSVP'}
 ])
 
 // computeds

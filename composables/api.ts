@@ -1,6 +1,8 @@
 export const useApi = () => {
+  const config = useRuntimeConfig()
+
   const fetchApi = async (url: string, options: Object) => {
-    const baseApiUrl = 'http://localhost:5000'
+    const baseApiUrl = config.public.apiBaseUrl
     const completeUrl = `${baseApiUrl}${url}`
 
     try {
