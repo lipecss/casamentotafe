@@ -36,7 +36,7 @@
     </section>
     <!-- A capela -->
 
-    <!-- A capela -->
+    <!-- A Festa -->
     <section class="md:mt-10">
       <h2 class="title text-center place-items-center">Cerimônia religiosa</h2>
       <p class="pb-3 text-center place-items-center">A capela</p>
@@ -64,7 +64,7 @@
       </section>
 
     </section>
-    <!-- A capela -->
+    <!-- A Festa -->
   </section>
 </template>
 

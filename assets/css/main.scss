@@ -32,6 +32,6 @@
 
 .paper-bg {
   background-image: url('~/assets/img/background.webp');
-  background-size: contain;
-  min-height: 100vh;
+  background-position: center top;
+  background-size: 100% auto;
 }
