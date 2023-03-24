@@ -145,6 +145,10 @@
           </div>
         </div>
       </div>
+
+      <p class="about-text">
+        Estamos ansiosos para ver todos vocês saboreando esses pratos deliciosos no nosso casamento!
+      </p>
     </section>
     <!-- O Menu -->
   </section>
