@@ -4,7 +4,7 @@
       class="max-w-screen-xl px-4 py-6 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"
     >
       <div class="flex justify-center mt-8 space-x-6">
-        <a href="#" class="hover:text-tuscany">
+        <NuxtLink to="#" class="hover:text-tuscany">
           <span class="sr-only">Instagram</span>
           <svg
             class="w-6 h-6"
@@ -18,8 +18,8 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-        </a>
-        <a href="#" class="hover:text-tuscany">
+        </NuxtLink>
+        <NuxtLink to="https://github.com/lipecss" target="_blank" class="hover:text-tuscany">
           <span class="sr-only">GitHub</span>
           <svg
             class="w-6 h-6"
@@ -33,16 +33,16 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-        </a>
+        </NuxtLink>
       </div>
 
       <p class="mt-8 text-base leading-6 text-center">
         <span 
         class="text-sm sm:text-center">
         © 2023
-        <a href="https://felipecss.com/" target="_blank" class="hover:underline hover:text-tuscany">
+        <NuxtLink to="https://felipecss.com/" target="_blank" class="hover:underline hover:text-tuscany">
           Felipecs
-        </a>
+        </NuxtLink>
         <br>
         <span>Por todos os dias ao longo do caminho.</span>
       </span>
