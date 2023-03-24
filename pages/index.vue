@@ -1,16 +1,11 @@
 <template>
-  <section class="w-full h-screen">
-    <div class="cover-image" />
-    <img 
-      src="~/assets/img/cover-image.jpg"
-      class="object-cover w-full h-full"
-      alt="Felipe e Taina cover image"
-      title="Felipe e Taina cover image"
-    />
+  <section class="relative w-full h-screen" style="margin-top: -55px;">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <img src="~/assets/img/cover-image.jpg" class="object-cover w-full h-full" alt="Felipe e Taina cover image" title="Felipe e Taina cover image" />
   </section>
 
   <section class="text-center place-items-center">
-    <div className="w-1/2 m-auto flex justify-center items-center gap-x-3 py-28">
+    <!-- <div className="w-1/2 m-auto flex justify-center items-center gap-x-3 py-28">
       <div className="flex flex-col text-right">
         <div className="text-4xl lg:text-6xl font-bold">Felipe</div>
         <div className="text-4xl lg:text-6xl font-black">Santos</div>
@@ -24,7 +19,7 @@
         <div className="text-4xl lg:text-6xl font-black">de Souza</div>
         <div className="text-4xl lg:text-6xl font-black">Crivelaro</div>
       </div>
-    </div>
+    </div> -->
 
     <section>
       <p class="text-2xl mb-10">#casamentoTaFe</p>
@@ -70,7 +65,7 @@
   
   <Divider type="floral"/>
 
-  <section class="grid text-center place-items-center">
+  <section data-aos="fade-right" class="grid text-center place-items-center">
     <div class="items-center max-w-2xl relative mb-6">
       <h2 class="title">Como nos conhecemos</h2>
       <p class="pb-3">02.02.17</p>
@@ -179,6 +174,8 @@ const goToRsvpRoute = () => {
   left: 0;
   right: 0;
   background-color: #0000007d;
+  width: 100%; /* adicionado */
+  height: 100%; /* adicionado */
 }
 
 .vg-countdown__items .vg-countdown__items-number {

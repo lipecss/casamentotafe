@@ -11,13 +11,6 @@
   font-family: 'Glacial Indifference', sans-serif;
 }
 
-// body {
-//   background-image: url('~/assets/img/background.webp');
-//   background-repeat: no-repeat;
-//   background-attachment: fixed;
-//   background-size: cover;
-// }
-
 .title {
   font-family: 'Brittany Signature', sans-serif;
   font-size: 40px;
@@ -35,4 +28,10 @@
   font-weight: 300;
   line-height: 2;
   letter-spacing: 1px;
+}
+
+.paper-bg {
+  background-image: url('~/assets/img/background.webp');
+  background-size: contain;
+  min-height: 100vh;
 }

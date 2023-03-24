@@ -9,7 +9,7 @@
     <!-- Intro -->
 
     <!-- A capela -->
-    <section class="mt-10">
+    <section class="md:mt-10">
       <h2 class="title text-center place-items-center">Cerimônia religiosa</h2>
       <p class="pb-3 text-center place-items-center">A capela</p>
 
@@ -21,7 +21,7 @@
         Ao entrar na capela, é fácil se sentir imediatamente envolvido por uma atmosfera de paz e tranquilidade. As paredes de pedra, os vitrais coloridos e os bancos de madeira criam um ambiente acolhedor e íntimo, perfeito para esse nosso momento.
       </p>
 
-      <section class="py-8 px-4">
+      <section class="md:py-8 px-4">
         <div class="flex flex-wrap -mx-4">
           <div class="md:w-1/2 px-4 mb-8 md:mb-0">
             <img class="shadow-md" src="https://source.unsplash.com/random/1280x720" alt="">
@@ -37,7 +37,7 @@
     <!-- A capela -->
 
     <!-- A capela -->
-    <section class="mt-10">
+    <section class="md:mt-10">
       <h2 class="title text-center place-items-center">Cerimônia religiosa</h2>
       <p class="pb-3 text-center place-items-center">A capela</p>
 

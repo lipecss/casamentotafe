@@ -1,13 +1,13 @@
 <template>
   <Navbar :position="position"/>
-  <div class="content" :class="paddingContent">
+  <div class="content paper-bg" :class="paddingContent">
     <slot />
+
+    <Footer/>
   </div>
-  <Footer/>
 </template>
 
 <script setup>
-const position = ref(0)
 
 // lyfecicle
 onMounted(() => {
@@ -19,6 +19,9 @@ onBeforeUnmount(() => {
 })
 
 let globalPosition = useScrollPosition()
+
+// datas
+const position = ref(0)
 
 // computeds
 const paddingContent = computed(() => {
@@ -34,7 +37,7 @@ const logScroll = () => {
 
 <style>
 .content {
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
