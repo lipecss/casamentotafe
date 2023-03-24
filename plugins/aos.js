@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 export default defineNuxtPlugin((nuxtApp) => {
   if (typeof window !== 'undefined') {
     nuxtApp.AOS = AOS.init({
-      duration: 300,
+      duration: 600,
       easing: 'ease-in-out-cubic',
       once: false
     });

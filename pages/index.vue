@@ -86,7 +86,9 @@
         </p>
 
         <button 
-          class="outline outline-offset-2 hover:text-white py-1 px-1 lg:py-2 lg:px-2 hover:bg-tuscany active:bg-red-500 outline-1 lg:absolute lg:right-0">
+          class="outline outline-offset-2 hover:text-white py-1 px-1 lg:py-2 lg:px-2 hover:bg-tuscany active:bg-red-500 outline-1 lg:absolute lg:right-0"
+          @click="toggleModal"
+          >
           Ver o texto da noiva (ela escreve muito hehe)
         </button>
       </div>
@@ -123,6 +125,35 @@
       </div>
       </div>
   </section>
+
+  <Modal
+    title="Texto da noiva (ela escreve de mais rs)"
+    :show="showModal"
+    :show-actions="false"
+    @toggle-modal="toggleModal"
+  >
+    <div >
+      <p class="about-text">
+        Trabalhamos juntos e por diversas vezes, nos vimos na hora do almoço. Mas não passava de "Oi, boa tarde. Tudo bem?" - "Tudo bem sim e você?". Mas a nossa história começou em 02 de Fevereiro de 2017,  quando resolvi mandar mensagem o parabenizando pelo seu aniversário! 
+      </p>
+
+      <p class="about-text">
+        No dia seguinte, ele me trouxe pedaço do bolo. Porém, eu estava ausente da empresa e pedi a uma amiga, que me passasse o número de telefone dele para agradecer e desde então, não paramos mais de nos falar! Com o passar do tempo, construimos uma grande amizade! 
+      </p>
+
+      <p class="about-text">
+        Tivemos diversos momentos juntos e com o tempo, veio a certeza que existia algo muito maior entre nós: as nossas conversas, nossos sonhos, nosso jeito de ser, o amor, muita coisa em nós sempre se encaixou de uma forma que hoje quando olhamos para trás entendemos que tudo foi plano de Deus sobre nossas vidas. Em 03 de junho de 2017 começamos a namorar e nem imaginavamos tudo que iriamos passar! Logo no mês seguinte, tivemos uma experiência inesperada ( precisei fazer uma cirurgia para retirar 9 nódulos). Esse momento foi marcante não apenas pela surpresa indesejada, mas também pelo quanto ele foi companheiro, o quanto se preocupou e o quanto cuidou de tudo para que a minha recuperação fosse a menos sofrida possivel.  Mas acima de todo esse momento doloroso, pudemos desfrutar de mais uma experiência com o Senhor, fomos alcançados por Sua graça e misericordia. Aprendemos diariamente a colocar Deus sempre a frente de tudo e em todas as coisas!
+      </p>
+      
+      <p class="about-text">
+        Crescemos e amadurecemos juntos! Aprendemos diairiamente cada dia uma nova forma de amar e fortalecer nosso compromisso para ser quem somos hoje!
+      </p>
+
+      <p class="about-text">
+        Hoje após quase sete anos juntos e nessa caminhada de várias experiências com Deus em nossas vidas, estamos prestes a ver mais uma de Suas promessas se cumprindo e poder assim realizar o nosso grande sonho: O casamento!
+      </p>
+    </div>
+  </Modal>
 </template>
 
 <script setup>
@@ -137,7 +168,9 @@ useHead({
   ]
 })
 
+// datas
 const position = ref(0)
+let showModal = ref(false)
 
 function logScroll() {
   position.value = Math.round(window.scrollY)
@@ -155,6 +188,11 @@ const goToRsvpRoute = () => {
   const router = useRouter()
   router.push({ path: '/rsvp' })
 }
+// methods
+const toggleModal = () => {
+  showModal.value = !showModal.value
+}
+
 </script>
 
 <style lang="scss">

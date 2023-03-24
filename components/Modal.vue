@@ -33,7 +33,7 @@
           </div>
 
           <div class="mt-4">
-            <div class="text-center place-items-center my-6">
+            <div class="text-center place-items-center my-6 modal-content">
               <slot />
             </div>
 
@@ -77,3 +77,10 @@ const emitToggleModal = () => {
   emit('toggle-modal')
 }
 </script>
+
+<style lang="scss" scoped>
+.modal-content {
+  overflow: auto;
+  max-height: 381px;
+}
+</style>
