@@ -36,6 +36,7 @@
     </section>
     <!-- A capela -->
 
+    <Map />
     <!-- A Festa -->
     <section class="md:mt-10">
       <h2 class="title text-center place-items-center">Cerimônia religiosa</h2>

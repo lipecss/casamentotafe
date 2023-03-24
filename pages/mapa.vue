@@ -1,11 +1,39 @@
 <template>
-  <div>
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic aperiam eligendi sed a deleniti necessitatibus repellendus dolorum, quo iusto dolores incidunt accusantium porro numquam non. Repellendus sint soluta nemo explicabo autem. Ducimus itaque corrupti eligendi placeat facilis. Id unde esse sed asperiores recusandae quae ad deleniti consequatur saepe tempore repudiandae repellat assumenda qui beatae nihil reiciendis nemo iure, quasi voluptate eum maxime quos! Nihil porro, consectetur asperiores nobis, maxime veniam tempore quod quos ducimus dolorum nesciunt nulla non hic suscipit facilis quisquam sint omnis et culpa praesentium quibusdam enim ea! Nemo itaque temporibus saepe vero! Iure assumenda fugiat omnis accusantium ducimus libero iste, recusandae nisi consectetur tempora tenetur neque quo ratione earum dolorem aut ab itaque, fugit quod doloribus, id quos. Tempore doloribus fuga explicabo omnis accusamus aliquid molestiae laborum odit, autem non soluta pariatur. Quidem dolores nulla possimus esse. Beatae dolorum ullam sed asperiores aperiam consequuntur distinctio quisquam quas repellendus porro, molestiae reiciendis non dolore laboriosam quasi cum hic modi recusandae fugiat atque deleniti sunt nemo! Tempore aliquam eius mollitia eaque fugiat rerum laborum dolore corporis, sequi quam earum ipsam quas, ea possimus error excepturi saepe quidem ducimus nesciunt voluptates! Quae velit laudantium veritatis reiciendis ad, quam et quis doloribus, dolorum, molestias voluptas sapiente id consequatur aspernatur debitis beatae ducimus tempora numquam ratione. Ut dignissimos ipsam, fugit repellat eius recusandae porro aliquid excepturi ipsa voluptate cupiditate modi praesentium sit delectus. Culpa provident possimus impedit nesciunt veniam dolor saepe consectetur aperiam, explicabo eos atque aspernatur et iste modi optio earum, unde eum! Numquam cum totam natus ratione sed distinctio labore doloribus, eum hic earum minus! Accusamus itaque laboriosam recusandae et, voluptatibus corrupti repellendus velit praesentium culpa repudiandae, corporis, ab aspernatur magnam suscipit in. Cupiditate quisquam quia voluptatibus quae? Animi enim quidem architecto quaerat neque, voluptatum, saepe aperiam error vero, quae fugit quia modi exercitationem provident similique libero eos possimus rem voluptatem ex non nobis asperiores recusandae! Corrupti sunt repudiandae obcaecati perspiciatis sequi aut quasi. Error nihil velit amet eveniet deserunt. Fugiat ea accusamus aliquid laboriosam, aperiam in iste commodi minus cum deleniti nostrum laborum quasi similique eius corrupti nisi minima sed, libero eveniet. Ipsa odio iure alias repellat, facere explicabo assumenda corrupti reiciendis similique cupiditate enim magni quaerat autem voluptas consectetur fugiat quisquam fugit doloribus rerum at architecto velit numquam laudantium? Voluptate corrupti quod unde velit modi id fugit, repellat dolore reprehenderit ut! Facilis a iusto suscipit eligendi nesciunt? Ex.</div>
-  </div>
+  <section class="w-full max-w-xs md:max-w-lg lg:max-w-6xl mx-auto">
+    <section class="mb-2">
+      <Map />
+    </section>
+  </section>
 </template>
 
 <script setup>
 definePageMeta({
   middleware: ["general"],
+})
+
+useHead({
+  title: 'My App',
+  link: [
+    // {
+    //   rel: 'stylesheet',
+    //   href: 'https://unpkg.com/leaflet@1.9.3/dist/leaflet.css',
+    //   integrity: 'sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=',
+    //   crossorigin: ''
+    // },
+    // {
+    //   rel: 'stylesheet',
+    //   href: 'https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css',
+    // }
+  ],
+  script: [
+    // {
+    //   src: 'https://unpkg.com/leaflet@1.9.3/dist/leaflet.js',
+    //   integrity: 'sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=',
+    //   crossorigin: ''
+    // },
+    // {
+    //   src: 'https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js'
+    // }
+  ]
 })
 </script>
