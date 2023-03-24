@@ -48,5 +48,5 @@ const emitRemoveItem = (product) => {
   removeToCart(product)
 }
 
-if (!error.value) products = data.value.products
+if (!error) products = data.products
 </script>

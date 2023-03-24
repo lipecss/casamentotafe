@@ -1,5 +1,5 @@
 <template>
-  <div :class="paddingContent">
+  <div>
     <section class="grid text-center place-items-center">
       <h2 class="title">Padrinhos</h2>
 
@@ -30,16 +30,10 @@ const { fetchApi } = useApi()
 // datas
 let padrinhosList = reactive([])
 
-let globalPosition = useScrollPosition()
-
-const paddingContent = computed(() => {
-  return globalPosition.value > 30 ? 'pt-52' : 'pt-48'
-})
-
 const { data, error } = await fetchApi('/friends')
 
-if (!error.value) {
-  padrinhosList = data.value.friends
+if (!error) {
+  padrinhosList = data.friends
 } else {
   padrinhosList = []
 }

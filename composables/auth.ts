@@ -10,14 +10,14 @@ export const useAuth = () => {
   const logout = async () => {
     try {
 
-      const { data, error } = await fetchApi('/users/logout', {
+      const { error } = await fetchApi('/users/logout', {
         method: 'POST',
         headers: {
           'x-access-token': token.value
         }
       }) as { data: any, error: any }
 
-      if (!error.value) {    
+      if (!error) {    
         token.value = null
         clearUserStore()
         clearCart()

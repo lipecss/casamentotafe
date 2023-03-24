@@ -7,14 +7,31 @@ export const useApi = () => {
 
     try {
       const { data, error, pending } = await useFetch(completeUrl, options)
-      return {
-        data, 
-        error,
-        pending
+    
+      if (error.value) {
+        const { response } = error.value
+    
+        return {
+          data: null, 
+          error: true,
+          message: response?._data?.message,
+          pending: pending.value
+        }
+      } else {
+        return {
+          data: data.value, 
+          error: false,
+          pending: pending.value
+        }
       }
     } catch (error) {
-      return error
+      return {
+        data: null,
+        error: 'Falha ao realizar operação',
+        pending: false
+      }
     }
+    
   }
 
   return { fetchApi }

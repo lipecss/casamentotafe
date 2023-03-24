@@ -86,7 +86,7 @@ definePageMeta({
 
 // datas
 const form = reactive({
-  email: 'john_doe@example.com',
+  email: 'user2@example.com',
   password: '123456',
 })
 
@@ -102,11 +102,9 @@ const onSubmit = async () => {
     body: form
   })
 
-  if (!error.value) {
-    const value = data.value
-
-    const id = value.data.id
-    const token = value.token
+  if (!error) {
+    const id = data.data.id
+    const token = data.token
     
     //configurando token
     cookie.value = await token
@@ -118,7 +116,7 @@ const onSubmit = async () => {
       }
     })
 
-    store.setUser(userData.value)
+    store.setUser(userData)
 
     router.push({ path: '/dashboard'})
   }

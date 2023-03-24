@@ -1,6 +1,6 @@
 <template>
   <Navbar :position="position"/>
-  <div class="content">
+  <div class="content" :class="paddingContent">
     <slot />
   </div>
   <Footer/>
@@ -9,13 +9,7 @@
 <script setup>
 const position = ref(0)
 
-let globalPosition = useScrollPosition()
-
-function logScroll() {
-  position.value = Math.round(window.scrollY)
-  globalPosition.value = Math.round(window.scrollY)
-}
-
+// lyfecicle
 onMounted(() => {
   window.addEventListener('scroll', logScroll)
 })
@@ -23,6 +17,19 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', logScroll)
 })
+
+let globalPosition = useScrollPosition()
+
+// computeds
+const paddingContent = computed(() => {
+  return globalPosition.value > 30 ? 'pt-52' : 'pt-48'
+})
+
+// methods
+const logScroll = () => {
+  position.value = Math.round(window.scrollY)
+  globalPosition.value = Math.round(window.scrollY)
+}
 </script>
 
 <style>

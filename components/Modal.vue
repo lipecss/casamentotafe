@@ -12,13 +12,13 @@
           bg-gray-700 bg-opacity-50
         "
       >
-        <div class="max-w-2xl p-6 bg-white rounded-md shadow-xl">
+        <div class="max-w-2xl p-6 bg-white rounded-md shadow-xl" style="min-width: 403px;">
           <div class="flex items-center justify-between">
             <h3 class="text-2xl">{{ title }}</h3>
             <svg
               @click="emitToggleModal(false)"
               xmlns="http://www.w3.org/2000/svg"
-              class="w-8 h-8 text-red-500 cursor-pointer"
+              class="w-8 h-8 ml-6 text-red-500 cursor-pointer"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -74,7 +74,6 @@ const emit = defineEmits(['toggle-modal'])
 
 // methods
 const emitToggleModal = () => {
-  console.log('aaa')
   emit('toggle-modal')
 }
 </script>

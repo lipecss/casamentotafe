@@ -1,7 +1,7 @@
 export default async function () {
-  // const store = statusStore()
+  const { fetchApi } = useApi()
 
-  // const { data } = await useFetch('http://localhost:5000/status')
+  const { data } = await fetchApi('/status')
 
-  // store.changeWeddingStatus(data.value.isBeforeWedding)
+  console.log('status', data)
 }
