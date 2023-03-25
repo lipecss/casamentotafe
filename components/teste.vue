@@ -5,13 +5,12 @@
     </div>
 
     <p class="mt-2 text-gray-600 text-justify">
-      Getting a new business off the ground is a lot of hard work.
+      {{ title }}
     </p>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'MyComponent'
-}
+<script setup>
+// props
+const props = defineProps({ title: '', default: 'aaaaaaaaaaaa' })
 </script>

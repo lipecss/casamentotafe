@@ -38,19 +38,26 @@ const monteMillzaoCoords = reactive([-46.30859374020185, -23.375957160878425])
 let userCoords = reactive({})
 const config = useRuntimeConfig()
 
-console.log('teste', teste)
-
 
 // methods
 const successGeolocation = async ({ coords }) => {
-  console.log('coords', coords.longitude, coords.latitude)
-  console.log('apiBaseUrl', config.apiBaseUrl)
   userCoords = await coords
   createMapLayer(coords.longitude, coords.latitude)
 }
 
 const errorGeolocation = async (value) => {
   console.log('error', value)
+}
+
+const createMarker = async (title) => {
+  const popupComponent = createApp(teste, { title: title});
+
+  const popupContainer  = document.createElement('div')
+  popupComponent.mount(popupContainer);
+
+  const popupHtml = popupContainer.outerHTML;
+
+  return popupHtml
 }
 
 const createMapLayer = (long, lat) => {
@@ -65,13 +72,6 @@ const createMapLayer = (long, lat) => {
     // maxZoom: 16
   })
 
-  const popupComponent = createApp(teste);
-
-  const popupContainer  = document.createElement('div')
-  popupComponent.mount(popupContainer);
-
-  const popupHtml = popupContainer.outerHTML;
-
   map.on('load', async () => {
     /* Quando o mapa carregar, add os dois pontos.
      Aqui mockei os dois valores: Origem e Destino
@@ -84,8 +84,8 @@ const createMapLayer = (long, lat) => {
 
     let currentPosition = new mapboxgl.Marker()
       .setLngLat([lat, long])
-      .setPopup(new mapboxgl.Popup().setHTML(popupHtml))
       .addTo(map)
+      .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>"))
   
     map.loadImage('https://cdn-icons-png.flaticon.com/512/5385/5385449.png', function(error, image) {
       if (error) throw error;
@@ -129,14 +129,13 @@ const createMapLayer = (long, lat) => {
     // .addTo(map)
   })
 
-  map.on('click', 'points', function(e) {
-    console.log('aaaa', e)
+  map.on('click', 'points', async function(e) {
     var coordinates = e.features[0].geometry.coordinates.slice();
-    var description = 'Descrição do popup';
+    const ele = await createMarker('    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium exercitationem esse aspernatur, velit, similique repellendus corrupti laborum aliquid numquam vero porro? Modi illo repellendus repellat qui fugiat, porro nesciunt enim asperiores voluptas perspiciatis numquam eius. Maxime, rerum nisi aut ipsum eius voluptatem veniam repudiandae illo, doloribus necessitatibus placeat at deleniti!')
     // Crie o popup
     var popup = new mapboxgl.Popup({ offset: [0, -20] })
       .setLngLat(coordinates)
-      .setHTML(popupHtml)
+      .setHTML(ele)
       .addTo(map)
   });
 }
