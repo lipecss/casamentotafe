@@ -65,6 +65,13 @@ const createMapLayer = (long, lat) => {
     // maxZoom: 16
   })
 
+  const popupComponent = createApp(teste);
+
+  const popupContainer  = document.createElement('div')
+  popupComponent.mount(popupContainer);
+
+  const popupHtml = popupContainer.outerHTML;
+
   map.on('load', async () => {
     /* Quando o mapa carregar, add os dois pontos.
      Aqui mockei os dois valores: Origem e Destino
@@ -77,7 +84,7 @@ const createMapLayer = (long, lat) => {
 
     let currentPosition = new mapboxgl.Marker()
       .setLngLat([lat, long])
-      .setPopup(new mapboxgl.Popup().setHTML('Localização'))
+      .setPopup(new mapboxgl.Popup().setHTML(popupHtml))
       .addTo(map)
   
     map.loadImage('https://cdn-icons-png.flaticon.com/512/5385/5385449.png', function(error, image) {
@@ -123,26 +130,14 @@ const createMapLayer = (long, lat) => {
   })
 
   map.on('click', 'points', function(e) {
+    console.log('aaaa', e)
     var coordinates = e.features[0].geometry.coordinates.slice();
     var description = 'Descrição do popup';
-    const popupComponent = createApp(teste);
-
-    const popupContainer  = document.createElement('div')
-    popupComponent.mount(popupContainer);
-
-    const popupHtml = popupContainer.outerHTML;
-
-      console.log('popupHtml', popupHtml)
     // Crie o popup
     var popup = new mapboxgl.Popup({ offset: [0, -20] })
       .setLngLat(coordinates)
       .setHTML(popupHtml)
-      .addTo(map);
-
-      map.on('mouseleave', 'points', function() {
-        map.getCanvas().style.cursor = '';
-        popup.remove();
-      });
+      .addTo(map)
   });
 }
 </script>
