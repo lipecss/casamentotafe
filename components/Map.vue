@@ -62,19 +62,6 @@ const createMapLayer = (long, lat) => {
     // maxZoom: 16
   })
 
-  // Prearando para utilizar MapboxDirections
-  const directions = new MapboxDirections({
-    accessToken: config.mapboxKey,
-    interactive: false,
-    controls: {
-      inputs: false,
-      instructions: false,
-      profileSwitcher: false
-    },
-    unit: 'metric',
-    profile: 'mapbox/driving'
-  })
-  
   map.on('load', async () => {
     /* Quando o mapa carregar, add os dois pontos.
      Aqui mockei os dois valores: Origem e Destino
@@ -91,6 +78,14 @@ const createMapLayer = (long, lat) => {
     map.loadImage('https://cdn-icons-png.flaticon.com/512/5385/5385449.png', function(error, image) {
       if (error) throw error;
       map.addImage('custom-marker', image);
+      console.log('image', image)
+
+      const marker = new mapboxgl.Marker({ 
+        color: '#0079c2',
+        draggable: true,
+        icon: 'custom-marker'
+      }).setLngLat([-46.6388, -23.5489]) // São Paulo
+        .addTo(map);
     });
 
     // var el = document.createElement('div');
