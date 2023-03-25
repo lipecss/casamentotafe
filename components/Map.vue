@@ -7,7 +7,8 @@
 <script setup>
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
-import process from 'process';
+import teste from './teste.vue'
+import { createApp } from 'vue';
 
 // lifeCicle
 onMounted(() => {
@@ -36,6 +37,8 @@ let map = null
 const monteMillzaoCoords = reactive([-46.30859374020185, -23.375957160878425])
 let userCoords = reactive({})
 const config = useRuntimeConfig()
+
+console.log('teste', teste)
 
 
 // methods
@@ -72,21 +75,39 @@ const createMapLayer = (long, lat) => {
     // directions.setOrigin([-40.429616073599, -23.52881527141651]);
     // directions.setDestination(monteMillzaoCoords);
 
-    // let currentPosition = new mapboxgl.Marker()
-    //   .setLngLat([lat, long])
-    //   .addTo(map)
+    let currentPosition = new mapboxgl.Marker()
+      .setLngLat([lat, long])
+      .setPopup(new mapboxgl.Popup().setHTML('Localização'))
+      .addTo(map)
+  
     map.loadImage('https://cdn-icons-png.flaticon.com/512/5385/5385449.png', function(error, image) {
       if (error) throw error;
       map.addImage('custom-marker', image);
-      console.log('image', image)
-
-      const marker = new mapboxgl.Marker({ 
-        color: '#0079c2',
-        draggable: true,
-        icon: 'custom-marker'
-      }).setLngLat([-46.6388, -23.5489]) // São Paulo
-        .addTo(map);
-    });
+      map.addSource('points', {
+        type: 'geojson',
+        data: {
+          type: 'FeatureCollection',
+          features: [
+            {
+              type: 'Feature',
+              geometry: {
+                type: 'Point',
+                coordinates: monteMillzaoCoords,
+              },
+            },
+          ],
+        },
+      });
+      map.addLayer({
+        id: 'points',
+        type: 'symbol',
+        source: 'points',
+        layout: {
+          'icon-image': 'custom-marker',
+          'icon-size': 0.09,
+        },
+      });
+    }); 
 
     // var el = document.createElement('div');
     //     el.className = 'marker';
@@ -95,11 +116,34 @@ const createMapLayer = (long, lat) => {
     //     el.style.height = '54px';
     //     el.style.backgroundRepeat = 'no-repeat'
          
-    new mapboxgl.Marker()
-    .setLngLat(monteMillzaoCoords)
-    .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>"))
-    .addTo(map)
+    // new mapboxgl.Marker()
+    // .setLngLat(monteMillzaoCoords)
+    // .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>"))
+    // .addTo(map)
   })
+
+  map.on('click', 'points', function(e) {
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    var description = 'Descrição do popup';
+    const popupComponent = createApp(teste);
+
+    const popupContainer  = document.createElement('div')
+    popupComponent.mount(popupContainer);
+
+    const popupHtml = popupContainer.outerHTML;
+
+      console.log('popupHtml', popupHtml)
+    // Crie o popup
+    var popup = new mapboxgl.Popup({ offset: [0, -20] })
+      .setLngLat(coordinates)
+      .setHTML(popupHtml)
+      .addTo(map);
+
+      map.on('mouseleave', 'points', function() {
+        map.getCanvas().style.cursor = '';
+        popup.remove();
+      });
+  });
 }
 </script>
 
