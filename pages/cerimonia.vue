@@ -23,10 +23,10 @@
 
       <section class="md:py-8 px-4">
         <div class="flex flex-wrap -mx-4">
-          <div class="md:w-1/2 px-4 mb-8 md:mb-0">
+          <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
             <img class="shadow-md" src="https://source.unsplash.com/random/1280x720" alt="">
           </div>
-          <div class="md:w-1/2 px-4 mb-8 md:mb-0">
+          <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
             <p class="about-text" style="padding-top: 0 !important;">
               O teto alto da capela é sustentado por pilares de madeira maciça, que adicionam uma sensação de grandiosidade e solidez ao espaço. A luz natural que entra pelos vitrais coloridos, combinada com o som suave da natureza ao redor, cria um ambiente sereno e inspirador que é perfeito para a cerimônia do casamento.
             </p>
@@ -36,7 +36,14 @@
     </section>
     <!-- A capela -->
 
-    <Map />
+    <div class="flex flex-wrap">
+      <div class="w-full md:-96">
+        <div class="h-80 md:h-96 w-full mx-auto">
+          <Map />
+        </div>
+      </div>
+    </div>
+
     <!-- A Festa -->
     <section class="md:mt-10">
       <h2 class="title text-center place-items-center">Cerimônia religiosa</h2>
@@ -72,5 +79,21 @@
 <script setup>
 definePageMeta({
   middleware: ["general"],
+})
+
+useHead({
+  title: 'My App',
+  script: [
+      {
+        src: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js",
+        body: true
+      }
+    ],
+    link: [
+      {
+        rel: "stylesheet",
+        href: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css"
+      }
+    ]
 })
 </script>

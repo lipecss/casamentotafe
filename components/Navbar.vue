@@ -92,7 +92,6 @@ const menuList = reactive([
   { path: '/', text: 'Inicio'},
   { path: '/padrinhos', text: 'Padrinhos'},
   { path: '/buffet', text: 'Buffet'},
-  { path: '/mapa', text: 'Mapa'},
   { path: '/cerimonia', text: 'Cerimônia & Festa'},
   { path: '/rsvp', text: 'RSVP'}
 ])

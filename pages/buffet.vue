@@ -64,11 +64,11 @@
 
       <section class="py-8 px-4">
         <div class="flex flex-wrap -mx-4">
-          <div class="md:w-1/2 px-4 mb-8 md:mb-0">
+          <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
             <img class="shadow-md" src="https://source.unsplash.com/random/1280x720" alt="">
           </div>
 
-          <div class="md:w-1/2 px-4 mb-8 md:mb-0">
+          <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
             <p class="about-text" style="padding-top: 0 !important;">
               Levamos nossos pais para conhecer e apresentar o local que havíamos escolhido para o nosso casamento. Foi um
               dia muito especial, pois pudemos compartilhar nossa alegria e felicidade com eles. Ver a alegria nos rostos
@@ -79,14 +79,14 @@
         </div>
 
         <div class="flex flex-wrap -mx-4">
-          <div class="md:w-1/2 px-4 mb-8 md:mb-0">
+          <div class="lg:w-1/2 px-4 mb-8 md:mb-0">
             <p class="about-text" style="padding-top: 0 !important;">
               Estamos animados para ter nosso casamento no <span class="font-bold">Monte Millazzo</span> e compartilhar
               essa experiência única com nossos amigos e familiares. Não poderíamos estar mais felizes com a escolha que
               fizemos e mal podemos esperar para o grande dia chegar!
             </p>
           </div>
-          <div class="md:w-1/2 px-4 mb-8 md:mb-0">
+          <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
             <img class="shadow-md" src="https://source.unsplash.com/random/1280x720" alt="">
           </div>
         </div>

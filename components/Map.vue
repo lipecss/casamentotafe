@@ -5,14 +5,17 @@
 </template>
 
 <script setup>
-import 'leaflet/dist/leaflet.css'
-import 'leaflet-routing-machine/dist/leaflet-routing-machine.css'
-import L from 'leaflet'
-import 'leaflet-routing-machine'
+import mapboxgl from 'mapbox-gl'
+import 'mapbox-gl/dist/mapbox-gl.css'
+import process from 'process';
 
 // lifeCicle
 onMounted(() => {
-  navigator.geolocation.getCurrentPosition(successGeolocation, errorGeolocation)
+  navigator.geolocation.getCurrentPosition(successGeolocation, errorGeolocation, {
+    enableHighAccuracy: true,
+    maximumAge:30000,
+    timeout:27000
+  })
 })
 
 onBeforeMount(() => {
@@ -30,114 +33,95 @@ const props = defineProps({
 
 // datas
 let map = null
-const monteMillzaoCoords = reactive([-23.375957160878425, -46.30859374020185])
+const monteMillzaoCoords = reactive([-46.30859374020185, -23.375957160878425])
 let userCoords = reactive({})
+const config = useRuntimeConfig()
+
 
 // methods
 const successGeolocation = async ({ coords }) => {
+  console.log('coords', coords.longitude, coords.latitude)
+  console.log('apiBaseUrl', config.apiBaseUrl)
   userCoords = await coords
-  createMapLayer(userCoords.latitude, userCoords.longitude)
+  createMapLayer(coords.longitude, coords.latitude)
 }
 
 const errorGeolocation = async (value) => {
   console.log('error', value)
 }
 
-const createMapLayer = (lat, long) => {
-  map = L.map('map').setView([lat, long], 16)
+const createMapLayer = (long, lat) => {
+  // Inicializa o Mapa
+  const map = new mapboxgl.Map({
+    accessToken: config.mapboxKey,
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v12',
+    center: monteMillzaoCoords,
+    zoom: 10,
+    // minZoom: 10,
+    // maxZoom: 16
+  })
 
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map)
-      
-  const routingControl = L.Routing.control({
-    show: false,
-    language: 'pt-BR',
-    draggableWaypoints: false,
-    routeWhileDragging: false,
-    addWaypoints: false,
-		waypoints: [
-			L.latLng(lat, long),
-      L.latLng(monteMillzaoCoords)
-		],
-    lineOptions: {
-      styles: [
-        {
-          color: 'red',
-          opacity: 1,
-          weight: 5
-        }
-      ]
+  // Prearando para utilizar MapboxDirections
+  const directions = new MapboxDirections({
+    accessToken: config.mapboxKey,
+    interactive: false,
+    controls: {
+      inputs: false,
+      instructions: false,
+      profileSwitcher: false
     },
-    routeLineThickness: 5
-  }).addTo(map)
-
-  L.marker([lat, long]).addTo(map).bindPopup('Você está aqui')
-  L.marker(monteMillzaoCoords).addTo(map).bindPopup('Onde o casório acontece')
-
-  map.flyTo(monteMillzaoCoords, 13, {
-    duration: 2, // duração em segundos
-    easeLinearity: 0.25,
-    noMoveStart: true
+    unit: 'metric',
+    profile: 'mapbox/driving'
   })
+  
+  map.on('load', async () => {
+    /* Quando o mapa carregar, add os dois pontos.
+     Aqui mockei os dois valores: Origem e Destino
+    */
+    // directions.setOrigin(startPoint)
+    // directions.setDestination(endPoint)
 
-  //events do mapa
-  map.on('click', ({ target, latlng }) => {
-    
+    // directions.setOrigin([-40.429616073599, -23.52881527141651]);
+    // directions.setDestination(monteMillzaoCoords);
+
+    // let currentPosition = new mapboxgl.Marker()
+    //   .setLngLat([lat, long])
+    //   .addTo(map)
+    map.loadImage('https://cdn-icons-png.flaticon.com/512/5385/5385449.png', function(error, image) {
+      if (error) throw error;
+      map.addImage('custom-marker', image);
+    });
+
+    // var el = document.createElement('div');
+    //     el.className = 'marker';
+    //     el.style.backgroundImage = 'url(https://cdn-icons-png.flaticon.com/512/5385/5385449.png)';
+    //     el.style.width = '54px';
+    //     el.style.height = '54px';
+    //     el.style.backgroundRepeat = 'no-repeat'
+         
+    new mapboxgl.Marker()
+    .setLngLat(monteMillzaoCoords)
+    .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>"))
+    .addTo(map)
   })
-
-  routingControl.on('linetouched', (e) => {
-    console.log('Waypoints changed', e);
-  })
-
-
-  const CustomControl = L.Control.extend({
-  onAdd: function() {
-    // cria um elemento de div para a control
-    const controlDiv = L.DomUtil.create('div', 'custom-control');
-    // cria um botão com o texto 'Clique aqui!'
-    const button = L.DomUtil.create('button', 'custom-button', controlDiv);
-    button.innerHTML = 'Clique aqui!';
-    // adiciona um evento de clique ao botão
-    L.DomEvent.on(button, 'click', () =>   map.flyTo(monteMillzaoCoords, 18, {
-    duration: 2, // duração em segundos
-    noMoveStart: true
-  }));
-    // retorna a div control criada
-    return controlDiv;
-  },
-});
-const zoomControl = L.control({ position: 'bottomright' });
-
-zoomControl.onAdd = function(map) {
-  const div = L.DomUtil.create('div', 'zoom-control');
-  div.innerHTML = `Zoom: ${map.getZoom()}`;
-  return div;
-};
-
-zoomControl.addTo(map);
-
-// adiciona a nova classe de controle ao mapa
-const customControl = new CustomControl({ position: 'topright' });
-map.addControl(customControl);
-        
 }
 </script>
 
 <style scoped>
 .map-wrapper {
   position: relative;
-  width: 400px;
-  height: 300px;
+  height: 100%;
+  padding: 0px 1rem 1rem 1rem;
+  padding: 0px 1vmin 1vmin 1vmin;
+  z-index: 20 !important;
 }
 
 #map {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  outline: 1px solid black;
+  z-index: 20 !important;
 }
 </style>
