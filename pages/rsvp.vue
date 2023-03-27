@@ -24,9 +24,13 @@
           <div class="flex items-center justify-center">
             <form class="flex flex-col items-center justify-center" style="width: 300px;" @submit.prevent="onSubmit">
               <div class="w-full my-4">
-                <input v-model="form.rsvp_code" required maxlength="8"
+                <input 
+                  v-model="form.rsvp_code"
+                  required
                   class="form-select block mt-1 uppercase py-2 px-4 text-base text-gray-700 bg-transparent border border-gray-400 appearance-none focus:outline-none focus:shadow-outline w-full"
-                  placeholder="Informe o seu e-mail">
+                  placeholder="Informe o seu e-mail"
+                  @keydown="onChangeRsvpCode($event)"
+                >
               </div>
 
               <div class="flex flex-col md:flex-row justify-between md:items-center w-full mb-4">
@@ -148,5 +152,12 @@ const onSubmit = async () => {
   }
 
   showModal.value = true
+}
+
+const onChangeRsvpCode = (e) => {
+  const length = e.target.value.length
+  const isDeleteKey = e.keyCode === 8 || e.keyCode === 46
+
+  if (length >= 8 && !isDeleteKey) e.preventDefault()
 }
 </script>

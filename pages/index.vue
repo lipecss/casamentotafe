@@ -4,26 +4,24 @@
     <img src="~/assets/img/cover-image.jpg" class="object-cover w-full h-full" alt="Felipe e Taina cover image" title="Felipe e Taina cover image" />
   </section>
 
+  <section class="grid text-center place-items-center my-10">
+    <div data-testid="Title" class="title">
+      <h2>Sejam bem-vindos ao nosso site!</h2>
+    </div>
+    
+    <div class="items-center max-w-6xl relative">
+      <div>
+        <p class="about-text">
+          Aqui vamos contar à vocês, queridos amigos e familiares, sobre um pouquinho da nossa vida antes desse momento especial em que daremos esse passo a mais para unirmos nossas vidas. É um prazer compartilhar esse momento com vocês!
+        </p>
+      </div>
+    </div>
+  </section>
+
   <section class="text-center place-items-center">
-    <!-- <div className="w-1/2 m-auto flex justify-center items-center gap-x-3 py-28">
-      <div className="flex flex-col text-right">
-        <div className="text-4xl lg:text-6xl font-bold">Felipe</div>
-        <div className="text-4xl lg:text-6xl font-black">Santos</div>
-        <div className="text-4xl lg:text-6xl font-black">Santos</div>
-      </div>
-
-      <div className="grid text-xl place-items-center">e</div>
-
-      <div className="flex flex-col gap-x-2 text-left">
-        <div className="text-4xl lg:text-6xl font-black">Tatiana</div>
-        <div className="text-4xl lg:text-6xl font-black">de Souza</div>
-        <div className="text-4xl lg:text-6xl font-black">Crivelaro</div>
-      </div>
-    </div> -->
-
-    <section>
+    <div>
       <p class="text-2xl mb-10">#casamentoTaFe</p>
-    </section>
+    </div>
 
     <div class="grid grid-rows-1 text-center grid-flow-col gap-1 mb-10">
       <div>
@@ -33,6 +31,8 @@
     </div>
 
     <div class="text-center">
+      <h1 class="text-2xl md:text-3xl my-6 font-bold">CONTAGEM REGRESSIVA PARA O GRANDE DIA</h1>
+
       <VgCountdown
         vg-id="vg-countdown"
         :day="6"
@@ -66,17 +66,11 @@
   <Divider type="floral"/>
 
   <section data-aos="fade-right" class="grid text-center place-items-center">
-    <div class="items-center max-w-2xl relative mb-6">
+    <div class="items-center max-w-6xl relative mb-6">
       <h2 class="title">Como nos conhecemos</h2>
       <p class="pb-3">02.02.17</p>
 
       <div>
-        <p class="about-text">Olá, seja bem-vindo ao nosso site de casamento!</p>
-        
-        <p class="about-text">
-          Aqui vamos contar à vocês, queridos amigos e familiares, sobre um pouquinho da nossa vida antes desse momento especial em que daremos esse passo a mais para unirmos nossas vidas. É um prazer compartilhar esse momento com vocês!
-        </p>
-
         <p class="about-text">
           No início trabalhávamos juntos na mesma empresa e nos conhecemos do nada (mais precisamente no meu aniversário), então uma grande amizade surgiu, não imaginaríamos nunca que seria desse jeito, mas depois essa amizade acabou se tornando algo que rendeu um fruto de amor que cresceu e floresceu.
         </p>
@@ -94,7 +88,7 @@
       </div>
     </div>
 
-    <div class="items-center max-w-2xl mt-10">
+    <div class="items-center max-w-6xl mt-10">
       <h2 class="title">A proposta</h2>
       <p class="pb-3">02.04.22</p>
      
@@ -114,7 +108,7 @@
 
   <section class="py-6 md:py-6">
     <div class="container px-4 mx-auto">
-      <div class="text-center max-w-2xl mx-auto">
+      <div class="text-center max-w-6xl mx-auto">
         <div class="mt-4">
           <img 
             src="~/assets/img/home_felipe_tatiana.jpg"
@@ -229,14 +223,6 @@ const toggleModal = () => {
 .vg-countdown__separator {
   font-size: 50px !important;
 }
-
-.about-text {
-  padding: 15px;
-  font-weight: 300;
-  line-height: 2;
-  letter-spacing: 1px;
-}
-
 </style>
 
 

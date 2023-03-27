@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full max-w-xs md:max-w-lg lg:max-w-4xl mx-auto">
+  <section class="w-full max-w-xs md:max-w-lg lg:max-w-6xl mx-auto">
     <!-- Intro -->
     <section class="mb-2">
       <p class="about-text">

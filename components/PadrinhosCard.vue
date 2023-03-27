@@ -4,7 +4,7 @@
       <div class="p-8">
         <div class="mt-8 mb-8">
           <h1 class="text-2xl font-black uppercase text-right mb-2">{{ name }}</h1>
-          <p class="text-right">
+          <p class="text-right descripiton text-lg">
             {{ description }}
           </p>
         </div>
@@ -15,7 +15,7 @@
     <div class="p-8">
       <div class="mt-8 mb-8">
         <h1 class="text-2xl font-black uppercase text-left mb-2">{{ name }}</h1>
-        <p class="text-left">
+        <p class="text-left descripiton text-lg">
           {{  description }}
         </p>
       </div>
@@ -59,5 +59,10 @@ const backgroundStyle = computed(() => {
   .bg-cover {
     height: 200px; /* ou outra altura desejada */
   }
+}
+.descripiton {
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 1px;
 }
 </style>

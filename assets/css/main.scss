@@ -35,3 +35,16 @@
   background-position: center top;
   background-size: 100% auto;
 }
+
+.about-text {
+  padding: 15px;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 768px) {
+  .about-text {
+    font-size: 18px !important;
+  }
+}

@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full max-w-xs md:max-w-lg lg:max-w-4xl mx-auto">
+  <section class="w-full max-w-xs md:max-w-lg lg:max-w-6xl mx-auto">
     <!-- Intro -->
     <section class="mb-2">
       <p class="about-text text-center">
@@ -83,17 +83,5 @@ definePageMeta({
 
 useHead({
   title: 'My App',
-  script: [
-      {
-        src: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js",
-        body: true
-      }
-    ],
-    link: [
-      {
-        rel: "stylesheet",
-        href: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css"
-      }
-    ]
 })
 </script>

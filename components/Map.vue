@@ -27,7 +27,7 @@ import { createApp } from 'vue'
 
 // lifeCicle
 onMounted(() => {
-  navigator.geolocation.watchPosition(successGeolocation, errorGeolocation, {
+  navigator.geolocation.getCurrentPosition(successGeolocation, errorGeolocation, {
     enableHighAccuracy: true,
     timeout:27000
   })
@@ -61,12 +61,9 @@ let showOptions = ref(false)
 
 // methods
 const successGeolocation = async ({ coords }) => {
-  if (map === null) createMapLayer(coords.longitude, coords.latitude)
-  else {
-    map.remove()
+  if (map !== null)  map.remove()
 
-    createMapLayer(coords.longitude, coords.latitude)
-  }
+  createMapLayer(coords.longitude, coords.latitude)
 }
 
 const errorGeolocation = async (value) => {
