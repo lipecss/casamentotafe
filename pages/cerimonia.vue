@@ -36,14 +36,6 @@
     </section>
     <!-- A capela -->
 
-    <div class="flex flex-wrap">
-      <div class="w-full md:-96">
-        <div class="h-80 md:h-96 w-full mx-auto">
-          <Map />
-        </div>
-      </div>
-    </div>
-
     <!-- A Festa -->
     <section class="md:mt-10">
       <h2 class="title text-center place-items-center">Cerimônia religiosa</h2>
@@ -57,22 +49,23 @@
         O salão é um espaço amplo e lindo, decorado com muito bom gosto e estilo. Há uma pista de dança enorme, onde vamos dançar até nossos pés doerem e as músicas vão variar desde as românticas para os momentos mais calmos até as mais agitadas para ninguém ficar parado.
       </p>
 
-      <section class="py-6 md:py-6">
-        <div class="container px-4 mx-auto">
-          <div class="text-center max-w-2xl mx-auto">
-            <div class="mt-4">
-              <img 
-                src="~/assets/img/home_felipe_tatiana.jpg"
-                alt="mockup"
-                class="d-block max-w-full rounded shadow-md"
-              >
-            </div>
-          </div>
-          </div>
+      <section class="py-8 px-4">
+        <div class="flex flex-wrap -mx-4">
+          <div class="md:w-1/2 px-4 mb-8 md:mb-0"><img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt=""></div>
+          <div class="md:w-1/2 px-4 mb-8 md:mb-0"><img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt=""></div>
+        </div>
       </section>
 
     </section>
     <!-- A Festa -->
+
+    <div class="flex flex-wrap">
+      <div class="w-full md:-96">
+        <div class="h-80 w-full mx-auto" style="height: 600px;">
+          <Map />
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
