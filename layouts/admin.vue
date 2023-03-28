@@ -48,14 +48,21 @@
             @click="togglePanel">
             <div class="hidden md:flex md:flex-col md:items-end md:leading-tight">
               <span class="font-semibold">{{ currentUser.username }}</span>
-              <span class="capitalize text-sm text-gray-600">{{
+              <span class="capitalize text-sm text-gray-600">
+                <!-- {{
                 currentUser.type
-              }}</span>
+                }} -->
+                <div
+                  v-for="(type, index) in currentUser.type" :key="index"
+                  class="ml-2 text-xs inline-flex items-center leading-sm uppercase px-2 py-0.5 bg-tuscany text-white rounded-full"
+                >
+                  {{ type }}
+                </div>
+              </span>
             </div>
-            <span class="h-12 w-12 ml-2 sm:ml-3 mr-2 bg-gray-100 rounded-full overflow-hidden">
-              <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="user profile photo"
-                class="h-full w-full object-cover" />
-            </span>
+            <div class="ml-2 sm:ml-3 mr-2 relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                <span class="font-medium text-gray-600 dark:text-gray-300">JL</span>
+            </div>
           </button>
 
           <div v-if="cartMenu" id="cartMenuRef" ref="cartMenuRef"
@@ -223,8 +230,8 @@ let canClickOut = ref(false)
 const menuList = reactive([
   { route: "/", name: "home", text: "Inicio" },
   { route: "/dashboard", name: "dashboard", text: "Dashboard" },
-  { route: "/dashboard/profile", name: "dashboard-profile", text: "Perfil" },
   { route: "/dashboard/lojinha", name: "dashboard-lojinha", text: "Lojinha" },
+  { route: "/dashboard/conquistas", name: "dashboard-conquistas", text: "Conquistas" }
 ])
 
 // computed

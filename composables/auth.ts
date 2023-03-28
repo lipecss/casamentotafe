@@ -1,5 +1,7 @@
 export const useAuth = () => {
   let token = useCookie('auth')
+  let user = useCookie('user-store')
+  let cart = useCookie('cart-store')
   const { clearUserStore } = userStore()
   const { fetchApi } = useApi()
   const router = useRouter()
@@ -19,6 +21,8 @@ export const useAuth = () => {
 
       if (!error) {    
         token.value = null
+        user.value = null
+        cart.value = null
         clearUserStore()
         clearCart()
     

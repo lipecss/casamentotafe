@@ -86,8 +86,8 @@ definePageMeta({
 
 // datas
 const form = reactive({
-  email: 'user2@example.com',
-  password: '123456',
+  email: '',
+  password: '',
 })
 
 // computeds
@@ -97,9 +97,11 @@ const isComplete = computed(() => {
 
 // methods
 const onSubmit = async () => {
+  const formCopy = { ...form }
+
   const { data, error } = await fetchApi('/users/authenticate', {
     method: 'POST',
-    body: form
+    body: formCopy
   })
 
   if (!error) {

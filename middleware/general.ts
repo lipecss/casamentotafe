@@ -1,7 +1,12 @@
 export default async function () {
+  const store = statusStore()
   const { fetchApi } = useApi()
 
-  const { data } = await fetchApi('/status')
+  const isEmptyObject = Object.entries(store.status).length === 0
 
-  console.log('status', data)
+  if (isEmptyObject) {
+    const { data, error } = await fetchApi('/status')
+
+    if (!error) store.setStatus(data)
+  }
 }

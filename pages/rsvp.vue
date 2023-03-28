@@ -14,7 +14,7 @@
       <div class="w-full max-w-xs md:max-w-lg lg:max-w-3xl mx-auto">
         <div class="bg-slate-50 shadow-md rounded px-5 pt-5 pb-8 mb-4 my-24">
           <p class="text-center place-items-center">
-            Insira o seu email abaixo.
+            Insira o seu código aqui.
           </p>
 
           <p>
@@ -28,7 +28,7 @@
                   v-model="form.rsvp_code"
                   required
                   class="form-select block mt-1 uppercase py-2 px-4 text-base text-gray-700 bg-transparent border border-gray-400 appearance-none focus:outline-none focus:shadow-outline w-full"
-                  placeholder="Informe o seu e-mail"
+                  placeholder="Informe o seu código"
                   @keydown="onChangeRsvpCode($event)"
                 >
               </div>
