@@ -57,6 +57,7 @@ export default defineNuxtConfig({
     dirs: ['stores'],
   },
   modules: [
+    '@nuxtjs/robots',
     '@nuxt/devtools',
     '@nuxt/image-edge',
     '@nuxtjs/tailwindcss',
@@ -67,7 +68,7 @@ export default defineNuxtConfig({
       },
     ],
     '@pinia-plugin-persistedstate/nuxt',
-    ['@funken-studio/sitemap-nuxt-3', { generateOnBuild: true }],
+    ['@funken-studio/sitemap-nuxt-3', { generateOnBuild: true }]
   ],
   image: {
     dir: 'public'
