@@ -157,15 +157,25 @@
 </template>
 
 <script setup>
+const config = useRuntimeConfig()
+
 definePageMeta({
   middleware: ['general']
 })
 
+// computeds
+const meta = computed(() => {
+  const metaData = {
+    title: 'article',
+    url: config.baseUrl,
+    mainImage: 'https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/home_felipe_tatiana.jpg'
+  }
+
+  return getSiteMeta(metaData)
+})
+
 useHead({
-  title: 'My App',
-  meta: [
-    { name: 'description', content: 'My amazing site.' }
-  ]
+  meta: [ ...meta.value ]
 })
 
 // datas

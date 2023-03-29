@@ -9,18 +9,12 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'pt-BR'
       },
-      title: 'Bem-vindo ao site do casamento de Tatiana e Felipe',
-      titleTemplate: chunk => `${chunk} | aaaaaaaaa`,
+      title: 'Bem-vindo ao site do casamento de Tatiana e Felipe | 06 de agosto de 2023',
       meta: [
         ...meta,
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { property: 'og:site_name', content: 'O site do casamento de Tatiana e Felipe' },
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'O site do casamento de Tatiana e Felipe'
-        },
         { property: 'og:image:width', content: '740' },
         { property: 'og:image:height', content: '300' },
         { name: 'format-detection', content: 'telephone=no' },
@@ -44,6 +38,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
+      baseUrl: 'http://localhost:3000',
       apiBaseUrl: 'http://localhost:5000',
       pixKey: 'contato@casamentotafe.com',
       mapboxKey: 'pk.eyJ1IjoiZmVsaXBlY3NzIiwiYSI6ImNsZmc0ZjczZTA0azMzcXMzYTBnaXFzYjcifQ.QWiOGCNiz6IdYZuXct4A-w'

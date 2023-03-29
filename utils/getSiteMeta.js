@@ -1,12 +1,13 @@
 const type = 'website'
 const url = 'https://myUrl.com'
 const title = 'lorem title'
-const description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum orci non molestie sodales. Donec vestibulum libero quis libero condimentum lacinia. Aliquam viverra enim volutpat purus pharetra pellentesque. Fusce velit enim, dignissim non leo vel, ullamcorper commodo enim. Donec lacinia nisi in mauris pharetra, non lacinia leo porta. Cras sit.'
+const description = 'Bem-vindos ao nosso cantinho virtual! Aqui vocês encontrarão todas as informações sobre o casamento mais aguardado do ano: o nosso! Somos Felipe e Tatiana, e estamos vivendo um conto de fadas que só poderia ter um final feliz: o nosso casamento! Queremos compartilhar com vocês todos os detalhes desse momento mágico e inesquecível das nossas vidas. Preparem-se para uma celebração cheia de amor, alegria, música, dança e muitas surpresas. Nosso amor transborda e queremos que vocês façam parte desse momento tão especial. Vamos celebrar juntos!'
 const mainImage = '/a-lovely-image.png'
 const twitterSite = ''
 const twitterCard = 'summary_large_image'
 
 export default (meta) => {
+  console.log('(meta && meta.description)', !!(meta && meta.description))
   return [
     {
       hid: 'description',
