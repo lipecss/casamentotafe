@@ -49,14 +49,21 @@
                 class="shadow-md"
                 src="https://source.unsplash.com/random/1280x720"
                 alt=""
-                width="100%"
-                height="500"
-                layout="responsive"
-                sizes="sm:100vw md:50vw lg:400px"
+                width="692"
+                height="270"
+                sizes="sm:100vw md:100vw lg:100vw"
               />
             </div>
             <div>
-              <nuxt-img format="webp" class="shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+              <nuxt-img 
+                format="webp"
+                class="shadow-md"
+                src="https://source.unsplash.com/random/1280x720"
+                alt=""
+                width="692"
+                height="270"
+                sizes="sm:100vw md:100vw lg:100vw"
+              />
             </div>
           </div>
         </div>
@@ -79,6 +86,9 @@
               class="shadow-md"
               src="https://source.unsplash.com/random/1280x720"
               alt=""
+              width="692"
+              height="270"
+              sizes="sm:100vw md:100vw lg:100vw"
             />
           </div>
 
@@ -106,6 +116,9 @@
               class="shadow-md"
               src="https://source.unsplash.com/random/1280x720"
               alt=""
+              width="692"
+              height="270"
+              sizes="sm:100vw md:100vw lg:100vw"
             />
           </div>
         </div>

@@ -27,7 +27,15 @@
       <section class="md:py-8 px-4">
         <div class="flex flex-wrap -mx-4">
           <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
-            <img class="shadow-md" src="https://source.unsplash.com/random/1280x720" alt="">
+            <nuxt-img
+              format="webp"
+              class="shadow-md"
+              src="https://source.unsplash.com/random/1280x720"
+              alt=""
+              width="692"
+              height="270"
+              sizes="sm:100vw md:100vw lg:100vw"
+            />
           </div>
           <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
             <p class="about-text" style="padding-top: 0 !important;">
@@ -42,12 +50,39 @@
 
       <section class="pt-8 px-4">
         <div class="flex flex-wrap -mx-4">
-          <div class="md:w-1/3 px-4 mb-8"><img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720"
-              alt=""></div>
-          <div class="md:w-1/3 px-4 mb-8"><img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720"
-              alt=""></div>
-          <div class="md:w-1/3 px-4 mb-8"><img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720"
-              alt=""></div>
+          <div class="md:w-1/3 px-4 mb-8">
+            <nuxt-img
+              format="webp" 
+              class="rounded shadow-md"
+              src="https://source.unsplash.com/random/1280x720"
+              alt=""
+              width="692"
+              height="270"
+              sizes="sm:100vw md:100vw lg:100vw"
+            />
+          </div>
+          <div class="md:w-1/3 px-4 mb-8">
+            <nuxt-img
+              format="webp" 
+              class="rounded shadow-md"
+              src="https://source.unsplash.com/random/1280x720"
+              alt=""
+              width="692"
+              height="270"
+              sizes="sm:100vw md:100vw lg:100vw"
+            />
+          </div>
+          <div class="md:w-1/3 px-4 mb-8">
+            <nuxt-img
+              format="webp"
+              class="rounded shadow-md"
+              src="https://source.unsplash.com/random/1280x720"
+              alt=""
+              width="692"
+              height="270"
+              sizes="sm:100vw md:100vw lg:100vw"
+            />
+          </div>
         </div>
       </section>
     </section>
@@ -71,10 +106,28 @@
 
       <section class="py-8 px-4">
         <div class="flex flex-wrap -mx-4">
-          <div class="md:w-1/2 px-4 mb-8 md:mb-0"><img class="rounded shadow-md"
-              src="https://source.unsplash.com/random/1280x720" alt=""></div>
-          <div class="md:w-1/2 px-4 mb-8 md:mb-0"><img class="rounded shadow-md"
-              src="https://source.unsplash.com/random/1280x720" alt=""></div>
+          <div class="md:w-1/2 px-4 mb-8 md:mb-0">
+            <nuxt-img
+              format="webp"
+              class="rounded shadow-md"
+              src="https://source.unsplash.com/random/1280x720"
+              alt=""
+              width="692"
+              height="270"
+              sizes="sm:100vw md:100vw lg:100vw"
+            />
+          </div>
+          <div class="md:w-1/2 px-4 mb-8 md:mb-0">
+            <nuxt-img
+              format="webp"
+              class="rounded shadow-md"
+              src="https://source.unsplash.com/random/1280x720"
+              alt=""
+              width="692"
+              height="270"
+              sizes="sm:100vw md:100vw lg:100vw"
+            />
+          </div>
         </div>
       </section>
     </section>
@@ -97,18 +150,5 @@ definePageMeta({
 
 useHead({
   title: 'My App',
-  script: [
-    {
-      src: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js",
-      body: true
-    }
-  ],
-  link: [
-    {
-      rel: "stylesheet",
-      href: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css",
-      body: true
-    }
-  ]
 })
 </script>
