@@ -10,19 +10,19 @@
       <div class="hidden md:block">
         <NuxtLink 
           v-for="(menu, index) in menuList" :key="index" 
-          :to="menu.path" class="px-2 text-gray-400 hover:text-tuscany">
+          :to="menu.path" class="px-2 text-gray-700 hover:text-tuscany">
           {{ menu.text }}
         </NuxtLink>
 
         <NuxtLink
           v-if="!isAuthenticated"
-          to="/login" class="px-2 text-gray-400 hover:text-tuscany">
+          to="/login" class="px-2 text-gray-700 hover:text-tuscany">
           Logar
         </NuxtLink>      
 
         <NuxtLink
           v-else
-          to="/dashboard" class="px-2 text-gray-400 hover:text-tuscany">
+          to="/dashboard" class="px-2 text-gray-700 hover:text-tuscany">
           Dashboard
         </NuxtLink>    
       </div>
@@ -32,8 +32,8 @@
           type="button"
           class="
           text-gray-800
-          hover:text-gray-400
-          focus:outline-none focus:text-gray-400
+          hover:text-gray-700
+          focus:outline-none focus:text-gray-700
           "
         >
         <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
@@ -51,21 +51,21 @@
       :class="showMenu ? 'flex' : 'hidden'"
       class="md:hidden flex-col mt-8 space-y-4 flex items-center">
         <li v-for="(menu, index) in menuList" :key="index">
-          <NuxtLink :to="menu.path" class="px-2 text-gray-400 hover:text-tuscany">
+          <NuxtLink :to="menu.path" class="px-2 text-gray-700 hover:text-tuscany">
             {{ menu.text }}
           </NuxtLink>   
         </li>
 
         <li v-if="!isAuthenticated">
           <NuxtLink
-            to="/login" class="px-2 text-gray-400 hover:text-tuscany">
+            to="/login" class="px-2 text-gray-700 hover:text-tuscany">
             Logar
           </NuxtLink>   
         </li>
 
         <li v-else>
           <NuxtLink
-          to="/dashboard" class="px-2 text-gray-400 hover:text-tuscany">
+          to="/dashboard" class="px-2 text-gray-700 hover:text-tuscany">
           Dashboard
         </NuxtLink>   
         </li>

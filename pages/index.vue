@@ -47,7 +47,7 @@
   <section>
     <div class="flex items-center justify-center pt-10">
       <button
-        class="text-center place-items-center text-dark bg-tuscany hover:bg-pastel-pink rounded-lg text-sm px-5 py-2.5 mb-2 lg:w-80"
+        class="text-center place-items-center text-white bg-gray-800 hover:bg-gray-700 rounded-lg text-sm px-5 py-2.5 mb-2 lg:w-80"
         @click="goToRsvpRoute"
         title="Confirmar presença"
         >
