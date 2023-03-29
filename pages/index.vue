@@ -5,7 +5,7 @@
         format="webp"
         class="w-full h-full object-cover bg-fixed bg-no-repeat bg-center"
         title="Felipe e Taina cover image"
-        src="/cover-image.jpg"
+        src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/cover-image.jpg"
         alt="Felipe e Taina hero image"
         width="1200"
         height="800"
@@ -145,7 +145,7 @@
         <div class="mt-4">
           <NuxtImg 
             format="webp"
-            src="/home_felipe_tatiana.jpg"
+            src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/home_felipe_tatiana.jpg"
             alt="mockup"
             class="d-block max-w-full rounded shadow-md"
             sizes="sm:100vw"
