@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import getSiteMeta from './utils/getSiteMeta'
 
-// const meta = getSiteMeta()
+const meta = getSiteMeta()
 
 export default defineNuxtConfig({
   app: {
@@ -11,6 +11,7 @@ export default defineNuxtConfig({
       },
       title: 'Bem-vindo ao site do casamento de Tatiana e Felipe | 06 de agosto de 2023',
       meta: [
+        ...meta,
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { property: 'og:site_name', content: 'O site do casamento de Tatiana e Felipe' },
@@ -22,18 +23,18 @@ export default defineNuxtConfig({
       ],
       script: [
         {
-          src: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js",
+          src: 'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js',
           body: true
         },
-        {
-          hid: 'getSiteMeta',
-          innerHTML: `window.getSiteMeta = ${getSiteMeta.toString()}`
-        }
+        // {
+        //   hid: 'getSiteMeta',
+        //   innerHTML: `window.getSiteMeta = ${getSiteMeta.toString()}`
+        // }
       ],
       link: [
         {
-          rel: "stylesheet",
-          href: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css",
+          rel: 'stylesheet',
+          href: 'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css',
           body: true
         }
       ]
@@ -73,6 +74,7 @@ export default defineNuxtConfig({
   },
   plugins: [
     '~/plugins/vg-countdown.js',
-    { src: "@/plugins/aos", mode: "client" }
+    { src: '@/plugins/aos', mode: 'client' },
+    { src: '@/plugins/meta', mode: 'client' }
   ]
 })
