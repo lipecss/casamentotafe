@@ -90,8 +90,8 @@
 
     <!-- A Festa -->
     <section class="md:mt-10">
-      <h2 class="title text-center place-items-center">Cerimônia religiosa</h2>
-      <p class="pb-3 text-center place-items-center">A capela</p>
+      <h2 class="title text-center place-items-center">Hora do puts puts</h2>
+      <p class="pb-3 text-center place-items-center">O salão</p>
 
       <p class="about-text">
         Ah, o salão de festas! É o lugar onde a festa realmente começa e onde vamos celebrar a união do nosso amor com
@@ -133,9 +133,14 @@
     </section>
     <!-- A Festa -->
 
-    <div class="flex flex-wrap">
+    <div class="w-full md:mt-10">
+    <div class="text-center place-items-center">
+      <h2 class="title">Localização</h2>
+        <p class="pb-3">Se ache no mapa</p>
+    </div>
+
       <div class="w-full md:-96">
-        <div class="h-80 w-full mx-auto" style="height: 600px;">
+        <div class="h-80 w-full mx-auto mt-6" style="height: 600px;">
           <Map />
         </div>
       </div>

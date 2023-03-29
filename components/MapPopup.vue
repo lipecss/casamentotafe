@@ -5,10 +5,12 @@
     </div>
 
     <nuxt-link 
-      to="https://www.google.com/maps/place/Monte+Millazzo/@-23.3755959,-46.308824,18z/data=!4m6!3m5!1s0x94ce874fda6a0f9b:0x8fc9c9bfdc4e6eaa!8m2!3d-23.3760606!4d-46.3085915!16s%2Fg%2F11js2nxqbx"
+      :to="urlLocation"
       target="_blank"
       >
-      <span class="text-sm text-gray-900">Rua Paulo Antônio, R. Paulo A Barbosa, 290 - Jardim Aruja, Arujá - SP, 07407-375</span>
+      <span class="text-sm text-gray-900">
+        {{ address }}
+      </span>
     </nuxt-link>x
 
     <p class="mt-2 text-gray-600 text-justify">
@@ -21,6 +23,8 @@
 // props
 const props = defineProps({ 
   title: { type: String, default: 'Monte Millazzo' },
+  urlLocation: { type: String, default: 'https://www.google.com/maps/place/Monte+Millazzo/@-23.3755959,-46.308824,18z/data=!4m6!3m5!1s0x94ce874fda6a0f9b:0x8fc9c9bfdc4e6eaa!8m2!3d-23.3760606!4d-46.3085915!16s%2Fg%2F11js2nxqbx' },
+  address: { type: String, default: '' },
   description: { type: String, default: '' }
 })
 </script>
