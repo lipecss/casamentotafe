@@ -66,7 +66,8 @@ export default defineNuxtConfig({
         autoImports: ['defineStore', 'definePiniaStore', 'acceptHMRUpdate'],
       },
     ],
-    '@pinia-plugin-persistedstate/nuxt'
+    '@pinia-plugin-persistedstate/nuxt',
+    ['@funken-studio/sitemap-nuxt-3', { generateOnBuild: true }],
   ],
   image: {
     dir: 'public'
