@@ -55,6 +55,9 @@ export default defineNuxtConfig({
     ],
     '@pinia-plugin-persistedstate/nuxt'
   ],
+  image: {
+    dir: 'public'
+  },
   plugins: [
     '~/plugins/vg-countdown.js',
     { src: "@/plugins/aos", mode: "client" }
