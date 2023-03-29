@@ -3,7 +3,15 @@
     <div class="text-center place-items-center">
       <h2 class="title">Coisas da casa nova</h2>
 
-      <img class="mx-auto mb-6" width="150" src="/rosa.png" alt="Seprador" title="Separador"/>
+      <img 
+        class="mx-auto mb-6"
+        width="150"
+        src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/rosa.png"
+        alt="Seprador"
+        title="Separador"
+        height="270"
+        sizes="sm:100vw md:100vw lg:100vw"
+      />
 
       <p class="about-text text-space-10">Queridos familiares e amigos, para nós, a presença de vocês neste dia tão especial é o maior presente que poderíamos receber. </p>
 
