@@ -3,7 +3,7 @@
     <div class="text-center place-items-center">
       <h2 class="title">Coisas da casa nova</h2>
 
-      <img class="mx-auto mb-6" width="150" src="~/assets/img/rosa.png" alt="Seprador" title="Separador"/>
+      <img class="mx-auto mb-6" width="150" src="/rosa.png" alt="Seprador" title="Separador"/>
 
       <p class="about-text text-space-10">Queridos familiares e amigos, para nós, a presença de vocês neste dia tão especial é o maior presente que poderíamos receber. </p>
 
