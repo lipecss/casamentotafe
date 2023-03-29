@@ -43,10 +43,9 @@ const meta = computed(() => {
   return getSiteMeta(metaData)
 })
 
-console.log('meta.value', [meta.value])
 
 useHead({
-  meta: [...meta.value]
+  meta: () => [...meta.value]
 })
 
 // datas

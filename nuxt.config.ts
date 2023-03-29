@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import getSiteMeta from './utils/getSiteMeta'
 
-const meta = getSiteMeta()
+// const meta = getSiteMeta()
 
 export default defineNuxtConfig({
   app: {
@@ -11,7 +11,6 @@ export default defineNuxtConfig({
       },
       title: 'Bem-vindo ao site do casamento de Tatiana e Felipe | 06 de agosto de 2023',
       meta: [
-        ...meta,
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { property: 'og:site_name', content: 'O site do casamento de Tatiana e Felipe' },
