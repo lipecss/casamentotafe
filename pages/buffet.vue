@@ -74,7 +74,12 @@
       <section class="py-8 px-4">
         <div class="flex flex-wrap -mx-4">
           <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
-            <nuxt-img format="webp" class="shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+            <nuxt-img 
+              format="webp"
+              class="shadow-md"
+              src="https://source.unsplash.com/random/1280x720"
+              alt=""
+            />
           </div>
 
           <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
@@ -96,7 +101,12 @@
             </p>
           </div>
           <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
-            <nuxt-img format="webp" class="shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+            <nuxt-img
+              format="webp"
+              class="shadow-md"
+              src="https://source.unsplash.com/random/1280x720"
+              alt=""
+            />
           </div>
         </div>
       </section>
@@ -126,7 +136,7 @@
       <nuxt-img
         format="webp"
         class="mx-auto my-10"
-        src="/separador2.png"
+        src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/separador.png"
         alt="Separador"
         title="Separador"
         width="692"

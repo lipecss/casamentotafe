@@ -131,7 +131,7 @@
   <NuxtImg
     format="webp"
     class="mx-auto mt-10 block max-w-full md:max-w-lg h-full"
-    src="/separador2.png"
+    src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/separador.png"
     alt="Separador"
     title="Separador"
     width="512"

@@ -73,7 +73,7 @@
     <div class="hidden sm:block fixed right-0 top-60">
       <nuxt-img
         format="webp"
-        src="/lateral-rosa.png"
+        src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/lateral-rosa.png"
         alt="Right garland"
         title="Right garland"
         width="117"
