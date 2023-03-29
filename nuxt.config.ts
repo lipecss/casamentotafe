@@ -26,18 +26,6 @@ export default defineNuxtConfig({
         { name: 'format-detection', content: 'telephone=no' },
         { name: 'twitter:site', content: '@felipecss' },
         { name: 'twitter:card', content: 'summary_large_image' }
-      ],
-      script: [
-        {
-            src: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js",
-            body: true
-        }
-      ],
-      link: [
-        {
-          rel: "stylesheet",
-          href: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css"
-        }
       ]
     }
   },
@@ -57,6 +45,7 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxt/devtools',
+    '@nuxt/image-edge',
     '@nuxtjs/tailwindcss',
     [
       '@pinia/nuxt',

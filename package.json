@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@mapbox/mapbox-gl-directions": "^4.1.1",
+    "@nuxt/image-edge": "^1.0.0-28001428.0aa03b6",
     "@nuxtjs/dotenv": "^1.4.1",
     "@pinia/nuxt": "^0.4.7",
     "@vemlavaraloucagamers/vg-countdown": "^2.0.1",

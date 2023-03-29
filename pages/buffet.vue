@@ -44,10 +44,19 @@
           </div>
           <div class="md:w-1/2 h-auto px-4">
             <div class="mb-8">
-              <img class="shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+              <nuxt-img 
+                format="webp"
+                class="shadow-md"
+                src="https://source.unsplash.com/random/1280x720"
+                alt=""
+                width="100%"
+                height="500"
+                layout="responsive"
+                sizes="sm:100vw md:50vw lg:400px"
+              />
             </div>
             <div>
-              <img class="shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+              <nuxt-img format="webp" class="shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
             </div>
           </div>
         </div>
@@ -65,7 +74,7 @@
       <section class="py-8 px-4">
         <div class="flex flex-wrap -mx-4">
           <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
-            <img class="shadow-md" src="https://source.unsplash.com/random/1280x720" alt="">
+            <nuxt-img format="webp" class="shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
           </div>
 
           <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
@@ -87,7 +96,7 @@
             </p>
           </div>
           <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
-            <img class="shadow-md" src="https://source.unsplash.com/random/1280x720" alt="">
+            <nuxt-img format="webp" class="shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
           </div>
         </div>
       </section>
@@ -114,7 +123,16 @@
         gostos e paladares. Aqui está o nosso menu para que você possa salivar junto com a gente:
       </p>
 
-      <img class="mx-auto my-10" src="~/assets/img/separador2.png" alt="Separador" title="Separador" style="height: 190px;" />
+      <nuxt-img
+        format="webp"
+        class="mx-auto my-10"
+        src="/separador2.png"
+        alt="Separador"
+        title="Separador"
+        width="692"
+        height="270"
+        sizes="sm:100vw md:100vw lg:100vw"
+      />
 
       <div class="px-4">
         <div class="grid grid-cols-2 gap-4 py-5">

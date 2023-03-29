@@ -14,11 +14,14 @@
       <p class="pb-3 text-center place-items-center">A capela</p>
 
       <p class="about-text">
-        A capela do Monte Millazzo é um lugar verdadeiramente mágico e inspirador. É um espaço muito especial, a aprenta ter sido construído com muito amor e cuidado pela equipe que administra o local.
+        A capela do Monte Millazzo é um lugar verdadeiramente mágico e inspirador. É um espaço muito especial, a aprenta
+        ter sido construído com muito amor e cuidado pela equipe que administra o local.
       </p>
 
       <p class="about-text">
-        Ao entrar na capela, é fácil se sentir imediatamente envolvido por uma atmosfera de paz e tranquilidade. As paredes de pedra, os vitrais coloridos e os bancos de madeira criam um ambiente acolhedor e íntimo, perfeito para esse nosso momento.
+        Ao entrar na capela, é fácil se sentir imediatamente envolvido por uma atmosfera de paz e tranquilidade. As
+        paredes de pedra, os vitrais coloridos e os bancos de madeira criam um ambiente acolhedor e íntimo, perfeito para
+        esse nosso momento.
       </p>
 
       <section class="md:py-8 px-4">
@@ -28,7 +31,10 @@
           </div>
           <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
             <p class="about-text" style="padding-top: 0 !important;">
-              O teto alto da capela é sustentado por pilares de madeira maciça, que adicionam uma sensação de grandiosidade e solidez ao espaço. A luz natural que entra pelos vitrais coloridos, combinada com o som suave da natureza ao redor, cria um ambiente sereno e inspirador que é perfeito para a cerimônia do casamento.
+              O teto alto da capela é sustentado por pilares de madeira maciça, que adicionam uma sensação de
+              grandiosidade e solidez ao espaço. A luz natural que entra pelos vitrais coloridos, combinada com o som
+              suave da natureza ao redor, cria um ambiente sereno e inspirador que é perfeito para a cerimônia do
+              casamento.
             </p>
           </div>
         </div>
@@ -36,9 +42,12 @@
 
       <section class="pt-8 px-4">
         <div class="flex flex-wrap -mx-4">
-          <div class="md:w-1/3 px-4 mb-8"><img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt=""></div>
-          <div class="md:w-1/3 px-4 mb-8"><img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt=""></div>
-          <div class="md:w-1/3 px-4 mb-8"><img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt=""></div>
+          <div class="md:w-1/3 px-4 mb-8"><img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720"
+              alt=""></div>
+          <div class="md:w-1/3 px-4 mb-8"><img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720"
+              alt=""></div>
+          <div class="md:w-1/3 px-4 mb-8"><img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720"
+              alt=""></div>
         </div>
       </section>
     </section>
@@ -50,17 +59,22 @@
       <p class="pb-3 text-center place-items-center">A capela</p>
 
       <p class="about-text">
-        Ah, o salão de festas! É o lugar onde a festa realmente começa e onde vamos celebrar a união do nosso amor com nossos amigos e familiares.
+        Ah, o salão de festas! É o lugar onde a festa realmente começa e onde vamos celebrar a união do nosso amor com
+        nossos amigos e familiares.
       </p>
 
       <p class="about-text">
-        O salão é um espaço amplo e lindo, decorado com muito bom gosto e estilo. Há uma pista de dança enorme, onde vamos dançar até nossos pés doerem e as músicas vão variar desde as românticas para os momentos mais calmos até as mais agitadas para ninguém ficar parado.
+        O salão é um espaço amplo e lindo, decorado com muito bom gosto e estilo. Há uma pista de dança enorme, onde vamos
+        dançar até nossos pés doerem e as músicas vão variar desde as românticas para os momentos mais calmos até as mais
+        agitadas para ninguém ficar parado.
       </p>
 
       <section class="py-8 px-4">
         <div class="flex flex-wrap -mx-4">
-          <div class="md:w-1/2 px-4 mb-8 md:mb-0"><img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt=""></div>
-          <div class="md:w-1/2 px-4 mb-8 md:mb-0"><img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt=""></div>
+          <div class="md:w-1/2 px-4 mb-8 md:mb-0"><img class="rounded shadow-md"
+              src="https://source.unsplash.com/random/1280x720" alt=""></div>
+          <div class="md:w-1/2 px-4 mb-8 md:mb-0"><img class="rounded shadow-md"
+              src="https://source.unsplash.com/random/1280x720" alt=""></div>
         </div>
       </section>
     </section>
@@ -83,5 +97,18 @@ definePageMeta({
 
 useHead({
   title: 'My App',
+  script: [
+    {
+      src: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js",
+      body: true
+    }
+  ],
+  link: [
+    {
+      rel: "stylesheet",
+      href: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css",
+      body: true
+    }
+  ]
 })
 </script>

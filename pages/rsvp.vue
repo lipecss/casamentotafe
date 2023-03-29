@@ -71,8 +71,16 @@
     </div>
 
     <div class="hidden sm:block fixed right-0 top-60">
-      <img src="https://images.zola.com/5d5bd448-8081-450b-ab17-8061a10589c9" alt="Right garland" title="Right garland"
-        width="117" class="">
+      <nuxt-img
+        format="webp"
+        src="/lateral-rosa.png"
+        alt="Right garland"
+        title="Right garland"
+        width="117"
+        height="500"
+        layout="responsive"
+        sizes="sm:100vw md:50vw lg:400px"
+      />
     </div>
   </div>
 

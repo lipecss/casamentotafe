@@ -5,13 +5,13 @@
     <div v-if="showOptions" id="menu" class="z-40" style="top: 3em;">
       <div class="mapboxgl-ctrl mapboxgl-ctrl-group mb-5">
         <button @click="flysToChurch" title="Go to church" :disabled="!canFlyTo">
-          <img class="mx-auto" src="https://cdn-icons-png.flaticon.com/512/345/345811.png" width="24" alt="">
+          <NuxtImg format="webp" class="mx-auto" src="https://cdn-icons-png.flaticon.com/512/345/345811.png" width="24" alt="" />
         </button>
       </div>
 
       <div class="mapboxgl-ctrl mapboxgl-ctrl-group">
         <button @click="toggleMapDirections" title="Show directions">
-          <img class="mx-auto" src="https://cdn-icons-png.flaticon.com/512/879/879677.png" width="24" alt="">
+          <NuxtImg format="webp" class="mx-auto" src="https://cdn-icons-png.flaticon.com/512/879/879677.png" width="24" alt="" />
         </button>
       </div>
       

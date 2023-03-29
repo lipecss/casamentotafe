@@ -1,10 +1,14 @@
 <template>
   <section class="hero container max-w-screen-lg mx-auto py-10">
-    <img 
+    <NuxtImg
+      format="webp"
       class="mx-auto md:w-3/5"
-      src="~/assets/img/separador.png"
-      alt="Seprador"
+      src="/separador.png"
+      alt="Separador"
       title="Separador"
+      width="615"
+      height="70"
+      sizes="sm:100vw md:100vw lg:100vw"
     />
   </section>
 </template>

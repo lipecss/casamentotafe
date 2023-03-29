@@ -1,8 +1,16 @@
 <template>
   <section class="relative bg-gray-800" style="margin-top: -55px; height: 700px;">
     <div class="absolute inset-0">
-      <img class="w-full h-full object-cover bg-fixed bg-no-repeat bg-center" title="Felipe e Taina cover image"
-        src="~/assets/img/cover-image.jpg" alt="Felipe e Taina hero image">
+      <NuxtImg
+        format="webp"
+        class="w-full h-full object-cover bg-fixed bg-no-repeat bg-center"
+        title="Felipe e Taina cover image"
+        src="/cover-image.jpg"
+        alt="Felipe e Taina hero image"
+        width="1200"
+        height="800"
+        sizes="sm:100vw md:100vw lg:100vw"
+      />
       <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
     </div>
   </section>
@@ -120,13 +128,28 @@
     </div>
   </section>
 
-  <img class="mx-auto mt-10 block max-w-full md:max-w-lg h-full" src="~/assets/img/separador2.png" alt="Separador" title="Separador" style="height: 190px;" />
+  <NuxtImg
+    format="webp"
+    class="mx-auto mt-10 block max-w-full md:max-w-lg h-full"
+    src="/separador2.png"
+    alt="Separador"
+    title="Separador"
+    width="512"
+    height="200"
+    sizes="sm:100vw md:100vw lg:100vw"
+  />
 
   <section class="py-6 md:py-6">
     <div class="container px-4 mx-auto">
       <div class="text-center max-w-6xl mx-auto">
         <div class="mt-4">
-          <img src="~/assets/img/home_felipe_tatiana.jpg" alt="mockup" class="d-block max-w-full rounded shadow-md">
+          <NuxtImg 
+            format="webp"
+            src="/home_felipe_tatiana.jpg"
+            alt="mockup"
+            class="d-block max-w-full rounded shadow-md"
+            sizes="sm:100vw"
+          />
         </div>
       </div>
     </div>
