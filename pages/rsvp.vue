@@ -1,33 +1,22 @@
 <template>
   <div>
-    <div class="text-center place-items-center">
-      <p class="subtitle mt-12">
-        Confirmação de presença
-      </p>
-
-      <h1 class="text-2xl md:text-2xl font-medium mb-2">
-        Faça parte da nossa história de amor, confirme sua presença.
-      </h1>
-    </div>
-
     <div class="flex justify-center">
       <div class="w-full max-w-xs md:max-w-lg lg:max-w-3xl mx-auto">
-        <div class="bg-slate-50 shadow-md rounded px-5 pt-5 pb-8 mb-4 my-24">
-          <p class="text-center place-items-center">
-            Insira o seu código aqui.
-          </p>
+        <div class="px-5 pt-5 pb-8 mb-4 my-6">
+          <p class="title text-center mb-6">Confirmação de presença</p>
 
-          <p>
+          <p class="text-lg">
             Se estiver respondendo por você e um convidado (ou sua família), você poderá confirmar presença para todo o
             grupo aqui.
           </p>
-          <div class="flex items-center justify-center">
+
+          <div class="flex items-center justify-center mt-2">
             <form class="flex flex-col items-center justify-center" style="width: 300px;" @submit.prevent="onSubmit">
               <div class="w-full my-4">
                 <input 
                   v-model="form.rsvp_code"
                   required
-                  class="form-select block mt-1 uppercase py-2 px-4 text-base text-gray-700 bg-transparent border border-gray-400 appearance-none focus:outline-none focus:shadow-outline w-full"
+                  class="mt-1 uppercase py-2 px-4 text-base bg-transparent border border-tuscany appearance-none focus:outline-none focus:shadow-outline w-full"
                   placeholder="Informe o seu código"
                   @keydown="onChangeRsvpCode($event)"
                 >
@@ -38,12 +27,12 @@
 
                 <div class="flex items-center">
                   <label class="inline-flex items-center">
-                    <input type="radio" class="form-radio h-5 w-5 text-gray-600" name="attend" v-model="form.will_attend"
+                    <input type="radio" class="form-radio bg-transparent h-5 w-5 text-gray-600" name="attend" v-model="form.will_attend"
                       value="true">
                     <span class="ml-2 text-gray-700">Sim</span>
                   </label>
                   <label class="inline-flex items-center ml-6">
-                    <input type="radio" class="form-radio h-5 w-5 text-gray-600" name="attend" v-model="form.will_attend"
+                    <input type="radio" class="form-radio bg-transparent h-5 w-5 text-gray-600" name="attend" v-model="form.will_attend"
                       :value="form.will_attend" required>
                     <span class="ml-2 text-gray-700">Não</span>
                   </label>
@@ -53,7 +42,7 @@
               <div class="flex flex-col md:flex-row md:items-center w-full mb-4">
                 <label class="w-full pr-4 text-gray-700 font-bold">Total de adultos</label>
                 <select v-model="form.guests"
-                  class="form-select block md:w-16 mt-1 py-2 px-4 text-base text-gray-700 bg-transparent border border-gray-400 appearance-none focus:outline-none focus:shadow-outline"
+                  class="form-select block md:w-16 mt-1 py-2 px-4 text-base text-gray-700 bg-transparent border border-tuscany appearance-none focus:outline-none focus:shadow-outline"
                   required>
                   <option :selected="(n - 1) === form.guests" v-for="n in 11" :value="n - 1" :key="n">{{ n - 1 }}</option>
                 </select>
@@ -62,15 +51,17 @@
               <div class="flex flex-col md:flex-row md:items-center w-full mb-6">
                 <label class="w-full pr-4 text-gray-700 font-bold">Total de crianças</label>
                 <select v-model="form.kids"
-                  class="form-select block md:w-16 mt-1 py-2 px-4 text-base text-gray-700 bg-transparent border border-gray-400 appearance-none focus:outline-none focus:shadow-outline"
+                  class="form-select block md:w-16 mt-1 py-2 px-4 text-base text-gray-700 bg-transparent border border-tuscany appearance-none focus:outline-none focus:shadow-outline"
                   required>
                   <option :selected="(n - 1) === form.kids" v-for="n in 11" :value="n - 1" :key="n">{{ n - 1 }}</option>
                 </select>
               </div>
 
               <button
-                class="disabled:opacity-25 text-center place-items-center text-white bg-gray-800 focus:ring-4 focus:ring-gray-300 rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-gray-800 dark:border-gray-700"
-                :disabled="!isFormValid" type="submit">
+              class="disabled:opacity-75 bg-tuscany p-4 w-full rounded-full text-white font-semibold focus:shadow-outline hover:bg-pastel-pink"
+              :disabled="!isFormValid"
+              type="submit"
+              >
                 Confirmar presença
               </button>
             </form>
@@ -114,7 +105,7 @@ const { fetchApi } = useApi()
 let returnType = ref('success')
 let backendMessage = ref('')
 let showModal = ref(false)
-let form = reactive({
+let form = ref({
   rsvp_code: '',
   will_attend: true,
   guests: 0,
@@ -123,14 +114,15 @@ let form = reactive({
 
 // computeds
 const isFormValid = computed(() => {
-  return form.rsvp_code && form.rsvp_code.length === 8
+  return form.value.rsvp_code && form.value.rsvp_code.length === 8 ? true : false
 })
 
 // methods
 const toggleModal = () => {
   showModal.value = !showModal.value
-  backendMessage.value = 'success'
-  form = {
+  returnType.value = 'success'
+
+  form.value = {
     rsvp_code: '',
     will_attend: true,
     guests: 0,
@@ -139,9 +131,11 @@ const toggleModal = () => {
 }
 
 const onSubmit = async () => {
+  const formCopy = { ...form.value }
+
   const { data, error, message } = await fetchApi('/rsvp', { 
     method: 'POST',
-    body: form
+    body: formCopy
   })
 
   if (error) {

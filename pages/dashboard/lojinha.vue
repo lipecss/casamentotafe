@@ -5,11 +5,11 @@
 
       <img class="mx-auto mb-6" width="150" src="~/assets/img/rosa.png" alt="Seprador" title="Separador"/>
 
-      <p class="text-space-10">Queridos familiares e amigos, para nós, a presença de vocês neste dia tão especial é o maior presente que poderíamos receber. </p>
+      <p class="about-text text-space-10">Queridos familiares e amigos, para nós, a presença de vocês neste dia tão especial é o maior presente que poderíamos receber. </p>
 
-      <p class="text-space-10">Mas, se vocês também quiserem nos presentear, separamos algumas opções abaixo.</p>
+      <p class="about-text text-space-10">Mas, se vocês também quiserem nos presentear, separamos algumas opções abaixo.</p>
 
-      <p class="text-space-10">Com amor, Taiana e Felipe.</p>
+      <p class="about-text text-space-10">Com amor, Taiana e Felipe.</p>
     </div>
 
     <section
@@ -31,13 +31,17 @@ definePageMeta({
 })
 
 // datas
-let products = reactive([])
+let products = ref([])
+
+// lifecyle
+onBeforeMount(async () => {
+  const { data, error } = await fetchApi('/products', { method: 'GET' })
+
+  if (!error) products.value = data.products
+})
 
 const { fetchApi } = useApi()
 const { addToCart, removeToCart } = cartStore()
-
-//methods
-const { data, error } = await fetchApi('/products', { method: 'GET' })
 
 // methods
 const addItem = (product) => {
@@ -47,6 +51,4 @@ const addItem = (product) => {
 const emitRemoveItem = (product) => {
   removeToCart(product)
 }
-
-if (!error) products = data.products
 </script>

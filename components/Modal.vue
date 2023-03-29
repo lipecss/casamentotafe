@@ -81,6 +81,6 @@ const emitToggleModal = () => {
 <style lang="scss" scoped>
 .modal-content {
   overflow: auto;
-  max-height: 381px;
+  max-height: 492px;
 }
 </style>

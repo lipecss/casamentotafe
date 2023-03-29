@@ -1,17 +1,24 @@
 <template>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
     <div v-for="(achievement) in achievements" :key="achievement">
-      <div class="bg-white rounded shadow p-4" :class="userHasAchievement(achievement._id)">
-        <h3 class="font-bold text-xl">{{ achievement.name }}</h3>
-        <img :src="achievement.image" alt="Imagem da conquista" class="w-full h-32 object-cover mt-2 mb-4">
-        <p c>{{ achievement.description }}</p>
-
-        <span 
-          v-if="!userHasAchievement(achievement._id)"
-          class="text-yellow-500"
-        >
-          Desbloqueado
-        </span>
+      <div class="bg-white h-full rounded-md" :class="userHasAchievement(achievement._id)">
+        <div class="flex justify-center items-center leading-none">
+          <img
+          :src="achievement.image"
+            alt="pic"
+            class="h-32 w-32 rounded-md shadow-2xl mt-6 transform -translate-y-10 hover:-translate-y-4 transition duration-700"
+          />
+        </div>
+        <div class="p-3 h-full">
+          <h3 class="font-bold my-3">{{ achievement.name }}</h3>
+          <p class="text-gray-600">{{ achievement.description }}</p>
+          <p 
+            v-if="!userHasAchievement(achievement._id)"
+            class="text-yellow-500 my-6"
+          >
+            Desbloqueado
+          </p>
+        </div>
       </div>
     </div>
   </div>

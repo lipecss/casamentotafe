@@ -1,49 +1,55 @@
 <template>
-  <div class="lg:flex bg-white text-slate-900">
-    <div class="lg:w-1/2 ">
-      <div class="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl ">
+  <div class="h-screen flex bg-white text-slate-900 items-center justify-center">
+    <div class="w-screen sm:w-11/12 lg:w-1/2">
+      <div class="px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
         <h2 class="text-center text-4xl font-display font-semibold lg:text-left xl:text-5xl
-        xl:text-bold">
+            xl:text-bold">
           Entrar
         </h2>
 
         <div class="mt-12">
           <form @submit.prevent="onSubmit">
-            <div>
-                <div>
-                  Email Address
-                </div>
-                <input
-                  v-model="form.email"
-                  class="w-full text-lg py-2 rounded border border-tuscany"
-                  type="email"
-                  required
-                  placeholder="Informe seu e-mail"
-                >
+            <label class="font-medium block mb-1 mt-6 text-gray-700">
+              E-mail
+            </label>
+
+            <div class="relative w-full">
+              <input
+                v-model="form.email"
+                class="w-full py-3 px-3 text-lg rounded border border-tuscany"
+                type="text"
+                placeholder="Informe seu e-mail"
+              />
             </div>
 
-            <div class="mt-8">
-                <div>
-                  <div>
-                    Password
-                  </div>
-                </div>
+            <label class="font-medium block mb-1 mt-6 text-gray-700" for="password">
+              Senha
+            </label>
 
-                <input
-                  v-model="form.password"
-                  class="w-full text-lg py-2 rounded border border-tuscany"
-                  type="password"
-                  required
-                  placeholder="Digite sua senha"
+            <div class="relative w-full">
+              <div class="absolute inset-y-0 right-0 flex items-center px-2">
+                <input class="hidden js-password-toggle" id="toggle" type="checkbox" />
+                <label
+                  class="bg-tuscany hover:bg-gray-400 rounded px-2 py-1 text-sm text-white font-mono cursor-pointer js-password-label"
+                  for="toggle"
+                  @click="toggleShowPassword"
                 >
-            </div>
+                  {{ showPasswordText }}
+                </label>
+              </div>
 
+              <input
+                v-model="form.password"
+                class="w-full py-3 px-3 text-lg rounded border border-tuscany"
+                :type="passwordInputType"
+                placeholder="Informe sua senha"
+                autocomplete="off"/>
+            </div>
+ 
             <div class="mt-10">
-              <button 
+              <button
                 class="disabled:opacity-25 bg-tuscany p-4 w-full rounded-full text-white font-semibold focus:shadow-outline hover:bg-pastel-pink"
-                type="submit"
-                :disabled="!isComplete"
-                >
+                type="submit" :disabled="!isComplete">
                 Entrar
               </button>
             </div>
@@ -52,10 +58,11 @@
       </div>
     </div>
 
-    <div class="hidden lg:flex items-center justify-center relative bg-tuscany flex-1 h-screen" style="border-radius: 130px 0 0 130px;">
+    <div class="hidden lg:flex items-center justify-center relative bg-tuscany flex-1 h-screen"
+      style="border-radius: 130px 0 0 130px;">
       <div class="overlay"></div>
 
-      <NuxtLink to="/" class="bt-back">Voltar ao Início</NuxtLink>
+      <NuxtLink to="/" class="cursor-pointer bt-back">Voltar ao Início</NuxtLink>
 
       <img 
         class="image"
@@ -73,7 +80,6 @@ import { useRouter } from 'vue-router'
 const store = userStore()
 
 const router = useRouter()
-// const userCookie = useCookie('userInfo')
 const cookie = useCookie('auth')
 
 const { fetchApi } = useApi()
@@ -89,10 +95,22 @@ const form = reactive({
   email: '',
   password: '',
 })
+let showPassword = ref(false)
+let passwordInputType = ref('password')
 
 // computeds
 const isComplete = computed(() => {
   return Object.values(form).every(val => val)
+})
+
+const showPasswordText = computed(() => {
+  return showPassword.value ? 'esconder' : 'mostrar'
+})
+
+// watchers 
+watch(showPassword, (value) => {
+  passwordInputType.value = 'password'
+  if (value) passwordInputType.value = 'text'
 })
 
 // methods
@@ -107,7 +125,7 @@ const onSubmit = async () => {
   if (!error) {
     const id = data.data.id
     const token = data.token
-    
+
     //configurando token
     cookie.value = await token
 
@@ -120,8 +138,11 @@ const onSubmit = async () => {
 
     store.setUser(userData)
 
-    router.push({ path: '/dashboard'})
+    router.push({ path: '/dashboard' })
   }
+}
+const toggleShowPassword = () => {
+  showPassword.value = !showPassword.value
 }
 </script>
 

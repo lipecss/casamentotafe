@@ -49,19 +49,17 @@
             <div class="hidden md:flex md:flex-col md:items-end md:leading-tight">
               <span class="font-semibold">{{ currentUser.username }}</span>
               <span class="capitalize text-sm text-gray-600">
-                <!-- {{
-                currentUser.type
-                }} -->
-                <div
-                  v-for="(type, index) in currentUser.type" :key="index"
-                  class="ml-2 text-xs inline-flex items-center leading-sm uppercase px-2 py-0.5 bg-tuscany text-white rounded-full"
-                >
+                <div v-for="(type, index) in currentUser.type" :key="index"
+                  class="ml-2 text-xs inline-flex items-center leading-sm uppercase px-2 py-0.5 bg-tuscany text-white rounded-full">
                   {{ type }}
                 </div>
               </span>
             </div>
-            <div class="ml-2 sm:ml-3 mr-2 relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
-                <span class="font-medium text-gray-600 dark:text-gray-300">JL</span>
+            <div
+              class="ml-2 sm:ml-3 mr-2 relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+              <span class="font-medium text-gray-600 dark:text-gray-300">
+                {{ initials(currentUser.username) }}
+              </span>
             </div>
           </button>
 
@@ -126,11 +124,8 @@
         </div>
 
         <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-        <div 
-          :class="menu ? 'flex' : 'hidden'"
-          class="md:hidden text-gray-500 bg-koamaru absolute"
-          style="top: 80px; left: 0; right: 0;"
-          >
+        <div :class="menu ? 'flex' : 'hidden'" class="z-50 md:hidden text-gray-500 bg-koamaru absolute"
+          style="top: 80px; left: 0; right: 0;">
           <nav class="grid my-6 space-y-4">
             <NuxtLink v-for="(item, index) in menuList" :key="index" :to="item.route"
               class="inline-flex items-center py-3 rounded-lg px-2" :class="{
@@ -173,7 +168,6 @@
     </div>
   </div>
 
-
   <Modal :show="showModal" :show-actions="false" @toggle-modal="toggleModal">
     <h2>Muito obrigado pelo presente!</h2>
 
@@ -181,11 +175,12 @@
       <img :src="pixImage" class="w-full mx-auto" style="width: 370px" alt="Código pix" title="Código pix" />
 
       <button
-        class="inline-flex items-center font-bold bg-gray-200 px-6 py-2 bold text-koamaru border border-koamaru rounded"
+        class="inline-flex items-center font-bold bg-gray-200 active:bg-sky-100 px-6 py-2 bold text-koamaru border border-koamaru rounded"
         @click="copyPixCode">
-        Copiar código QR
 
-        <svg class="h-8 w-8 text-back-500" width="16" height="24" viewBox="0 0 24 24" stroke-width="2"
+        {{ pixMessage }}
+
+        <svg v-if="canCopy" class="h-8 w-8 text-back-500" width="16" height="24" viewBox="0 0 24 24" stroke-width="2"
           :stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" />
           <rect x="8" y="8" width="12" height="12" rx="2" />
@@ -202,14 +197,16 @@
 </template>
 
 <script setup>
-import { storeToRefs } from "pinia"
-import useDetectOutsideClick from "@/composables/useDetectOutsideClick"
-import generateCode from "@/composables/generatePix"
+import { storeToRefs } from 'pinia'
+import useDetectOutsideClick from '@/composables/useDetectOutsideClick'
+import generateCode from '@/composables/generatePix'
 
 const route = useRoute()
 const { currentUser } = userStore()
 const { logout } = useAuth()
+const auth = useCookie('auth')
 const some = cartStore()
+const { fetchApi } = useApi()
 
 const { removeToCart, clearCart } = some
 
@@ -217,21 +214,23 @@ const { totalItems, cartList, totalValue } = storeToRefs(some)
 
 // datas
 let panel = ref(false)
-const svgColor = ref("#566584")
-const currentColor = ref("#2E3C5C")
+const svgColor = ref('#566584')
+const currentColor = ref('#2E3C5C')
 let menu = ref(true)
 let cartMenu = ref(false)
-let pixCode = ref("")
-let pixImage = ref("")
+let pixCode = ref('')
+let pixImage = ref('')
+let canCopy = ref(true)
+let pixMessage = ref('Copiar código QR')
 let showModal = ref(false)
 
 let canClickOut = ref(false)
 
 const menuList = reactive([
-  { route: "/", name: "home", text: "Inicio" },
-  { route: "/dashboard", name: "dashboard", text: "Dashboard" },
-  { route: "/dashboard/lojinha", name: "dashboard-lojinha", text: "Lojinha" },
-  { route: "/dashboard/conquistas", name: "dashboard-conquistas", text: "Conquistas" }
+  { route: '/', name: 'home', text: 'Inicio' },
+  { route: '/dashboard', name: 'dashboard', text: 'Dashboard' },
+  { route: '/dashboard/lojinha', name: 'dashboard-lojinha', text: 'Lojinha' },
+  { route: '/dashboard/conquistas', name: 'dashboard-conquistas', text: 'Conquistas' }
 ])
 
 // computed
@@ -289,8 +288,15 @@ const checkout = async () => {
   pixCode.value = code
   pixImage.value = image
 
-  toggleModal()
-  clearCart()
+  const { error } = await fetchApi('/checkout', {
+    method: 'POST',
+    headers: { 'x-access-token': auth.value }
+  })
+
+  if (!error) {
+    toggleModal()
+    clearCart()
+  }
 }
 
 const toggleModal = () => {
@@ -298,20 +304,30 @@ const toggleModal = () => {
 }
 
 const copyPixCode = () => {
-  const el = document.createElement("textarea")
+  const el = document.createElement('textarea')
+
+  pixMessage.value = 'Copiado'
+  canCopy.value = false
+
   el.value = pixCode.value
   document.body.appendChild(el)
   el.select()
-  document.execCommand("copy")
+  document.execCommand('copy')
   document.body.removeChild(el)
+
+  setTimeout(() => {
+    pixMessage.value = 'Copiar código QR'
+    canCopy.value = true
+  }, 500)
+}
+
+const initials = (string) => {
+  const words = string.split(/[\s-]+/)
+  return words.map(word => word.substr(0, 1)).join('').substr(0, 2).toUpperCase()
 }
 
 // composables
-useDetectOutsideClick("cartMenuRef", () => (cartMenu.value = false))
-
-// useDetectOutsideClick("panelRef", () => {
-//   if (canClickOut.value) panel.value = false
-// })
+useDetectOutsideClick('cartMenuRef', () => (cartMenu.value = false))
 </script>
 
 <style lang="scss" scoped>

@@ -1,6 +1,13 @@
 export const useApi = () => {
   const config = useRuntimeConfig()
 
+  let token = useCookie('auth')
+  let user = useCookie('user-store')
+  let cart = useCookie('cart-store')
+  const { clearUserStore } = userStore()
+  const router = useRouter()
+  const { clearCart } = cartStore()
+
   const fetchApi = async (url: string, options: Object) => {
     const baseApiUrl = config.public.apiBaseUrl
     const completeUrl = `${baseApiUrl}${url}`
@@ -9,8 +16,18 @@ export const useApi = () => {
       const { data, error, pending } = await useFetch(completeUrl, options)
     
       if (error.value) {
-        const { response } = error.value
-    
+        const { response, status } = error.value
+
+        if (status === 401) {
+          token.value = null
+          user.value = null
+          cart.value = null
+          clearUserStore()
+          clearCart()
+      
+          return router.push({ path: '/login'})
+        }
+
         return {
           data: null, 
           error: true,

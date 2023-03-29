@@ -44,7 +44,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBaseUrl: 'http://localhost:5000',
-      pixKey: '3b23bbf1-08d2-4a66-b4c4-fa4f9f7d7be5',
+      pixKey: 'contato@casamentotafe.com',
       mapboxKey: 'pk.eyJ1IjoiZmVsaXBlY3NzIiwiYSI6ImNsZmc0ZjczZTA0azMzcXMzYTBnaXFzYjcifQ.QWiOGCNiz6IdYZuXct4A-w'
     }
   },
@@ -56,6 +56,7 @@ export default defineNuxtConfig({
     dirs: ['stores'],
   },
   modules: [
+    '@nuxt/devtools',
     '@nuxtjs/tailwindcss',
     [
       '@pinia/nuxt',

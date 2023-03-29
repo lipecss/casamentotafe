@@ -2,17 +2,20 @@
   <div>
     <div class="flex flex-col space-y-6 md:space-y-0 md:flex-row justify-between mr-6">
       <h1 class="text-xl md:text-4xl mb-2">
-        Olá <span class="font-semibold">{{ currentUser.username }}</span>
+        Olá <span class="font-semibold">
+          {{ currentUser.username }}
+        </span>
+        <span v-if="family && !isAdmin"> e família ❤️</span>
       </h1>
     </div>
 
     <div class="my-12" v-if="!isAdmin">
-      <p class="text-lg my-4">Estamos muito felizes em recebê-los em nossa página de dashboard! Agradecemos do fundo do coração por terem dedicado seu tempo para nos prestigiar em nosso grande dia.</p>
+      <p class="about-text text-lg my-4">Estamos muito felizes em recebê-lo (s) em nossa página de dashboard! Agradecemos do fundo do coração por dedicarem seu tempo para nos prestigiar em nosso grande dia.</p>
 
-      <p class="text-lg">Aqui, vocês terão acesso algumas informações exclusivas. Esperamos que esta página facilite sua experiência e torne sua visita ainda mais agradável.</p>
+      <p class="about-text text-lg">Aqui,about-text  você(s) terão acesso algumas informações exclusivas. Esperamos que esta página facilite sua experiência e torne sua visita ainda mais agradável.</p>
     </div>
 
-    <div v-else class="p-6 sm:p-10 space-y-6">
+    <div v-else class="mt-10">
       <section class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
         <div class="flex items-center p-8 bg-white shadow rounded-lg">
           <div class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-blue-600 bg-blue-100 rounded-full mr-6">
@@ -74,16 +77,17 @@ const { currentUser, isAdmin } = userStore()
 const status = ref({})
 
 // computeds
-const activeMessage = computed(() => currentUser.activated ? 'Ativo' : 'Inativo')
-const activeMessageColor = computed(() => currentUser.activated ? 'text-emerald-400' : 'text-red-400')
+const family = computed(() => currentUser.family)
 
-if (isAdmin) {
+onBeforeMount(async() => {
+  if (isAdmin) {
   const { fetchApi } = useApi()
-  const { data, error } = await fetchApi('/admin-status', {
-    method: 'GET',
-    headers: { 'x-access-token': auth.value }
-  })
+    const { data, error } = await fetchApi('/admin-status', {
+      method: 'GET',
+      headers: { 'x-access-token': auth.value }
+    })
 
-  if(!error) status.value = data
-}
+    if(!error) status.value = data
+  }
+})
 </script>
