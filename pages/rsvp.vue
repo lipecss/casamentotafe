@@ -103,9 +103,13 @@
 </template>
 
 <script setup>
+import getSiteMeta from '@/utils/getSiteMeta'
+
 definePageMeta({
   middleware: ['general']
 })
+
+const config = useRuntimeConfig()
 
 const { fetchApi } = useApi()
 
@@ -124,6 +128,21 @@ let form = ref({
 const isFormValid = computed(() => {
   return form.value.rsvp_code && form.value.rsvp_code.length === 8 ? true : false
 })
+
+const meta = computed(() => {
+  const metaData = {
+    description: 'Confirme sua presença no nosso casamento e junte-se a nós em uma celebração inesquecível. Será um dia repleto de amor, felicidade e muita emoção. Nosso casamento será realizado no Monte Millazzo, um lugar encantador com vista para as montanhas e um ambiente acolhedor. Não perca a oportunidade de compartilhar esse momento especial conosco. Confirme sua presença agora!',
+    url: config.baseUrl
+  }
+
+  return getSiteMeta(metaData)
+})
+
+useHead({
+  title: 'Confirme sua presenção no casamento de Tatiana e Felipe!',
+  meta: () => [...meta.value]
+})
+
 
 // methods
 const toggleModal = () => {

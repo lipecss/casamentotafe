@@ -75,10 +75,11 @@
 </template>
 
 <script setup>
+import getSiteMeta from '@/utils/getSiteMeta'
 import { useRouter } from 'vue-router'
 
 const store = userStore()
-
+const config = useRuntimeConfig()
 const router = useRouter()
 const cookie = useCookie('auth')
 
@@ -99,12 +100,26 @@ let showPassword = ref(false)
 let passwordInputType = ref('password')
 
 // computeds
+const meta = computed(() => {
+  const metaData = {
+    url: `${config.baseUrl}/login`
+  }
+
+  return getSiteMeta(metaData)
+})
+
 const isComplete = computed(() => {
   return Object.values(form).every(val => val)
 })
 
 const showPasswordText = computed(() => {
   return showPassword.value ? 'esconder' : 'mostrar'
+})
+
+
+useHead({
+  title: 'Insira seu e-mail e senha para acessar seu site',
+  meta: () => [...meta.value]
 })
 
 // watchers 

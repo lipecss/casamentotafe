@@ -38,8 +38,25 @@ definePageMeta({
   layout: 'admin'
 })
 
+const config = useRuntimeConfig()
+
 // datas
 let products = ref([])
+
+// computed
+const meta = computed(() => {
+  const metaData = {
+    title: 'Lojinha de presentes para Tatiana e Felipe!',
+    url: `${config.baseUrl}/dashboard/lojinha`
+  }
+
+  return getSiteMeta(metaData)
+})
+
+useHead({
+  title: 'Lojinha',
+  meta: () => [...meta.value]
+})
 
 // lifecyle
 onBeforeMount(async () => {

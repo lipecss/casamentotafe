@@ -68,16 +68,35 @@
 </template>
 
 <script setup>
+import getSiteMeta from '@/utils/getSiteMeta'
+
 definePageMeta({
   middleware: ['auth-only'],
   layout: 'admin'
 })
+
 const auth = useCookie('auth')
 const { currentUser, isAdmin } = userStore()
 const status = ref({})
+const config = useRuntimeConfig()
 
 // computeds
+const meta = computed(() => {
+  const metaData = {
+    title: 'Padrinhos do casamento de Felipe e Tatiana!',
+    description: 'Bem-vindos à página de padrinhos do casamento de Felipe e Tatiana! Aqui, apresentamos as pessoas mais especiais em nossas vidas, que irão nos acompanhar em um dos dias mais felizes de nossas vidas. São essas pessoas que têm estado conosco em momentos importantes e que agora compartilham conosco essa alegria única. Conheça um pouco mais sobre cada um deles e sinta a emoção que estamos sentindo por tê-los ao nosso lado neste momento tão especial.',
+    url: `${config.baseUrl}/padrinhos`
+  }
+
+  return getSiteMeta(metaData)
+})
+
 const family = computed(() => currentUser.family)
+
+useHead({
+  title: `Área logada - Bem vindo ${currentUser.username}`,
+  meta: () => [...meta.value]
+})
 
 onBeforeMount(async() => {
   if (isAdmin) {

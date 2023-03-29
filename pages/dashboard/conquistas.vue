@@ -32,11 +32,21 @@ definePageMeta({
 const { userAchievements } = userStore()
 const auth = useCookie('auth')
 const { fetchApi } = useApi()
+const config = useRuntimeConfig()
 
 // datas
 let achievements = ref([])
 
 // computeds
+const meta = computed(() => {
+  const metaData = {
+    title: 'Suas conquistas',
+    url: `${config.baseUrl}/dashboard/conquistas`
+  }
+
+  return getSiteMeta(metaData)
+})
+
 const userHasAchievement = (id) => {
   return userAchievements.some(userAchievement => userAchievement._id === id) ? '' : 'opacity-50 '
 }
@@ -44,6 +54,11 @@ const userHasAchievement = (id) => {
 const { data, error } = await fetchApi('/achievements', {
   method: 'GET',
   headers: { 'x-access-token': auth.value }
+})
+
+useHead({
+  title: 'Suas conquistas',
+  meta: () => [...meta.value]
 })
 
 if(!error) {

@@ -149,11 +149,25 @@
 </template>
 
 <script setup>
+import getSiteMeta from '@/utils/getSiteMeta'
+
 definePageMeta({
   middleware: ["general"],
 })
 
+const config = useRuntimeConfig()
+// computeds
+const meta = computed(() => {
+  const metaData = {
+    description: 'A cerimônia e festa do meu casamento foram realizadas em um lugar único e encantador, o Monte Millazzo. Com uma vista privilegiada para a natureza e um ambiente acolhedor, o local proporcionou momentos inesquecíveis para todos os nossos convidados. O buffet foi especialmente preparado para a ocasião, com opções deliciosas que agradaram a todos os paladares. A equipe do Monte Millazzo foi extremamente atenciosa e prestativa, tornando a nossa experiência ainda mais especial e memorável. Sem dúvida, um lugar incrível para celebrar momentos únicos e especiais como o nosso casamento.',
+    url: config.baseUrl
+  }
+
+  return getSiteMeta(metaData)
+})
+
 useHead({
-  title: 'My App',
+  title: 'Cerimonia & Festa do casamento de Tatiana e Felipe!',
+  meta: () => [...meta.value]
 })
 </script>

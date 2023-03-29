@@ -157,6 +157,8 @@
 </template>
 
 <script setup>
+import getSiteMeta from '@/utils/getSiteMeta'
+
 const config = useRuntimeConfig()
 
 definePageMeta({
@@ -176,6 +178,7 @@ const meta = computed(() => {
 useHead({
   meta: () => [...meta.value]
 })
+
 // datas
 const position = ref(0)
 
