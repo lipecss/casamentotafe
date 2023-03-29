@@ -24,6 +24,10 @@ export default defineNuxtConfig({
         {
           src: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js",
           body: true
+        },
+        {
+          hid: 'getSiteMeta',
+          innerHTML: `window.getSiteMeta = ${getSiteMeta.toString()}`
         }
       ],
       link: [

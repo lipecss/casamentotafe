@@ -33,11 +33,9 @@ const config = useRuntimeConfig()
 // computeds
 const meta = computed(() => {
   const metaData = {
-    type: 'article',
     title: 'Padrinhos do casamento de Felipe e Tatiana!',
     description: 'Bem-vindos à página de padrinhos do casamento de Felipe e Tatiana! Aqui, apresentamos as pessoas mais especiais em nossas vidas, que irão nos acompanhar em um dos dias mais felizes de nossas vidas. São essas pessoas que têm estado conosco em momentos importantes e que agora compartilham conosco essa alegria única. Conheça um pouco mais sobre cada um deles e sinta a emoção que estamos sentindo por tê-los ao nosso lado neste momento tão especial.',
-    url: `${config.baseUrl}/padrinhos`,
-    mainImage: 'https://www.tailorbrands.com/wp-content/uploads/2020/07/mcdonalds-logo.jpg'
+    url: `${config.baseUrl}/padrinhos`
   }
 
   return getSiteMeta(metaData)
@@ -45,6 +43,7 @@ const meta = computed(() => {
 
 
 useHead({
+  title: 'Padrinhos do casamento de Felipe e Tatiana!',
   meta: () => [...meta.value]
 })
 

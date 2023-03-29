@@ -167,8 +167,7 @@ definePageMeta({
 const meta = computed(() => {
   const metaData = {
     description: 'Bem-vindos ao nosso site de casamento! Aqui você encontrará todas as informações necessárias para celebrar conosco este momento tão especial. Desde os detalhes da cerimônia até a lista de presentes, estamos compartilhando tudo com vocês. Acompanhe cada passo da nossa jornada até o grande dia e sinta-se parte desta história de amor.',
-    url: config.baseUrl,
-    mainImage: 'https://www.tailorbrands.com/wp-content/uploads/2020/07/mcdonalds-logo.jpg'
+    url: config.baseUrl
   }
 
   return getSiteMeta(metaData)
