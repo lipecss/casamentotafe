@@ -1,5 +1,7 @@
 <template>
-  <CookieAlert />
+  <ClientOnly fallback-tag="span">
+    <CookieAlert />
+  </ClientOnly>
 
   <NuxtLayout>
     <NuxtPage />
