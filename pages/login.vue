@@ -64,12 +64,16 @@
 
       <NuxtLink to="/" class="cursor-pointer bt-back">Voltar ao Início</NuxtLink>
 
-      <img 
+      <nuxt-img
+        format="webp"
         class="image"
-        src="https://www.casar.com/_nuxt/img/assets/images/foto-franco-rossi-12-50d85bf.webp"
+        src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/DJI_0317.JPG"
         alt="Cover login image"
         title="Cover login image"
-      >
+        width="692"
+        height="270"
+        sizes="sm:100vw md:100vw lg:100vw"
+      />
     </div>
   </div>
 </template>
