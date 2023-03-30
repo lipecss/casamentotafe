@@ -44,6 +44,9 @@
           Felipecs
         </NuxtLink>
         <br>
+        <span class="mt-8 text-sm text-center">
+          <NuxtLink to="/politica-de-privacidade" class="hover:text-tuscany hover:underline">Politica de privacidade</NuxtLink>
+        </span> <br>
         <span>Por todos os dias ao longo do caminho.</span>
       </span>
       </p>

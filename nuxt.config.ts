@@ -41,6 +41,28 @@ export default defineNuxtConfig({
           rel: 'stylesheet',
           href: 'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css',
           body: true
+        },
+        {
+          hid: 'icon',
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: 'favicon.ico'
+        },
+        {
+          hid: 'icon',
+          rel: 'apple-touch-icon',
+          type: 'image/x-icon',
+          href: 'apple-touch-icon.png'
+        },
+        {
+          rel: 'icon',
+          sizes: '180x180',
+          href: '/favicon-32x32.png'
+        },
+        {
+          rel: 'icon',
+          sizes: '16x16',
+          href: '/favicon-16x16.png'
         }
       ]
     }

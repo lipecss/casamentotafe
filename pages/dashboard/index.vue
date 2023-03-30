@@ -12,7 +12,7 @@
     <div class="my-12" v-if="!isAdmin">
       <p class="about-text text-lg my-4">Estamos muito felizes em recebê-lo (s) em nossa página de dashboard! Agradecemos do fundo do coração por dedicarem seu tempo para nos prestigiar em nosso grande dia.</p>
 
-      <p class="about-text text-lg">Aqui,about-text  você(s) terão acesso algumas informações exclusivas. Esperamos que esta página facilite sua experiência e torne sua visita ainda mais agradável.</p>
+      <p class="about-text text-lg">Aqui, você(s) terão acesso algumas informações exclusivas. Esperamos que esta página facilite sua experiência e torne sua visita ainda mais agradável.</p>
     </div>
 
     <div v-else class="mt-10">

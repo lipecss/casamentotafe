@@ -58,7 +58,7 @@
       </div>
     </div>
 
-    <div class="hidden lg:flex items-center justify-center relative bg-tuscany flex-1 h-screen"
+    <div class="hidden lg:flex items-center justify-center relative flex-1 h-screen"
       style="border-radius: 130px 0 0 130px;">
       <div class="overlay"></div>
 

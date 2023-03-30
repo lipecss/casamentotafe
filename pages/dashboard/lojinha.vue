@@ -59,16 +59,14 @@ useHead({
 })
 
 // lifecyle
-onBeforeMount(async () => {
-  const { data, error } = await fetchApi('/products', { method: 'GET' })
-
-  if (!error) products.value = data.products
-})
-
 const { fetchApi } = useApi()
 const { addToCart, removeToCart } = cartStore()
 
 // methods
+const { data, error } = await fetchApi('/products', { method: 'GET' })
+
+if (!error) products.value = data.products
+
 const addItem = (product) => {
   addToCart(product)
 }
