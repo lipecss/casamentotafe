@@ -26,6 +26,11 @@ export default defineNuxtConfig({
           src: 'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js',
           body: true
         },
+        {
+          async: true,
+          src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5137005946472400",
+          crossorigin: "anonymous"
+        }
         // {
         //   hid: 'getSiteMeta',
         //   innerHTML: `window.getSiteMeta = ${getSiteMeta.toString()}`
@@ -38,15 +43,6 @@ export default defineNuxtConfig({
           body: true
         }
       ]
-    }
-  },
-  runtimeConfig: {
-    public: {
-      baseUrl: process.env.NUXT_BASE_URL ||'http://localhost:3000',
-      gaKey: 'G-4YRSE1WP17',
-      apiBaseUrl: 'http://localhost:5000',
-      pixKey: 'contato@casamentotafe.com',
-      mapboxKey: 'pk.eyJ1IjoiZmVsaXBlY3NzIiwiYSI6ImNsZmc0ZjczZTA0azMzcXMzYTBnaXFzYjcifQ.QWiOGCNiz6IdYZuXct4A-w'
     }
   },
   css: [
@@ -68,7 +64,12 @@ export default defineNuxtConfig({
       },
     ],
     '@pinia-plugin-persistedstate/nuxt',
-    ['@funken-studio/sitemap-nuxt-3', { generateOnBuild: true }]
+    ['@funken-studio/sitemap-nuxt-3', { generateOnBuild: true }],
+    // ['@nuxtjs/google-adsense', {
+    //   onPageLoad: false,
+    //   pageLevelAds: false,
+    //   test: true
+    // }]
   ],
   image: {
     dir: 'public'
@@ -77,5 +78,14 @@ export default defineNuxtConfig({
     '~/plugins/vg-countdown.js',
     { src: '@/plugins/aos', mode: 'client' },
     { src: '@/plugins/meta', mode: 'client' }
-  ]
+  ],
+  runtimeConfig: {
+    public: {
+      baseUrl: process.env.NUXT_BASE_URL ||'http://localhost:3000',
+      gaKey: 'G-4YRSE1WP17',
+      apiBaseUrl: 'http://localhost:5000',
+      pixKey: 'contato@casamentotafe.com',
+      mapboxKey: 'pk.eyJ1IjoiZmVsaXBlY3NzIiwiYSI6ImNsZmc0ZjczZTA0azMzcXMzYTBnaXFzYjcifQ.QWiOGCNiz6IdYZuXct4A-w'
+    }
+  },
 })

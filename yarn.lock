@@ -1075,6 +1075,30 @@
     unimport "^3.0.2"
     untyped "^1.2.2"
 
+"@nuxt/kit@^3.0.0-rc.12":
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.3.2.tgz#e3cd19c0f5cd0f124fff6f659a5f25002f808946"
+  integrity sha512-mHucMYuN/nVJp0p+L6ezzEls8Y1PerAXCJi01lS3Z5ozz+l2OusEfes8EBxWcy3x0C5465ignXCujQs3/LAvnQ==
+  dependencies:
+    "@nuxt/schema" "3.3.2"
+    c12 "^1.2.0"
+    consola "^2.15.3"
+    defu "^6.1.2"
+    globby "^13.1.3"
+    hash-sum "^2.0.0"
+    ignore "^5.2.4"
+    jiti "^1.18.2"
+    knitwork "^1.0.0"
+    lodash.template "^4.5.0"
+    mlly "^1.2.0"
+    pathe "^1.1.0"
+    pkg-types "^1.0.2"
+    scule "^1.0.0"
+    semver "^7.3.8"
+    unctx "^2.1.2"
+    unimport "^3.0.4"
+    untyped "^1.2.2"
+
 "@nuxt/postcss8@^1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@nuxt/postcss8/-/postcss8-1.1.3.tgz#a7f8f6f2a664430bbdd3b175498eb693e0b1b351"
@@ -1108,7 +1132,7 @@
     unimport "^3.0.2"
     untyped "^1.2.2"
 
-"@nuxt/schema@^3.3.1":
+"@nuxt/schema@3.3.2", "@nuxt/schema@^3.3.1":
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.3.2.tgz#c567dfaf099c65ae2fce4b5d1bcf43a94239a4c6"
   integrity sha512-M2X/iwdX4hct31A7LA2+e41F91VZUXmwS5sZ03G49RnZdEXHMOKBO67e1d+5uxYmRD6eM/EyxWdPVgyLf6wocw==
@@ -1207,6 +1231,13 @@
   dependencies:
     consola "^2.10.1"
     dotenv "^8.1.0"
+
+"@nuxtjs/google-adsense@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-adsense/-/google-adsense-2.1.0.tgz#ef81708ffd5dda5abfb2fa159a477c47a1048870"
+  integrity sha512-ken1aITTBEluqyT9yvpdzMYaRDR3SOPcWeGOQHYj/pfw/IJb/Ye0Ylj7rF8gVyBurCbsbTV2pGlEDoalBDYMbg==
+  dependencies:
+    "@nuxt/kit" "^3.0.0-rc.12"
 
 "@nuxtjs/robots@^3.0.0":
   version "3.0.0"
