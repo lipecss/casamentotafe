@@ -43,6 +43,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       baseUrl: process.env.NUXT_BASE_URL ||'http://localhost:3000',
+      gaKey: 'G-4YRSE1WP17',
       apiBaseUrl: 'http://localhost:5000',
       pixKey: 'contato@casamentotafe.com',
       mapboxKey: 'pk.eyJ1IjoiZmVsaXBlY3NzIiwiYSI6ImNsZmc0ZjczZTA0azMzcXMzYTBnaXFzYjcifQ.QWiOGCNiz6IdYZuXct4A-w'
@@ -68,11 +69,6 @@ export default defineNuxtConfig({
     ],
     '@pinia-plugin-persistedstate/nuxt',
     ['@funken-studio/sitemap-nuxt-3', { generateOnBuild: true }]
-  ],
-  buildModules: [
-    ['@nuxtjs/google-analytics', {
-      id: 'G-4YRSE1WP17'
-    }]
   ],
   image: {
     dir: 'public'

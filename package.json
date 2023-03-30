@@ -22,7 +22,6 @@
     "@mapbox/mapbox-gl-directions": "^4.1.1",
     "@nuxt/image-edge": "^1.0.0-28001428.0aa03b6",
     "@nuxtjs/dotenv": "^1.4.1",
-    "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/robots": "^3.0.0",
     "@pinia/nuxt": "^0.4.7",
     "@vemlavaraloucagamers/vg-countdown": "^2.0.1",
@@ -33,6 +32,7 @@
     "mapbox-gl": "^2.13.0",
     "pinia": "^2.0.33",
     "qrcode-pix": "5.0.0",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "vue-gtag": "^2.0.1"
   }
 }
