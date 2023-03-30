@@ -121,7 +121,7 @@ if (isAdmin) {
   })
 
   if (!error) status.value = data
-
-  setTimeout(() => { setApiPending(false) }, 1500)
 }
+
+setTimeout(() => { setApiPending(false) }, 1500)
 </script>
