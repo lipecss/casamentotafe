@@ -1,4 +1,6 @@
 <template>
+  <Loader v-if="isLoading"/>
+  
   <div class="flex bg-gray-100 min-h-screen">
     <!-- menu lateral -->
     <aside class="hidden md:flex min-h-screen flex-col max-w-xs" v-if="menu">
@@ -203,6 +205,7 @@ import generateCode from '@/composables/generatePix'
 
 const route = useRoute()
 const { currentUser } = userStore()
+const store = statusStore()
 const { logout } = useAuth()
 const auth = useCookie('auth')
 const some = cartStore()
@@ -235,6 +238,7 @@ const menuList = reactive([
 
 // computed
 const routeName = computed(() => route.name)
+const isLoading = computed(() => store.isApiPending)
 
 // watch
 watch(cartMenu, (value) => {

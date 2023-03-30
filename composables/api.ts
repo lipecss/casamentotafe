@@ -14,7 +14,7 @@ export const useApi = () => {
 
     try {
       const { data, error, pending } = await useFetch(completeUrl, options)
-    
+   
       if (error.value) {
         const { response, status } = error.value
 

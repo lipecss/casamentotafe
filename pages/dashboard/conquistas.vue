@@ -29,10 +29,17 @@ definePageMeta({
   middleware: ['auth-only'],
   layout: 'admin'
 })
+
+// lifecycle
+onBeforeMount(() => { setApiPending(true) })
+
+onBeforeRouteLeave(() => { setApiPending(true) })
+
 const { userAchievements } = userStore()
 const auth = useCookie('auth')
 const { fetchApi } = useApi()
 const config = useRuntimeConfig()
+const { setApiPending } = statusStore()
 
 // datas
 let achievements = ref([])
@@ -66,4 +73,7 @@ if(!error) {
 } else {
   achievements.value = []
 }
+
+setTimeout(() => { setApiPending(false) }, 1500)
+
 </script>

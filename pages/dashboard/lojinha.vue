@@ -38,7 +38,15 @@ definePageMeta({
   layout: 'admin'
 })
 
+// lifecyle
+onBeforeMount(() => { setApiPending(true) })
+
+onBeforeRouteLeave(() => { setApiPending(true) })
+
 const config = useRuntimeConfig()
+const { fetchApi } = useApi()
+const { addToCart, removeToCart } = cartStore()
+const { setApiPending } = statusStore()
 
 // datas
 let products = ref([])
@@ -58,14 +66,12 @@ useHead({
   meta: () => [...meta.value]
 })
 
-// lifecyle
-const { fetchApi } = useApi()
-const { addToCart, removeToCart } = cartStore()
-
 // methods
 const { data, error } = await fetchApi('/products', { method: 'GET' })
 
 if (!error) products.value = data.products
+
+setTimeout(() => { setApiPending(false) }, 1500)
 
 const addItem = (product) => {
   addToCart(product)

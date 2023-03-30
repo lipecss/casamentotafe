@@ -132,10 +132,6 @@ const store = cookieConsertStore()
 
 const cookieConsert = computed(() => store.hasCookieConsert)
 
-const toggleCookie = () => {
-  console.log('antes', cookieConsert.value)
-  store.setCookieConsert()
-  console.log('depois', cookieConsert.value)
-}
+const toggleCookie = () => { store.setCookieConsert() }
 
 </script>
