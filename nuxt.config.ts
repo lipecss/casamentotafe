@@ -98,7 +98,6 @@ export default defineNuxtConfig({
   },
   plugins: [
     '~/plugins/vg-countdown.js',
-    { src: '@/plugins/aos', mode: 'client' },
     { src: '@/plugins/meta', mode: 'client' }
   ],
   runtimeConfig: {
