@@ -1,5 +1,5 @@
 <template>
-  <div class="paper-bg">
+  <div>
     <Navbar :position="position"/>
     <div class="content" :class="paddingContent">
       <slot />

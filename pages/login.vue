@@ -49,7 +49,7 @@
             <div class="mt-10">
               <button
                 class="disabled:opacity-25 bg-tuscany p-4 w-full rounded-full text-white font-semibold focus:shadow-outline hover:bg-pastel-pink"
-                type="submit" :disabled="!isComplete">
+                type="submit" :disabled="!isComplete || isLoading">
                 Entrar
               </button>
             </div>
@@ -102,6 +102,7 @@ const form = reactive({
 })
 let showPassword = ref(false)
 let passwordInputType = ref('password')
+let isLoading = ref(false)
 
 // computeds
 const meta = computed(() => {
@@ -135,6 +136,7 @@ watch(showPassword, (value) => {
 // methods
 const onSubmit = async () => {
   const formCopy = { ...form }
+  isLoading.value = true
 
   const { data, error } = await fetchApi('/users/authenticate', {
     method: 'POST',
@@ -158,7 +160,13 @@ const onSubmit = async () => {
     store.setUser(userData)
 
     router.push({ path: '/dashboard' })
+  } else {
+    useNuxtApp().$toast.error('Falha ao fazer login, tente novamente', {
+      theme: 'colored'
+    });
   }
+
+  isLoading.value = false
 }
 const toggleShowPassword = () => {
   showPassword.value = !showPassword.value

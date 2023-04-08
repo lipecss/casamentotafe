@@ -98,7 +98,8 @@ export default defineNuxtConfig({
   },
   plugins: [
     '~/plugins/vg-countdown.js',
-    { src: '@/plugins/meta', mode: 'client' }
+    { src: '@/plugins/meta', mode: 'client' },
+    { src: '~/plugins/vue3-toastify.js', mode: 'client' }
   ],
   runtimeConfig: {
     public: {
