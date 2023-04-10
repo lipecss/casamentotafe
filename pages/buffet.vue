@@ -3,21 +3,15 @@
     <!-- Intro -->
     <section class="mb-2">
       <p class="about-text">
-        Estamos nos preparando para esse dia, pensando carinhosamente em cada
-        detalhe e será ainda melhor, por compartilharmos juntos esse momento.
-        Sabemos que muitos de vocês não se conhecem, mas será uma grande
-        oportunidade para se conhecerem e compartilhar esse dia juntinho com a
-        gente.
+        Estamos nos preparando para esse dia, pensando carinhosamente em cada detalhe e será ainda melhor, por compartilharmos juntos esse momento. Sabemos que muitos de vocês não se conhecem, mas será uma grande oportunidade para se conhecerem e compartilhar esse dia juntinho conosco.
       </p>
 
       <p class="about-text">
-        Aqui você encontrará todas as informações importantes sobre o nosso
-        grande dia.
+        Aqui você encontrará todas as informações importantes sobre o nosso grande dia.
       </p>
 
       <p class="about-text">
-        Nós estamos muito empolgados em compartilhar cada detalhe com vocês,
-        nossos queridos convidados e familiares.
+        Nós estamos muito empolgados em compartilhar cada detalhe com vocês, nossos queridos convidados e familiares.
       </p>
     </section>
     <!-- Intro -->
@@ -40,14 +34,14 @@
         <div class="flex flex-wrap -mx-4">
           <div class="hidden md:block md:w-1/2 px-4">
             <div class="h-full w-full bg-cover shadow-md"
-              style="background-image: url('https://source.unsplash.com/random/1280x720')" />
+              style="background-image: url('https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/buffet1.jpg')" />
           </div>
           <div class="md:w-1/2 h-auto px-4">
             <div class="mb-8">
               <nuxt-img 
                 format="webp"
                 class="shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
+                src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/buffet2.jpg"
                 alt=""
                 width="692"
                 height="270"
@@ -58,7 +52,7 @@
               <nuxt-img 
                 format="webp"
                 class="shadow-md"
-                src="https://source.unsplash.com/random/1280x720"
+                src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/buffet3.jpg"
                 alt=""
                 width="692"
                 height="270"
@@ -70,12 +64,7 @@
       </section>
 
       <p class="about-text">
-        O local conquistou nosso coração, além do espaço ser rodeado pela
-        natureza, percebemos que tudo foi cronstruido com muito amor e carinh.
-        Cada detalhe foi pensado com cuidado e dedicação, desde a arquitetura da
-        igrejinha até a decoração do espaço. A equipe também nos receberam com
-        tanta gentileza e nos fizeram sentir em casa desde o primeiro momento.
-        Não é à toa que a noiva sempre sonhou em casar lá.
+        O local conquistou nosso coração, além do espaço ser rodeado pela natureza, percebemos que tudo foi construído com muito amor e carinho. Cada detalhe foi pensado com cuidado e dedicação, desde a arquitetura da igrejinha até a decoração do espaço. A equipe também nos receberam com tanta gentileza e nos fizeram sentir em casa desde o primeiro momento. Não é à toa que a noiva sempre sonhou em casar lá
       </p>
 
       <section class="py-8 px-4">
@@ -84,7 +73,7 @@
             <nuxt-img 
               format="webp"
               class="shadow-md"
-              src="https://source.unsplash.com/random/1280x720"
+              src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/buffet4.jpg"
               alt=""
               width="692"
               height="270"
@@ -114,7 +103,7 @@
             <nuxt-img
               format="webp"
               class="shadow-md"
-              src="https://source.unsplash.com/random/1280x720"
+              src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/buffet5.jpg"
               alt=""
               width="692"
               height="270"
@@ -142,8 +131,7 @@
       </p>
 
       <p class="about-text">
-        A equipe do Monte Millazzo preparou um menu especial para o nosso casamento, com opções para agradar a todos os
-        gostos e paladares. Aqui está o nosso menu para que você possa salivar junto com a gente:
+        A equipe do Monte Millazzo preparou um menu especial para o nosso casamento, com opções para agradar a todos os gostos e paladares. Aqui está o nosso menu para que você possa salivar junto conosco:
       </p>
 
       <nuxt-img

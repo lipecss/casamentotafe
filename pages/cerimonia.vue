@@ -14,8 +14,7 @@
       <p class="pb-3 text-center place-items-center">A capela</p>
 
       <p class="about-text">
-        A capela do Monte Millazzo é um lugar verdadeiramente mágico e inspirador. É um espaço muito especial, a aprenta
-        ter sido construído com muito amor e cuidado pela equipe que administra o local.
+        A capela do Monte Millazzo é um lugar verdadeiramente mágico e inspirador. É um espaço muito especial, a aparenta ter sido construído com muito amor e cuidado pela equipe que administra o local.
       </p>
 
       <p class="about-text">
@@ -30,7 +29,7 @@
             <nuxt-img
               format="webp"
               class="shadow-md"
-              src="https://source.unsplash.com/random/1280x720"
+              src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/capela2.jpg"
               alt=""
               width="692"
               height="270"
@@ -39,10 +38,7 @@
           </div>
           <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
             <p class="about-text" style="padding-top: 0 !important;">
-              O teto alto da capela é sustentado por pilares de madeira maciça, que adicionam uma sensação de
-              grandiosidade e solidez ao espaço. A luz natural que entra pelos vitrais coloridos, combinada com o som
-              suave da natureza ao redor, cria um ambiente sereno e inspirador que é perfeito para a cerimônia do
-              casamento.
+              O teto alto da capela é sustentado por pilares de madeira maciça, que adicionam uma sensação de grandiosidade e solidez ao espaço. A luz natural que entra pelos vitrais coloridos, combinada com o som suave da natureza ao redor, cria um ambiente sereno e inspirador, perfeito para a cerimônia do casamento.
             </p>
           </div>
         </div>
@@ -53,19 +49,19 @@
           <div class="md:w-1/3 px-4 mb-8">
             <nuxt-img
               format="webp" 
-              class="rounded shadow-md"
-              src="https://source.unsplash.com/random/1280x720"
+              class="rounded shadow-md h-64 object-cover"
+              src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/capela3.jpg"
               alt=""
               width="692"
               height="270"
-              sizes="sm:100vw md:100vw lg:100vw"
+              sizes="sm:100vw md:100% lg:00%"
             />
           </div>
           <div class="md:w-1/3 px-4 mb-8">
             <nuxt-img
               format="webp" 
-              class="rounded shadow-md"
-              src="https://source.unsplash.com/random/1280x720"
+              class="rounded shadow-md h-64 object-cover"
+              src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/capela1.webp"
               alt=""
               width="692"
               height="270"
@@ -75,8 +71,8 @@
           <div class="md:w-1/3 px-4 mb-8">
             <nuxt-img
               format="webp"
-              class="rounded shadow-md"
-              src="https://source.unsplash.com/random/1280x720"
+              class="rounded shadow-md h-64 object-cover"
+              src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/capela4.jpg"
               alt=""
               width="692"
               height="270"
@@ -85,6 +81,7 @@
           </div>
         </div>
       </section>
+
     </section>
     <!-- A capela -->
 
@@ -99,9 +96,7 @@
       </p>
 
       <p class="about-text">
-        O salão é um espaço amplo e lindo, decorado com muito bom gosto e estilo. Há uma pista de dança enorme, onde vamos
-        dançar até nossos pés doerem e as músicas vão variar desde as românticas para os momentos mais calmos até as mais
-        agitadas para ninguém ficar parado.
+        O salão é um espaço amplo e lindo, decorado com ótimo gosto e estilo. Há uma pista de dança enorme, onde vamos dançar até nossos pés doerem e as músicas vão variar desde as românticas para os momentos mais calmos até as mais agitadas para ninguém ficar parado.
       </p>
 
       <section class="py-8 px-4">
@@ -110,7 +105,7 @@
             <nuxt-img
               format="webp"
               class="rounded shadow-md"
-              src="https://source.unsplash.com/random/1280x720"
+              src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/salao1.webp"
               alt=""
               width="692"
               height="270"
@@ -121,7 +116,7 @@
             <nuxt-img
               format="webp"
               class="rounded shadow-md"
-              src="https://source.unsplash.com/random/1280x720"
+              src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/salao2.webp"
               alt=""
               width="692"
               height="270"

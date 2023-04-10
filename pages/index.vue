@@ -1,16 +1,9 @@
 <template>
   <section class="relative bg-gray-800" style="margin-top: -55px; height: 700px;">
     <div class="absolute inset-0">
-      <NuxtImg
-        format="webp"
-        class="w-full h-full object-cover bg-fixed bg-no-repeat bg-center"
-        title="Felipe e Taina cover image"
-        src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/cover-image.jpg"
-        alt="Felipe e Taina hero image"
-        width="1200"
-        height="800"
-        sizes="sm:100vw md:100vw lg:100vw"
-      />
+      <NuxtImg format="webp" class="w-full h-full object-cover bg-fixed bg-no-repeat bg-center"
+        title="Felipe e Taina cover image" src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/cover-image.jpg"
+        alt="Felipe e Taina hero image" width="1200" height="800" sizes="sm:100vw md:100vw lg:100vw" />
       <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
     </div>
   </section>
@@ -23,9 +16,7 @@
     <div class="items-center max-w-6xl relative">
       <div>
         <p class="about-text">
-          Aqui vamos contar à vocês, queridos amigos e familiares, sobre um pouquinho da nossa vida antes desse momento
-          especial em que daremos esse passo a mais para unirmos nossas vidas. É um prazer compartilhar esse momento com
-          vocês!
+          Aqui vamos contar a vocês, queridos amigos e familiares, sobre um pouquinho da nossa vida antes desse momento especial em que daremos esse passo a mais para unirmos nossas vidas. É um prazer compartilhar esse momento com vocês!
         </p>
       </div>
     </div>
@@ -56,9 +47,7 @@
     <div class="flex items-center justify-center pt-10">
       <button
         class="text-center place-items-center text-white bg-gray-800 hover:bg-gray-700 rounded-lg text-sm px-5 py-2.5 mb-2 lg:w-80"
-        @click="goToRsvpRoute"
-        title="Confirmar presença"
-        >
+        @click="goToRsvpRoute" title="Confirmar presença">
         RSVP
       </button>
     </div>
@@ -73,44 +62,31 @@
 
       <div>
         <p class="about-text">
-          Trabalhamos juntos e por diversas vezes, nos vimos na hora do almoço. Mas não passava de "Oi, boa tarde. Tudo
-          bem?" - "Tudo bem sim e você?". Mas a nossa história começou em 02 de Fevereiro de 2017, quando resolvi mandar
-          mensagem o parabenizando pelo seu aniversário!
+          Trabalhamos juntos e por diversas vezes, nos vimos na hora do almoço. Mas não passava de "Oi, boa tarde. Tudo bem?" - "Tudo bem, sim e você?". Mas a nossa história começou em 02 de fevereiro de 2017, quando resolvi mandar mensagem o parabenizando pelo seu aniversário!
         </p>
 
         <p class="about-text">
-          No dia seguinte, ele me trouxe pedaço do bolo. Porém, eu estava ausente da empresa e pedi a uma amiga, que me
-          passasse o número de telefone dele para agradecer e desde então, não paramos mais de nos falar! Com o passar do
-          tempo, construimos uma grande amizade!
+          No dia seguinte, ele me trouxe pedaço do bolo. Porém, eu estava ausente da empresa e pedi a uma amiga, que me passasse o número de telefone dele para agradecer e desde então, não paramos mais de nos falar! Com o passar do tempo, construímos uma grande amizade!
         </p>
 
         <p class="about-text">
-          Tivemos diversos momentos juntos e com o tempo, veio a certeza que existia algo muito maior entre nós: as nossas
-          conversas, nossos sonhos, nosso jeito de ser, o amor, muita coisa em nós sempre se encaixou de uma forma que
-          hoje quando olhamos para trás entendemos que tudo foi plano de Deus sobre nossas vidas.
+          Tivemos diversos momentos juntos e com o tempo, veio a certeza que existia algo muito maior entre nós: as nossas conversas, nossos sonhos, nosso jeito de ser, o amor, muita coisa em nós sempre se encaixou de uma forma que hoje quando olhamos para trás entendemos que tudo foi plano de Deus sobre nossas vidas.
         </p>
 
         <p class="about-text">
-          Em 03 de junho de 2017 começamos a namorar e nem imaginavamos tudo que iriamos passar! Logo no mês seguinte,
-          tivemos uma experiência inesperada ( precisei fazer uma cirurgia para retirar 9 nódulos).
+          Em 03 de junho de 2017 começamos a namorar e nem imaginávamos tudo que iriamos passar! Logo no mês seguinte, tivemos uma experiência inesperada (precisei fazer uma cirurgia para retirar 9 nódulos).
         </p>
 
         <p class="about-text">
-          Esse momento foi marcante não apenas pela surpresa indesejada, mas também pelo quanto ele foi companheiro, o
-          quanto se preocupou e o quanto cuidou de tudo para que a minha recuperação fosse a menos sofrida possivel. Mas
-          acima de todo esse momento doloroso, pudemos desfrutar de mais uma experiência com o Senhor, fomos alcançados
-          por Sua graça e misericordia. Aprendemos diariamente a colocar Deus sempre a frente de tudo e em todas as
-          coisas!
+          Esse momento foi marcante não apenas pela surpresa indesejada, mas também pelo quanto ele foi companheiro, o quanto se preocupou e o quanto cuidou de tudo para que a minha recuperação fosse a menos sofrida possível. Mas acima de todo esse momento doloroso, pudemos desfrutar de mais uma experiência com o Senhor. Aprendemos diariamente a colocar Deus sempre a frente de tudo e em todas as coisas!
         </p>
 
         <p class="about-text">
-          Crescemos e amadurecemos juntos! Aprendemos diairiamente cada dia uma nova forma de amar e fortalecer nosso
-          compromisso para ser quem somos hoje!
+          Crescemos e amadurecemos juntos! Aprendemos diariamente cada dia uma nova forma de amar e fortalecer nosso compromisso para ser quem somos hoje!
         </p>
 
         <p class="about-text">
-          Hoje após quase sete anos juntos e nessa caminhada de várias experiências com Deus em nossas vidas, estamos
-          prestes a ver mais uma de Suas promessas se cumprindo e poder assim realizar o nosso grande sonho: O casamento!
+          Hoje, após quase sete anos juntos e nessa caminhada de várias experiências com Deus em nossas vidas, estamos prestes a ver mais uma de Suas promessas se cumprindo e poder assim realizar o nosso grande sonho: O casamento!
         </p>
       </div>
     </div>
@@ -128,28 +104,16 @@
     </div>
   </section>
 
-  <NuxtImg
-    format="webp"
-    class="mx-auto mt-10 block max-w-full md:max-w-lg h-full"
-    src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/separador.png"
-    alt="Separador"
-    title="Separador"
-    width="512"
-    height="200"
-    sizes="sm:100vw md:100vw lg:100vw"
-  />
+  <NuxtImg format="webp" class="mx-auto mt-10 block max-w-full md:max-w-lg h-full"
+    src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/separador.png" alt="Separador" title="Separador"
+    width="512" height="200" sizes="sm:100vw md:100vw lg:100vw" />
 
   <section class="py-6 md:py-6">
     <div class="container px-4 mx-auto">
       <div class="text-center max-w-6xl mx-auto">
         <div class="mt-4">
-          <NuxtImg 
-            format="webp"
-            src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/home_felipe_tatiana.jpg"
-            alt="mockup"
-            class="d-block max-w-full rounded shadow-md"
-            sizes="sm:100vw"
-          />
+          <NuxtImg format="webp" src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/home_felipe_tatiana.jpg"
+            alt="mockup" class="d-block max-w-full rounded shadow-md" sizes="sm:100vw" />
         </div>
       </div>
     </div>

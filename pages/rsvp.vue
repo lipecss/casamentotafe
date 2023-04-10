@@ -18,7 +18,7 @@
                   required
                   class="mt-1 uppercase py-2 px-4 text-base bg-transparent border border-tuscany appearance-none focus:outline-none focus:shadow-outline w-full"
                   placeholder="Informe o seu código"
-                  @keydown="onChangeRsvpCode($event)"
+                  @input="onChangeRsvpCode($event)"
                 >
               </div>
 
@@ -176,9 +176,6 @@ const onSubmit = async () => {
 }
 
 const onChangeRsvpCode = (e) => {
-  const length = e.target.value.length
-  const isDeleteKey = e.keyCode === 8 || e.keyCode === 46
-
-  if (length >= 8 && !isDeleteKey) e.preventDefault()
+  form.value.rsvp_code = e.target.value
 }
 </script>
