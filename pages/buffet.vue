@@ -115,12 +115,15 @@
     </section>
     <!-- O buffet -->
 
-    <div class="w-full h-46 text-center lg:w-1/2 container-full-bleed mt-10">
-      <adsbygoogle 
-        ad-layout="in-article"
-        ad-slot="4866723766"
-        ad-format="fluid"
-      />
+    <div class="container-full-bleed mt-10">
+      <div class="w-full h-46 text-center">
+        <adsbygoogle
+          ad-layout="in-article"
+          ad-slot="4866723766"
+          ad-format="fluid"
+          :ad-full-width-responsive="true"
+        />
+      </div>
     </div>
 
     <!-- O Menu -->
@@ -189,12 +192,15 @@
     </section>
     <!-- O Menu -->
 
-    <div class="w-full h-46 text-center lg:w-1/2 container-full-bleed mt-10">
-      <adsbygoogle 
-        ad-layout="in-article"
-        ad-slot="4866723766"
-        ad-format="fluid"
-      />
+    <div class="container-full-bleed mt-10">
+      <div class="w-full h-46 text-center">
+        <adsbygoogle 
+          ad-layout="in-article"
+          ad-slot="4699202800 "
+          ad-format="auto"
+          :ad-full-width-responsive="true"
+        />
+      </div>
     </div>
   </section>
 </template>

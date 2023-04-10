@@ -55,8 +55,15 @@
     </div>
   </section>
 
-  <div class="w-full h-46 text-center lg:w-1/2 mt-10">
-    <adsbygoogle ad-layout="in-article" ad-slot="6412611867" ad-format="fluid" />
+  <div class="container-full-bleed mt-10">
+    <div class="w-full h-46 text-center">
+      <adsbygoogle
+        ad-layout="in-article"
+        ad-slot="7476575239"
+        ad-format="fluid"
+        :ad-full-width-responsive="true"
+      />
+    </div>
   </div>
 
   <Divider type="floral" />
@@ -92,7 +99,7 @@
 
         <p class="about-text">
           Esse momento foi marcante não apenas pela surpresa indesejada, mas também pelo quanto ele foi companheiro,
-          o quanto se preocupou e o quanto cuidou de tudo para que a minha recuperação fosse a menos sofrida possível. Mas
+          o quanto se preocupou e o quanto cuidou de tudo para que a minha recuperação fosse a menos sofrida possível. Mas
           acima de todo esse momento doloroso, pudemos desfrutar de mais uma experiência com o Senhor. Aprendemos
           diariamente a colocar Deus sempre a frente de tudo e em todas as coisas!
         </p>
@@ -137,12 +144,14 @@
     </div>
   </section>
 
-  <div class="w-full h-46 text-center lg:w-1/2 mt-10">
-    <adsbygoogle 
-      ad-layout="in-article"
-      ad-slot="4866723766"
-      ad-format="fluid"
-    />
+  <div class="max-w-full h-46 container-full-bleed">
+    <div class=" text-center">
+      <adsbygoogle 
+        ad-slot="6412611867" 
+        ad-format="auto"
+        :ad-full-width-responsive="true"
+      />
+    </div>
   </div>
 </template>
 
