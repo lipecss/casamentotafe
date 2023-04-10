@@ -95,8 +95,8 @@ export default defineNuxtConfig({
     // }]
   ],
   'google-adsense': {
-    id: 'ca-pub-5137005946472400',
-    // test: true
+    // id: 'ca-pub-5137005946472400',
+    test: true
   },
   image: {
     dir: 'public'

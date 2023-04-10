@@ -115,6 +115,14 @@
     </section>
     <!-- O buffet -->
 
+    <div class="w-full h-46 text-center lg:w-1/2 container-full-bleed mt-10">
+      <adsbygoogle 
+        ad-layout="in-article"
+        ad-slot="4866723766"
+        ad-format="fluid"
+      />
+    </div>
+
     <!-- O Menu -->
     <section class="mt-10">
       <h2 class="title text-center place-items-center">O Menu</h2>
@@ -180,6 +188,14 @@
       </p>
     </section>
     <!-- O Menu -->
+
+    <div class="w-full h-46 text-center lg:w-1/2 container-full-bleed mt-10">
+      <adsbygoogle 
+        ad-layout="in-article"
+        ad-slot="4866723766"
+        ad-format="fluid"
+      />
+    </div>
   </section>
 </template>
 

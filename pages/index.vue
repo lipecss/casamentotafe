@@ -16,7 +16,9 @@
     <div class="items-center max-w-6xl relative">
       <div>
         <p class="about-text">
-          Aqui vamos contar a vocês, queridos amigos e familiares, sobre um pouquinho da nossa vida antes desse momento especial em que daremos esse passo a mais para unirmos nossas vidas. É um prazer compartilhar esse momento com vocês!
+          Aqui vamos contar a vocês, queridos amigos e familiares, sobre um pouquinho da nossa vida antes desse momento
+          especial em que daremos esse passo a mais para unirmos nossas vidas. É um prazer compartilhar esse momento com
+          vocês!
         </p>
       </div>
     </div>
@@ -53,16 +55,9 @@
     </div>
   </section>
 
-  <div class="container-full-bleed mt-10">
-      <div class="w-full h-46 text-center">
-        <adsbygoogle
-          ad-layout="in-article"
-          ad-slot="6412611867"
-          ad-format="fluid"
-          ad-full-width-responsive="true"
-        />
-      </div>
-    </div>
+  <div class="w-full h-46 text-center lg:w-1/2 mt-10">
+    <adsbygoogle ad-layout="in-article" ad-slot="6412611867" ad-format="fluid" />
+  </div>
 
   <Divider type="floral" />
 
@@ -73,31 +68,43 @@
 
       <div>
         <p class="about-text">
-          Trabalhamos juntos e por diversas vezes, nos vimos na hora do almoço. Mas não passava de "Oi, boa tarde. Tudo bem?" - "Tudo bem, sim e você?". Mas a nossa história começou em 02 de fevereiro de 2017, quando resolvi mandar mensagem o parabenizando pelo seu aniversário!
+          Trabalhamos juntos e por diversas vezes, nos vimos na hora do almoço. Mas não passava de "Oi, boa tarde. Tudo
+          bem?" - "Tudo bem, sim e você?". Mas a nossa história começou em 02 de fevereiro de 2017, quando resolvi mandar
+          mensagem o parabenizando pelo seu aniversário!
         </p>
 
         <p class="about-text">
-          No dia seguinte, ele me trouxe pedaço do bolo. Porém, eu estava ausente da empresa e pedi a uma amiga, que me passasse o número de telefone dele para agradecer e desde então, não paramos mais de nos falar! Com o passar do tempo, construímos uma grande amizade!
+          No dia seguinte, ele me trouxe pedaço do bolo. Porém, eu estava ausente da empresa e pedi a uma amiga, que me
+          passasse o número de telefone dele para agradecer e desde então, não paramos mais de nos falar! Com o passar do
+          tempo, construímos uma grande amizade!
         </p>
 
         <p class="about-text">
-          Tivemos diversos momentos juntos e com o tempo, veio a certeza que existia algo muito maior entre nós: as nossas conversas, nossos sonhos, nosso jeito de ser, o amor, muita coisa em nós sempre se encaixou de uma forma que hoje quando olhamos para trás entendemos que tudo foi plano de Deus sobre nossas vidas.
+          Tivemos diversos momentos juntos e com o tempo, veio a certeza que existia algo muito maior entre nós: as nossas
+          conversas, nossos sonhos, nosso jeito de ser, o amor, muita coisa em nós sempre se encaixou de uma forma que
+          hoje quando olhamos para trás entendemos que tudo foi plano de Deus sobre nossas vidas.
         </p>
 
         <p class="about-text">
-          Em 03 de junho de 2017 começamos a namorar e nem imaginávamos tudo que iriamos passar! Logo no mês seguinte, tivemos uma experiência inesperada (precisei fazer uma cirurgia para retirar 9 nódulos).
+          Em 03 de junho de 2017 começamos a namorar e nem imaginávamos tudo que iriamos passar! Logo no mês seguinte,
+          tivemos uma experiência inesperada (precisei fazer uma cirurgia para retirar 9 nódulos).
         </p>
 
         <p class="about-text">
-          Esse momento foi marcante não apenas pela surpresa indesejada, mas também pelo quanto ele foi companheiro, o quanto se preocupou e o quanto cuidou de tudo para que a minha recuperação fosse a menos sofrida possível. Mas acima de todo esse momento doloroso, pudemos desfrutar de mais uma experiência com o Senhor. Aprendemos diariamente a colocar Deus sempre a frente de tudo e em todas as coisas!
+          Esse momento foi marcante não apenas pela surpresa indesejada, mas também pelo quanto ele foi companheiro,
+          o quanto se preocupou e o quanto cuidou de tudo para que a minha recuperação fosse a menos sofrida possível. Mas
+          acima de todo esse momento doloroso, pudemos desfrutar de mais uma experiência com o Senhor. Aprendemos
+          diariamente a colocar Deus sempre a frente de tudo e em todas as coisas!
         </p>
 
         <p class="about-text">
-          Crescemos e amadurecemos juntos! Aprendemos diariamente cada dia uma nova forma de amar e fortalecer nosso compromisso para ser quem somos hoje!
+          Crescemos e amadurecemos juntos! Aprendemos diariamente cada dia uma nova forma de amar e fortalecer nosso
+          compromisso para ser quem somos hoje!
         </p>
 
         <p class="about-text">
-          Hoje, após quase sete anos juntos e nessa caminhada de várias experiências com Deus em nossas vidas, estamos prestes a ver mais uma de Suas promessas se cumprindo e poder assim realizar o nosso grande sonho: O casamento!
+          Hoje, após quase sete anos juntos e nessa caminhada de várias experiências com Deus em nossas vidas, estamos
+          prestes a ver mais uma de Suas promessas se cumprindo e poder assim realizar o nosso grande sonho: O casamento!
         </p>
       </div>
     </div>
@@ -130,14 +137,12 @@
     </div>
   </section>
 
-  <div class="container-full-bleed">
-    <div class="w-full h-46 text-center">
-      <adsbygoogle
-        ad-slot="6412611867"
-        ad-format="auto"
-        data-full-width-responsive="true"
-      />
-    </div>
+  <div class="w-full h-46 text-center lg:w-1/2 mt-10">
+    <adsbygoogle 
+      ad-layout="in-article"
+      ad-slot="4866723766"
+      ad-format="fluid"
+    />
   </div>
 </template>
 
