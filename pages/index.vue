@@ -53,6 +53,17 @@
     </div>
   </section>
 
+  <div class="container-full-bleed mt-10">
+      <div class="w-full h-46 text-center">
+        <adsbygoogle
+          ad-layout="in-article"
+          ad-slot="6412611867"
+          ad-format="fluid"
+          ad-full-width-responsive="true"
+        />
+      </div>
+    </div>
+
   <Divider type="floral" />
 
   <section class="grid text-center place-items-center">
@@ -119,12 +130,14 @@
     </div>
   </section>
 
-  <div class="w-full h-46 text-center">
-    <adsbygoogle
-      data-ad-slot="6412611867"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    />
+  <div class="container-full-bleed">
+    <div class="w-full h-46 text-center">
+      <adsbygoogle
+        ad-slot="6412611867"
+        ad-format="auto"
+        data-full-width-responsive="true"
+      />
+    </div>
   </div>
 </template>
 
