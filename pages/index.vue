@@ -8,6 +8,10 @@
     </div>
   </section>
 
+  <div class="w-full h-46 bg-zinc-200">
+    <adsbygoogle />
+  </div>
+
   <section class="grid text-center place-items-center my-10">
     <div data-testid="Title" class="title">
       <h2>Sejam bem-vindos ao nosso site!</h2>
@@ -46,7 +50,7 @@
   <section>
     <div class="flex items-center justify-center pt-10">
       <button
-        class="text-center place-items-center text-white bg-gray-800 hover:bg-gray-700 rounded-lg text-sm px-5 py-2.5 mb-2 lg:w-80"
+        class="text-center place-items-center text-white bg-gray-800 hover:bg-gray-700 rounded-lg text-sm px-5 py-2.5 mb-2 w-40 lg:w-80"
         @click="goToRsvpRoute" title="Confirmar presença">
         RSVP
       </button>
