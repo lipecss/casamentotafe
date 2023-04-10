@@ -8,10 +8,6 @@
     </div>
   </section>
 
-  <div class="w-full h-46 bg-zinc-200">
-    <adsbygoogle />
-  </div>
-
   <section class="grid text-center place-items-center my-10">
     <div data-testid="Title" class="title">
       <h2>Sejam bem-vindos ao nosso site!</h2>
@@ -122,6 +118,14 @@
       </div>
     </div>
   </section>
+
+  <div class="w-full h-46 text-center">
+    <adsbygoogle
+      data-ad-slot="6412611867"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    />
+  </div>
 </template>
 
 <script setup>
