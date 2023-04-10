@@ -25,16 +25,7 @@ export default defineNuxtConfig({
         {
           src: 'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js',
           body: true
-        },
-        // {
-        //   async: true,
-        //   src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5137005946472400",
-        //   crossorigin: "anonymous"
-        // }
-        // {
-        //   hid: 'getSiteMeta',
-        //   innerHTML: `window.getSiteMeta = ${getSiteMeta.toString()}`
-        // }
+        }
       ],
       link: [
         {
@@ -88,15 +79,10 @@ export default defineNuxtConfig({
     '@pinia-plugin-persistedstate/nuxt',
     ['@funken-studio/sitemap-nuxt-3', { generateOnBuild: true }],
     '@nuxtjs/google-adsense'
-    // ['@nuxtjs/google-adsense', {
-    //   onPageLoad: false,
-    //   pageLevelAds: false,
-    //   test: true
-    // }]
   ],
   'google-adsense': {
-    id: 'ca-pub-5137005946472400',
-    // test: true
+    onPageLoad: false,
+    pageLevelAds: false
   },
   image: {
     dir: 'public'
@@ -107,6 +93,10 @@ export default defineNuxtConfig({
     { src: '~/plugins/vue3-toastify.js', mode: 'client' }
   ],
   runtimeConfig: {
+    'google-adsense': {
+      id: process.env.GOOGLE_ADSENSE_ID,
+      test: process.env.GOOGLE_ADSENSE_TEST_MODE === 'true',
+    },
     public: {
       baseUrl: process.env.NUXT_BASE_URL ||'http://localhost:3000',
       gaKey: 'G-4YRSE1WP17',

@@ -52,7 +52,7 @@ const giftList = reactive([
 // computeds
 const meta = computed(() => {
   const metaData = {
-    description: 'Nosso buffet é preparado com muito cuidado e carinho, pensando em cada detalhe para oferecer uma experiência gastronômica única para nossos clientes. Utilizamos ingredientes frescos e de alta qualidade em nossos pratos, que são cuidadosamente selecionados para garantir o melhor sabor e aroma. Além disso, nosso espaço conta com uma vista deslumbrante para o Monte Millazzo, uma paisagem de tirar o fôlego que proporciona um clima agradável e aconchegante para desfrutar de uma boa refeição. Venha experimentar o melhor da culinária em nosso buffet e aproveitar o encanto da natureza no Monte Millazzo!',
+    description: 'A presença de vocês nesse dia incrível é o nosso maior presente que poderíamos ter. Para aqueles que desejam nos presentear, criamos uma lista de presentes com todo carinho. Será uma ajuda muito especial para iniciarmos a nossa nova vida juntos',
     url: config.baseUrl
   }
 
