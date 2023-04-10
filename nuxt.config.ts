@@ -82,7 +82,7 @@ export default defineNuxtConfig({
   ],
   'google-adsense': {
     onPageLoad: false,
-    pageLevelAds: false
+    pageLevelAds: false,
   },
   image: {
     dir: 'public'
@@ -95,14 +95,15 @@ export default defineNuxtConfig({
   runtimeConfig: {
     'google-adsense': {
       id: process.env.GOOGLE_ADSENSE_ID,
-      test: process.env.GOOGLE_ADSENSE_TEST_MODE === 'true',
+      test: true,
     },
     public: {
       baseUrl: process.env.NUXT_BASE_URL ||'http://localhost:3000',
-      gaKey: 'G-4YRSE1WP17',
+      gaKey: process.env.NUXT_GA_KEY,
+      googleId: process.env.GOOGLE_ADSENSE_ID,
       apiBaseUrl: 'http://localhost:5000',
       pixKey: 'contato@casamentotafe.com',
-      mapboxKey: 'pk.eyJ1IjoiZmVsaXBlY3NzIiwiYSI6ImNsZmc0ZjczZTA0azMzcXMzYTBnaXFzYjcifQ.QWiOGCNiz6IdYZuXct4A-w'
+      mapboxKey: process.env.NUXT_MAPBOX_KEY
     }
   },
 })
