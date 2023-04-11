@@ -118,6 +118,7 @@
     <div class="container-full-bleed mt-10">
       <div class="w-full h-46 text-center">
         <adsbygoogle
+          :id="config.googleId"
           ad-layout="in-article"
           ad-slot="4866723766"
           ad-format="fluid"
@@ -194,7 +195,8 @@
 
     <div class="container-full-bleed mt-10">
       <div class="w-full h-46 text-center">
-        <adsbygoogle 
+        <adsbygoogle
+          :id="config.googleId"
           ad-layout="in-article"
           ad-slot="4699202800 "
           ad-format="auto"
