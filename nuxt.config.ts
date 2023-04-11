@@ -80,6 +80,9 @@ export default defineNuxtConfig({
     ['@funken-studio/sitemap-nuxt-3', { generateOnBuild: true }],
     '@nuxtjs/google-adsense'
   ],
+  'google-adsense': {
+    id: 'ca-pub-5137005946472400'
+  },
   image: {
     dir: 'public'
   },
