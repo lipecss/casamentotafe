@@ -39,7 +39,7 @@
     <div class="text-center">
       <h1 class="text-2xl md:text-3xl my-6 font-bold">CONTAGEM REGRESSIVA PARA O GRANDE DIA</h1>
 
-      <VgCountdown vg-id="vg-countdown" :day="6" month="aug" :year="2023" :hour="10" :minute="0" :second="0"
+      <VgCountdown vg-id="vg-countdown" :day="6" month="aug" :year="2023" :hour="9" :minute="30" :second="0"
         daysText="dias" hoursText="horas" minutesText="minutos" secondsText="segundos" text-color="#141414" separator
         separator-type=":" />
     </div>
