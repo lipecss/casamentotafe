@@ -3,7 +3,7 @@
     <div class="w-screen sm:w-11/12 lg:w-1/2">
       <div class="px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
         <h2 class="text-center text-4xl font-display font-semibold lg:text-left xl:text-5xl
-            xl:text-bold">
+              xl:text-bold">
           Entrar
         </h2>
 
@@ -14,12 +14,8 @@
             </label>
 
             <div class="relative w-full">
-              <input
-                v-model="form.email"
-                class="w-full py-3 px-3 text-lg rounded border border-tuscany"
-                type="text"
-                placeholder="Informe seu e-mail"
-              />
+              <input v-model="form.email" class="w-full py-3 px-3 text-lg rounded border border-tuscany" type="text"
+                placeholder="Informe seu e-mail" />
             </div>
 
             <label class="font-medium block mb-1 mt-6 text-gray-700" for="password">
@@ -31,21 +27,15 @@
                 <input class="hidden js-password-toggle" id="toggle" type="checkbox" />
                 <label
                   class="bg-tuscany hover:bg-gray-400 rounded px-2 py-1 text-sm text-white font-mono cursor-pointer js-password-label"
-                  for="toggle"
-                  @click="toggleShowPassword"
-                >
+                  for="toggle" @click="toggleShowPassword">
                   {{ showPasswordText }}
                 </label>
               </div>
 
-              <input
-                v-model="form.password"
-                class="w-full py-3 px-3 text-lg rounded border border-tuscany"
-                :type="passwordInputType"
-                placeholder="Informe sua senha"
-                autocomplete="off"/>
+              <input v-model="form.password" class="w-full py-3 px-3 text-lg rounded border border-tuscany"
+                :type="passwordInputType" placeholder="Informe sua senha" autocomplete="off" />
             </div>
- 
+
             <div class="mt-10">
               <button
                 class="disabled:opacity-25 bg-tuscany p-4 w-full rounded-full text-white font-semibold focus:shadow-outline hover:bg-pastel-pink"
@@ -64,16 +54,8 @@
 
       <NuxtLink to="/" class="cursor-pointer bt-back">Voltar ao Início</NuxtLink>
 
-      <nuxt-img
-        format="webp"
-        class="image"
-        src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/DJI_0317.JPG"
-        alt="Cover login image"
-        title="Cover login image"
-        width="692"
-        height="270"
-        sizes="sm:100vw md:100vw lg:100vw"
-      />
+      <nuxt-img format="webp" class="image" src="https://i.imgur.com/jnV7t17.jpg" alt="Cover login image"
+        title="Cover login image" width="692" height="270" sizes="sm:100vw md:100vw lg:100vw" />
     </div>
   </div>
 </template>

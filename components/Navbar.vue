@@ -8,67 +8,53 @@
 
     <div class="flex flex-grow space-x-1">
       <div class="hidden md:block">
-        <NuxtLink 
-          v-for="(menu, index) in menuList" :key="index" 
-          :to="menu.path" class="px-2 text-gray-700 hover:text-tuscany">
+        <NuxtLink v-for="(menu, index) in menuList" :key="index" :to="menu.path"
+          class="px-2 text-gray-700 hover:text-tuscany">
           {{ menu.text }}
         </NuxtLink>
 
-        <NuxtLink
-          v-if="!isAuthenticated"
-          to="/login" class="px-2 text-gray-700 hover:text-tuscany">
+        <NuxtLink v-if="!isAuthenticated" to="/login" class="px-2 text-gray-700 hover:text-tuscany">
           Logar
-        </NuxtLink>      
+        </NuxtLink>
 
-        <NuxtLink
-          v-else
-          to="/dashboard" class="px-2 text-gray-700 hover:text-tuscany">
+        <NuxtLink v-else to="/dashboard" class="px-2 text-gray-700 hover:text-tuscany">
           Dashboard
-        </NuxtLink>    
+        </NuxtLink>
       </div>
 
       <div @click="toggleNav" class="flex md:hidden">
-        <button
-          type="button"
-          class="
-          text-gray-800
-          hover:text-gray-700
-          focus:outline-none focus:text-gray-700
-          "
-        >
-        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-            <path
-              fill-rule="evenodd"
-               d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-            />
+        <button type="button" class="
+            text-gray-800
+            hover:text-gray-700
+            focus:outline-none focus:text-gray-700
+            ">
+          <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+            <path fill-rule="evenodd"
+              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
           </svg>
         </button>
       </div>
     </div>
 
     <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-    <ul 
-      :class="showMenu ? 'flex' : 'hidden'"
-      class="md:hidden flex-col mt-8 space-y-4 flex items-center">
-        <li v-for="(menu, index) in menuList" :key="index">
-          <NuxtLink :to="menu.path" class="px-2 text-gray-700 hover:text-tuscany">
-            {{ menu.text }}
-          </NuxtLink>   
-        </li>
+    <ul :class="showMenu ? 'flex' : 'hidden'" class="md:hidden flex-col mt-8 space-y-4 flex items-center">
+      <li v-for="(menu, index) in menuList" :key="index">
+        <NuxtLink :to="menu.path" class="px-2 text-gray-700 hover:text-tuscany">
+          {{ menu.text }}
+        </NuxtLink>
+      </li>
 
-        <li v-if="!isAuthenticated">
-          <NuxtLink
-            to="/login" class="px-2 text-gray-700 hover:text-tuscany">
-            Logar
-          </NuxtLink>   
-        </li>
+      <li v-if="!isAuthenticated">
+        <NuxtLink to="/login" class="px-2 text-gray-700 hover:text-tuscany">
+          Logar
+        </NuxtLink>
+      </li>
 
-        <li v-else>
-          <NuxtLink
-          to="/dashboard" class="px-2 text-gray-700 hover:text-tuscany">
+      <li v-else>
+        <NuxtLink to="/dashboard" class="px-2 text-gray-700 hover:text-tuscany">
           Dashboard
-        </NuxtLink>   
-        </li>
+        </NuxtLink>
+      </li>
     </ul>
   </nav>
 </template>
@@ -89,12 +75,12 @@ watch(route, () => {
 const showMenu = ref(false)
 
 const menuList = reactive([
-  { path: '/', text: 'Inicio'},
-  { path: '/padrinhos', text: 'Padrinhos'},
-  { path: '/buffet', text: 'Buffet'},
-  { path: '/cerimonia', text: 'Cerimônia & Festa'},
-  { path: '/presentes', text: 'Presentes'},
-  { path: '/rsvp', text: 'RSVP'}
+  { path: '/', text: 'Inicio' },
+  { path: '/padrinhos', text: 'Padrinhos' },
+  { path: '/buffet', text: 'Buffet' },
+  { path: '/cerimonia', text: 'Cerimônia & Festa' },
+  { path: '/presentes', text: 'Presentes' },
+  { path: '/rsvp', text: 'RSVP' }
 ])
 
 // computeds
@@ -107,7 +93,6 @@ const toggleNav = () => (showMenu.value = !showMenu.value)
 </script>
 
 <style lang="scss" scoped>
-
 .slide-enter-from,
 .slide-leave-to {
   opacity: 0;

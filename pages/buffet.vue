@@ -3,7 +3,9 @@
     <!-- Intro -->
     <section class="mb-2">
       <p class="about-text">
-        Estamos nos preparando para esse dia, pensando carinhosamente em cada detalhe e será ainda melhor, por compartilharmos juntos esse momento. Sabemos que muitos de vocês não se conhecem, mas será uma grande oportunidade para se conhecerem e compartilhar esse dia juntinho conosco.
+        Estamos nos preparando para esse dia, pensando carinhosamente em cada detalhe e será ainda melhor, por
+        compartilharmos juntos esse momento. Sabemos que muitos de vocês não se conhecem, mas será uma grande oportunidade
+        para se conhecerem e compartilhar esse dia juntinho conosco.
       </p>
 
       <p class="about-text">
@@ -38,55 +40,43 @@
           </div>
           <div class="md:w-1/2 h-auto px-4">
             <div class="mb-8">
-              <nuxt-img 
-                format="webp"
-                class="shadow-md"
-                src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/buffet2.jpg"
-                alt=""
-                width="692"
-                height="270"
-                sizes="sm:100vw md:100vw lg:100vw"
-              />
+              <nuxt-img format="webp" class="shadow-md"
+                src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/buffet2.jpg" alt="" width="692"
+                height="270" sizes="sm:100vw md:100vw lg:100vw" />
             </div>
             <div>
-              <nuxt-img 
-                format="webp"
-                class="shadow-md"
-                src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/buffet3.jpg"
-                alt=""
-                width="692"
-                height="270"
-                sizes="sm:100vw md:100vw lg:100vw"
-              />
+              <nuxt-img format="webp" class="shadow-md"
+                src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/buffet3.jpg" alt="" width="692"
+                height="270" sizes="sm:100vw md:100vw lg:100vw" />
             </div>
           </div>
         </div>
       </section>
 
       <p class="about-text">
-        O local conquistou nosso coração, além do espaço ser rodeado pela natureza, percebemos que tudo foi construído com muito amor e carinho. Cada detalhe foi pensado com cuidado e dedicação, desde a arquitetura da igrejinha até a decoração do espaço. A equipe também nos receberam com tanta gentileza e nos fizeram sentir em casa desde o primeiro momento. Não é à toa que a noiva sempre sonhou em casar lá
+        O local conquistou nosso coração, além do espaço ser rodeado pela natureza, percebemos todos os detalhes (desde a
+        capela até o salão principal) foram construídos com muito amor e carinho.
+      </p>
+
+      <p class="about-text">
+        A equipe que nos recebeu no dia da visita, foram muito gentis e nos fizeram sentir em casa desde o primeiro
+        momento.
       </p>
 
       <section class="py-8 px-4">
         <div class="flex flex-wrap -mx-4">
           <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
-            <nuxt-img 
-              format="webp"
-              class="shadow-md"
-              src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/buffet4.jpg"
-              alt=""
-              width="692"
-              height="270"
-              sizes="sm:100vw md:100vw lg:100vw"
-            />
+            <nuxt-img format="webp" class="shadow-md"
+              src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/buffet4.jpg" alt="" width="692" height="270"
+              sizes="sm:100vw md:100vw lg:100vw" />
           </div>
 
           <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
             <p class="about-text" style="padding-top: 0 !important;">
               Levamos nossos pais para conhecer e apresentar o local que havíamos escolhido para o nosso casamento. Foi um
               dia muito especial, pois pudemos compartilhar nossa alegria e felicidade com eles. Ver a alegria nos rostos
-              dos nossos pais ao conhecerem o local e perceberem como seríamos bem cuidados ali foi uma das melhores
-              sensações que já tivemos.
+              dos nossos pais ao conhecerem o local e perceberem como seria o grande dia, foi uma das melhores sensações
+              que já tivemos.
             </p>
           </div>
         </div>
@@ -94,47 +84,31 @@
         <div class="flex flex-wrap -mx-4">
           <div class="lg:w-1/2 px-4 mb-8 md:mb-0">
             <p class="about-text" style="padding-top: 0 !important;">
-              Estamos animados para ter nosso casamento no <span class="font-bold">Monte Millazzo</span> e compartilhar
-              essa experiência única com nossos amigos e familiares. Não poderíamos estar mais felizes com a escolha que
-              fizemos e mal podemos esperar para o grande dia chegar!
+              Estamos animados para realizar nosso casamento no <span class="font-bold">Monte Millazzo</span> e
+              compartilhar essa experiência única com
+              nossos amigos e familiares. Não poderíamos estar mais felizes com a escolha que fizemos e mal podemos
+              esperar para o grande dia chegar!
             </p>
           </div>
           <div class="lg:w-1/2 px-4 mb-8 lg:mb-0">
-            <nuxt-img
-              format="webp"
-              class="shadow-md"
-              src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/buffet5.jpg"
-              alt=""
-              width="692"
-              height="270"
-              sizes="sm:100vw md:100vw lg:100vw"
-            />
+            <nuxt-img format="webp" class="shadow-md"
+              src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/buffet5.jpg" alt="" width="692" height="270"
+              sizes="sm:100vw md:100vw lg:100vw" />
           </div>
         </div>
       </section>
     </section>
     <!-- O buffet -->
 
-    <div class="container-full-bleed mt-10">
-      <div class="w-full h-46 text-center">
-        <adsbygoogle
-          :id="config.googleId"
-          ad-layout="in-article"
-          ad-slot="4866723766"
-          ad-format="fluid"
-          :ad-full-width-responsive="true"
-        />
-      </div>
-    </div>
-
     <!-- O Menu -->
     <section class="mt-10">
       <h2 class="title text-center place-items-center">O Menu</h2>
 
       <p class="about-text">
-        Ah, não podemos deixar de falar sobre o menu! A comida do <span class="font-bold">Monte Millazzo</span> é
-        simplesmente divina! Não há palavras suficientes para descrever a infinidade de sabores, texturas e aromas que
-        experimentamos durante a degustação.
+        Ah, não podemos deixar de falar sobre o menu! A comida do Monte Millazzo é simplesmente <span
+          class="font-bold">maravilhosa</span>! Não há
+        palavras suficientes para descrever a infinidade de sabores, texturas e aromas que experimentamos durante a
+        degustação.
       </p>
 
       <p class="about-text">
@@ -143,19 +117,17 @@
       </p>
 
       <p class="about-text">
-        A equipe do Monte Millazzo preparou um menu especial para o nosso casamento, com opções para agradar a todos os gostos e paladares. Aqui está o nosso menu para que você possa salivar junto conosco:
+        A equipe do Monte Millazzo preparou um menu especial para o nosso casamento, com opções para agradar todos os
+        paladares.
       </p>
 
-      <nuxt-img
-        format="webp"
-        class="mx-auto my-10"
-        src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/separador.png"
-        alt="Separador"
-        title="Separador"
-        width="692"
-        height="270"
-        sizes="sm:100vw md:100vw lg:100vw"
-      />
+      <p class="about-text">
+        Apresentamos a vocês, o nosso menu:
+      </p>
+
+      <nuxt-img format="webp" class="mx-auto my-10"
+        src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/separador.png" alt="Separador" title="Separador"
+        width="692" height="270" sizes="sm:100vw md:100vw lg:100vw" />
 
       <div class="px-4">
         <div class="grid grid-cols-2 gap-4 py-5">
@@ -187,23 +159,11 @@
         </div>
       </div>
 
-      <p class="about-text">
+      <p class="about-text" style="font-weight: bold;">
         Estamos ansiosos para ver todos vocês saboreando esses pratos deliciosos no nosso casamento!
       </p>
     </section>
     <!-- O Menu -->
-
-    <div class="container-full-bleed mt-10">
-      <div class="w-full h-46 text-center">
-        <adsbygoogle
-          :id="config.googleId"
-          ad-layout="in-article"
-          ad-slot="4699202800 "
-          ad-format="auto"
-          :ad-full-width-responsive="true"
-        />
-      </div>
-    </div>
   </section>
 </template>
 

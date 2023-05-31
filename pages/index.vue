@@ -1,5 +1,5 @@
 <template>
-  <section class="relative bg-gray-800" style="margin-top: -55px; height: 700px;">
+  <section class="relative" style="margin-top: -55px; height: 700px;">
     <div class="absolute inset-0">
       <NuxtImg format="webp" class="w-full h-full object-cover bg-fixed bg-no-repeat bg-center"
         title="Felipe e Taina cover image" src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/cover-image.jpg"
@@ -16,9 +16,10 @@
     <div class="items-center max-w-6xl relative">
       <div>
         <p class="about-text">
-          Aqui vamos contar a vocês, queridos amigos e familiares, sobre um pouquinho da nossa vida antes desse momento
-          especial em que daremos esse passo a mais para unirmos nossas vidas. É um prazer compartilhar esse momento com
-          vocês!
+          É um prazer compartilhar esse momento com vocês! Aqui vamos contar a vocês, queridos amigos e familiares, os
+          momentos mais marcantes da nossa história. A contagem regressiva começa, o frio na barriga e toda a ansiedade do
+          dia mais esperado de nossas vidas nos enche de alegria em tê-los ao nosso lado. Vamos juntos nesse grande sonho,
+          o dia em que nos tornaremos um perante o Senhor!
         </p>
       </div>
     </div>
@@ -26,13 +27,12 @@
 
   <section class="text-center place-items-center">
     <div>
-      <p class="text-3xl font-light mb-10">#casamentoTaFe</p>
+      <p class="text-3xl mb-10">#casamentoTaFe</p>
     </div>
 
     <div class="grid grid-rows-1 text-center grid-flow-col gap-1 mb-10">
       <div>
-        <p class="subtitle">06 de Agosto de 2023</p>
-        <p class="mt-6 text-lg font-bold">São Paulo, SP</p>
+        <p class="text-3xl">06 de Agosto de 2023</p>
       </div>
     </div>
 
@@ -55,18 +55,6 @@
     </div>
   </section>
 
-  <div class="container-full-bleed mt-10">
-    <div class="w-full h-46 text-center">
-      <adsbygoogle
-        :id="config.googleId"
-        ad-layout="in-article"
-        ad-slot="7476575239"
-        ad-format="fluid"
-        :ad-full-width-responsive="true"
-      />
-    </div>
-  </div>
-
   <Divider type="floral" />
 
   <section class="grid text-center place-items-center">
@@ -83,8 +71,8 @@
 
         <p class="about-text">
           No dia seguinte, ele me trouxe pedaço do bolo. Porém, eu estava ausente da empresa e pedi a uma amiga, que me
-          passasse o número de telefone dele para agradecer e desde então, não paramos mais de nos falar! Com o passar do
-          tempo, construímos uma grande amizade!
+          passasse o número de telefone dele para agradecer e desde então, não paramos mais de nos falar! Construímos uma
+          grande amizade!
         </p>
 
         <p class="about-text">
@@ -99,10 +87,10 @@
         </p>
 
         <p class="about-text">
-          Esse momento foi marcante não apenas pela surpresa indesejada, mas também pelo quanto ele foi companheiro,
-          o quanto se preocupou e o quanto cuidou de tudo para que a minha recuperação fosse a menos sofrida possível. Mas
+          Esse momento foi marcante não apenas pela surpresa indesejada, mas também pelo quanto ele foi companheiro, o
+          quanto se preocupou e o quanto cuidou de tudo para que a minha recuperação fosse a menos sofrida possível. Mas
           acima de todo esse momento doloroso, pudemos desfrutar de mais uma experiência com o Senhor. Aprendemos
-          diariamente a colocar Deus sempre a frente de tudo e em todas as coisas!
+          diariamente a colocar Deus sempre à frente de tudo e em todas as coisas!
         </p>
 
         <p class="about-text">
@@ -122,10 +110,9 @@
       <p class="pb-3">02.04.22</p>
 
       <p class="about-text">
-        No aniversário de quando nos conhecemos, marcamos um encontro com toda a família. Depois de quase 1 hora de atraso
-        minha (achando meia pro meu <span class="font-black">Yeezy</span>) e muita diversão, o noivo chega. Quando a
-        música de repente acabou, estava lá eu pedindo minha menina em casamento. Ela chorou, a família chorou e ela disse
-        "SIM", e estávamos noivos.
+        Em 02 de Abril de 2022 marcamos um encontro com toda a família. Depois de quase 1 hora de atraso (achando meia pro
+        meu Yeezy) e muita diversão, eu finalmente cheguei. Quando a música de repente acabou, estava lá eu pedindo minha
+        menina em casamento. Ela chorou, a família chorou, ela disse "SIM" e de repente, estávamos noivos.
       </p>
     </div>
   </section>
@@ -144,17 +131,6 @@
       </div>
     </div>
   </section>
-
-  <div class="max-w-full h-46 container-full-bleed">
-    <div class=" text-center">
-      <adsbygoogle
-        :id="config.googleId"
-        ad-slot="6412611867" 
-        ad-format="auto"
-        :ad-full-width-responsive="true"
-      />
-    </div>
-  </div>
 </template>
 
 <script setup>

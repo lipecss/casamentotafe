@@ -78,11 +78,7 @@ export default defineNuxtConfig({
     ],
     '@pinia-plugin-persistedstate/nuxt',
     ['@funken-studio/sitemap-nuxt-3', { generateOnBuild: true }],
-    '@nuxtjs/google-adsense'
   ],
-  'google-adsense': {
-    id: 'ca-pub-5137005946472400'
-  },
   image: {
     dir: 'public'
   },
@@ -95,7 +91,6 @@ export default defineNuxtConfig({
     public: {
       baseUrl: process.env.NUXT_BASE_URL ||'http://localhost:3000',
       gaKey: process.env.NUXT_GA_KEY,
-      googleId: process.env.GOOGLE_ADSENSE_ID,
       apiBaseUrl: 'http://localhost:5000',
       pixKey: 'contato@casamentotafe.com',
       mapboxKey: process.env.NUXT_MAPBOX_KEY
