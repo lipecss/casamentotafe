@@ -10,7 +10,7 @@
 
       <div class="items-center max-w-6xl relative mb-6">
         <PadrinhosCard v-for="(padrinho, index) in padrinhosList" :key="index" :position="padrinho.position"
-          :description="padrinho.description" :name="padrinho.name" :image="padrinho.image" />
+          :description="padrinho.description" :size="padrinho.size" :name="padrinho.name" :image="padrinho.image" />
       </div>
     </section>
   </div>

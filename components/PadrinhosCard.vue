@@ -1,13 +1,13 @@
 <template>
   <div v-if="position === 'left'" class="grid grid-cols-2">
     <div class="h-auto bg-cover bg-center" :style="backgroundStyle"></div>
-      <div class="p-8">
-        <div class="mt-8 mb-8">
-          <h1 class="text-2xl font-black uppercase text-right mb-2">{{ name }}</h1>
-          <p class="text-right descripiton text-lg">
-            {{ description }}
-          </p>
-        </div>
+    <div class="p-8">
+      <div class="mt-8 mb-8">
+        <h1 class="text-2xl font-black uppercase text-right mb-2">{{ name }}</h1>
+        <p class="text-right descripiton text-lg">
+          {{ description }}
+        </p>
+      </div>
     </div>
   </div>
 
@@ -16,20 +16,20 @@
       <div class="mt-8 mb-8">
         <h1 class="text-2xl font-black uppercase text-left mb-2">{{ name }}</h1>
         <p class="text-left descripiton text-lg">
-          {{  description }}
+          {{ description }}
         </p>
       </div>
     </div>
 
-    <div class="h-auto bg-cover bg-center" :style="backgroundStyle"/>
+    <div class="h-auto bg-cover bg-center" :style="backgroundStyle" />
   </div>
 </template>
 
 <script setup>
 // props
-const props = defineProps({ 
-  position: { 
-    type: String , default: 'left',
+const props = defineProps({
+  position: {
+    type: String, default: 'left',
     validator(value) {
       return ['left', 'right'].includes(value)
     }
@@ -37,6 +37,7 @@ const props = defineProps({
   description: String,
   name: String,
   image: { type: String, default: '' },
+  size: { type: String, default: 'cover' },
   position: { type: String, default: 'center' }
 })
 
@@ -44,7 +45,7 @@ const props = defineProps({
 const backgroundStyle = computed(() => {
   return {
     backgroundImage: `url(${props.image})`,
-    backgroundSize: 'cover',
+    backgroundSize: props.size,
     backgroundRepeat: 'no-repeat',
     'background-position-y': props.position
   }
@@ -56,10 +57,13 @@ const backgroundStyle = computed(() => {
   .grid {
     display: block;
   }
+
   .bg-cover {
-    height: 200px; /* ou outra altura desejada */
+    height: 200px;
+    /* ou outra altura desejada */
   }
 }
+
 .descripiton {
   font-weight: 300;
   line-height: 2;
