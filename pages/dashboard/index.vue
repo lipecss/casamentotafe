@@ -44,31 +44,44 @@
             <span class="block text-gray-500">Convidados confirmados</span>
           </div>
         </div>
-        <div class="flex items-center p-8 bg-white shadow rounded-lg">
-          <div
-            class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-red-600 bg-red-100 rounded-full mr-6">
-            <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
-            </svg>
-          </div>
-          <div>
-            <span class="inline-block text-2xl font-bold">9</span>
-            <span class="inline-block text-xl text-gray-500 font-semibold">(14%)</span>
-            <span class="block text-gray-500">Underperforming students</span>
-          </div>
-        </div>
-        <div class="flex items-center p-8 bg-white shadow rounded-lg">
-          <div
-            class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-blue-600 bg-blue-100 rounded-full mr-6">
-            <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
-          </div>
-          <div>
-            <span class="block text-2xl font-bold">83%</span>
-            <span class="block text-gray-500">Finished homeworks</span>
-          </div>
+      </section>
+      <section class="cols-12 p-0 m-0">
+        <div class="mt-7" style="height: 500px; overflow: auto;">
+          <table class="w-full">
+            <thead class="rounded-t-lg border">
+              <tr class="text-center">
+                <th class="p-3 text-left">#</th>
+                <th class="p-3 text-left">Nome</th>
+                <th class="p-3">Email</th>
+                <th class="">rsvp código</th>
+                <th class="p-3">Confirmado?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(guest, index) in guestData" :key="index" class="h-16 border bg-white shadow rounded-lg w-full">
+                <td class="text-center">
+                  <span>{{ index + 1 }}</span>
+                </td>
+                <td class="">
+                  <div>
+                    <p class="text-sm leading-none text-gray-600 ml-2">{{ guest.username }}</p>
+                  </div>
+                </td>
+                <td class="pl-5">
+                  <p class="text-sm leading-none text-gray-600 ml-2">{{ guest.email }}</p>
+                </td>
+                <td class="pl-5">
+                  <p class="text-sm text-center leading-none text-gray-600 ml-2 font-bold">{{ guest.rsvp_code }}</p>
+                </td>
+                <td class="pl-5">
+                  <p class="text-sm text-center leading-none ml-2"
+                    :class="{ 'text-green-600': guest.confirmed, 'text-red-600': !guest.confirmed }">
+                    {{ confirmedText(guest.confirmed) }}
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
     </div>
@@ -94,7 +107,9 @@ const { setApiPending } = statusStore()
 const status = ref({})
 const config = useRuntimeConfig()
 
-// computeds
+const guestData = ref([])
+
+// computed
 const meta = computed(() => {
   const metaData = {
     title: 'Padrinhos do casamento de Felipe e Tatiana!',
@@ -107,6 +122,10 @@ const meta = computed(() => {
 
 const family = computed(() => currentUser.family)
 
+const confirmedText = (status) => {
+  return status ? 'Sim' : 'Não'
+}
+
 useHead({
   title: `Área logada - Bem vindo ${currentUser.username}`,
   meta: () => [...meta.value]
@@ -114,6 +133,26 @@ useHead({
 
 if (isAdmin) {
   const { fetchApi } = useApi()
+
+  const { data: guest } = await fetchApi('/guests', {
+    method: 'GET',
+    headers: { 'x-access-token': auth.value }
+  })
+
+  if (guest) {
+    guestData.value = guest.sort((a, b) => {
+      // Ordenar por confirmed em ordem decrescente
+      if (a.confirmed && !b.confirmed) {
+        return -1;
+      }
+      if (!a.confirmed && b.confirmed) {
+        return 1;
+      }
+
+      // Ordenar por username em ordem crescente
+      return a.username.localeCompare(b.username);
+    });
+  }
 
   const { data, error } = await fetchApi('/admin-status', {
     method: 'GET',
