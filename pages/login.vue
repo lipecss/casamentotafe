@@ -3,9 +3,15 @@
     <div class="w-screen sm:w-11/12 lg:w-1/2">
       <div class="px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
         <h2 class="text-center text-4xl font-display font-semibold lg:text-left xl:text-5xl
-              xl:text-bold">
+                                              xl:text-bold">
           Entrar
         </h2>
+
+        <h3 class="mt-10 font-bold">Família, padrinhos e convidados</h3>
+
+        <p>
+          Utilize seu e-mail informado. Sua senha padrão é o prefixo do seu e-mail até antes do @.
+        </p>
 
         <div class="mt-12">
           <form @submit.prevent="onSubmit">
@@ -52,7 +58,7 @@
       style="border-radius: 130px 0 0 130px;">
       <div class="overlay"></div>
 
-      <NuxtLink to="/" class="cursor-pointer bt-back">Voltar ao Início</NuxtLink>
+      <NuxtLink to="/" class="p-1 cursor-pointer bt-back hover:bg-gray-700">Voltar ao Início</NuxtLink>
 
       <nuxt-img format="webp" class="image" src="https://i.imgur.com/jnV7t17.jpg" alt="Cover login image"
         title="Cover login image" width="692" height="270" sizes="sm:100vw md:100vw lg:100vw" />
