@@ -5,6 +5,8 @@
     <h1 class="text-xl my-6">OBRIGADO PELO CARINHO. VAMOS LEMBRAR PARA SEMPRE DESTE MOMENTO TÃO
       ESPECIAL!</h1>
 
+    <p class="text-red-500 font-bold">**Sejam respeitosos, sua mensagem será visível para todos, logo abaixo.</p>
+
     <div class="grid max-w-screen-sm grid-cols-1 py-16 mx-auto rounded-lg md:px-12 lg:px-16 xl:px-32 dark:text-gray-100">
       <form class="space-y-6 ng-untouched ng-pristine ng-valid" @submit.prevent="sendMessage">
         <div>
@@ -95,11 +97,6 @@ let showModal = ref(false)
 let returnType = ref('success')
 let backendMessage = ref('')
 
-watch(showModal, (oldValue, newValue) => {
-  console.log('new', newValue)
-  console.log('oldValue,', oldValue)
-}, { immediate: true })
-
 const { data: messagesData, refresh } = await useAsyncData('mountains', () => fetchApi('/message'))
 
 // computed
@@ -109,12 +106,7 @@ const remainingCharacters = computed(() => {
 
 const disabledButton = computed(() => {
   const values = Object.values(form.value);
-
-  console.log('values', values)
-
   const allFieldsFilled = values.every(field => field.trim() !== '');
-
-  console.log('allFieldsFilled', allFieldsFilled)
 
   return allFieldsFilled && !!token.value
 })
