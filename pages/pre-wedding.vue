@@ -126,7 +126,8 @@ definePageMeta({
 })
 
 const config = useRuntimeConfig()
-// computeds
+
+// computed
 const meta = computed(() => {
   const metaData = {
     description: 'Nosso buffet é preparado com muito cuidado e carinho, pensando em cada detalhe para oferecer uma experiência gastronômica única para nossos clientes. Utilizamos ingredientes frescos e de alta qualidade em nossos pratos, que são cuidadosamente selecionados para garantir o melhor sabor e aroma. Além disso, nosso espaço conta com uma vista deslumbrante para o Monte Millazzo, uma paisagem de tirar o fôlego que proporciona um clima agradável e aconchegante para desfrutar de uma boa refeição. Venha experimentar o melhor da culinária em nosso buffet e aproveitar o encanto da natureza no Monte Millazzo!',
