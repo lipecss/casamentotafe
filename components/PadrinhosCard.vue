@@ -54,12 +54,14 @@ const backgroundStyle = computed(() => {
 
 <style scoped>
 @media (max-width: 767px) {
+
   .grid {
     display: block;
   }
 
   .bg-cover {
-    height: 200px;
+    background-size: contain !important;
+    height: 200px !important;
     /* ou outra altura desejada */
   }
 }
