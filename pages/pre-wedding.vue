@@ -101,7 +101,7 @@
       <div class="flex flex-wrap -mx-4">
         <div class="md:w-1/2 h-auto px-4">
           <div class="mb-8"><nuxt-img format="webp" class="rounded shadow-md"
-              src="https://chi01pap001files.storage.live.com/y4mY2c761bhGkXC_aI2_1ap0xp4Isv-J8tLsyyaj8SFeW7dMwitJZV01fT2u2twCDD-N3FEUUPcP-r7r_f79ezQYv1E28nVrp4TRf8FrIBHFY2g6a-BOyK8OaLxkdDwC8JmMDIjRAMk1KdEBLqtNiQc2G1Yg_BmaihyRiGgwlN4PU8JlAUEYrj390ghfG94mSnXsNk8SmE4Fnm3tDyWP2sx4FCXS97affZPFNyjWhu61aQ?encodeFailures=1&width=1321&height=881"
+              src="https://chi01pap001files.storage.live.com/y4mS5nuBbIamMwjinvff9KQ6bfVrz4uNLp8YMcUU2sakW4XAAjr5LSM7z6FqXkrhCwxQ0_I5fsqAnKpxI1Iw1jhl1yh14igiEoTkByNrN97hp3OQh2V6-i8L7l41BdW371_jBf7gf6LPKpwHjiPx-q1ki_0XVeDPh0-pqwPuLNi_GmONouuz08fYrQiRPa4ktLzkU9UqEu_rtIyIhRG5mEFrUOqW_0sIdAfK_u7qeV5INc?encodeFailures=1&width=1321&height=881"
               alt="" /></div>
           <div><nuxt-img format="webp" class="rounded shadow-md"
               src="https://chi01pap001files.storage.live.com/y4mlvHq3-yrhIlFUPutFsv25pl7SlZ-2kJRW_GKL30ahhX0gIuq4niTRSEmjEAaAwFX_avJ2mMsaLFyuRHXimeM0yypqL3Iun2XlpLS15krZof59zOLQK1hengwkjbpq8U7aZuYecfiOj1njzD9kbKZfrs-ZsEyJ14MfQjo9OvIy05sLAjIcNZD025CuzpOs7jk6l4xczjE1oWW8M3n3RkI11JVGZWHQ8Uy1W7lPUa_vGg?encodeFailures=1&width=1321&height=881"
@@ -110,7 +110,7 @@
 
         <div class="hidden md:block md:w-1/2 px-4">
           <div class="h-full w-full bg-cover rounded shadow-md"
-            style="background-image: url('https://chi01pap001files.storage.live.com/y4mTgbFSzGfeav51KsJXMQSDikNecuhsUcwZPdEk0Q4TJRyDv2CHpLZJdJaNN9WYZyhQ5fgr5nxirTFV-8XHHQgdQdr9_YOh3sxPXgxJmMeyPJ5Xad-xOTY2O-SBrIqpZ_NqwIq_qJTfPyduEdSepYBZDZahxW1Vzubcb9lygIlbdgnsi1l77NRs-mjV2K4aW0HnRY2I58dqeTvlUWZHUHQ3fEWvVLKJV9FQU5x9vui4JY?encodeFailures=1&width=587&height=881')">
+            style="background-image: url('https://chi01pap001files.storage.live.com/y4maWQe-RNTfhzSlofkrahKzjA6mnHjIrQXi72E5Co_BiRC4mQ0ue4_Dpo8ghgeTuqwDwMw6HwkcpELK82JRSlBpBkukVvVl47CMSmQ-R4Op8pGm3HTlMMvJKJ0PitHsBBO7ePk1JEQi1_UOkhPYNiEaganEDTBOIWXBPEfGA_3SzIwYb5V_J3fA2vBwEmXBLnJX6tGNuv0onu4bdjGMjS3D-SV3poHwzuFGDHXeADj11s?encodeFailures=1&width=587&height=880')">
           </div>
         </div>
       </div>
