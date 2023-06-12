@@ -78,6 +78,7 @@ export default defineNuxtConfig({
     ],
     '@pinia-plugin-persistedstate/nuxt',
     ['@funken-studio/sitemap-nuxt-3', { generateOnBuild: true }],
+    '@nuxtjs/turnstile'
   ],
   image: {
     dir: 'public'
@@ -87,13 +88,17 @@ export default defineNuxtConfig({
     { src: '@/plugins/meta', mode: 'client' },
     { src: '~/plugins/vue3-toastify.js', mode: 'client' }
   ],
+  turnstile: {
+    siteKey: process.env.NUXT_TURNSTILE_WEBSITE_KEY,
+    addValidateEndpoint: true
+  },
   runtimeConfig: {
     public: {
       baseUrl: process.env.NUXT_BASE_URL ||'http://localhost:3000',
       gaKey: process.env.NUXT_GA_KEY,
       apiBaseUrl: 'http://localhost:5000',
       pixKey: 'contato@casamentotafe.com',
-      mapboxKey: process.env.NUXT_MAPBOX_KEY
+      mapboxKey: process.env.NUXT_MAPBOX_KEY,
     }
   },
 })
