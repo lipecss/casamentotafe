@@ -226,7 +226,6 @@ const bebidas = reactive([
 ])
 </script>
 
-
 <style lang="scss" scoped>
 .menu-item {
   font-family: 'Assistant', sans-serif;
