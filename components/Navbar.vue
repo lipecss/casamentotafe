@@ -24,10 +24,10 @@
 
       <div @click="toggleNav" class="flex md:hidden">
         <button type="button" class="
-                      text-gray-800
-                      hover:text-gray-700
-                      focus:outline-none focus:text-gray-700
-                      ">
+                        text-gray-800
+                        hover:text-gray-700
+                        focus:outline-none focus:text-gray-700
+                        ">
           <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
             <path fill-rule="evenodd"
               d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
@@ -79,6 +79,7 @@ const menuList = reactive([
   { path: '/padrinhos', text: 'Padrinhos' },
   { path: '/buffet', text: 'Buffet' },
   { path: '/cerimonia', text: 'Cerimônia & Festa' },
+  { path: '/pre-wedding', text: 'Pré Wedding' },
   { path: '/presentes', text: 'Presentes' },
   { path: '/message', text: 'Mensagens ao noivos' },
   { path: '/rsvp', text: 'RSVP' }

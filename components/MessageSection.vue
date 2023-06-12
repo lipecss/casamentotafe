@@ -5,7 +5,7 @@
     <h1 class="text-xl my-6">OBRIGADO PELO CARINHO. VAMOS LEMBRAR PARA SEMPRE DESTE MOMENTO TÃO
       ESPECIAL!</h1>
 
-    <p class="text-red-500 font-bold">**Seja respeitoso, sua mensagem será visível para todos, logo abaixo.</p>
+    <p class="text-red-500 font-bold">**Seja respeitoso, sua mensagem será visível para todos logo abaixo.</p>
 
     <div class="grid max-w-screen-sm grid-cols-1 py-16 mx-auto rounded-lg md:px-12 lg:px-16 xl:px-32 dark:text-gray-100">
       <form class="space-y-6 ng-untouched ng-pristine ng-valid" @submit.prevent="sendMessage">
