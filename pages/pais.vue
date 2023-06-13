@@ -53,6 +53,38 @@
         <div class="md:w-1/2 h-auto px-4">
           <h1 class="title mt-10">Noiva/nora (filha)</h1>
 
+          <div class="mb-8 about-text">
+            Como agradecer por todo carinho e cuidado que sempre demonstram por mim? Não apenas em palavras, mas
+            principalmente em ações. Sempre muito atenciosos desde o primeiro dia que nos conhecemos. Vocês deram vida, ao
+            meu futuro esposo e não há palavras que expressem minha total gratidão. Acredito que seus ensinamentos
+            moldaram quem meu amado é e por isso sou grata, pois os conheço e sei de seu caráter. Sinto-me honrada por ser
+            parte da família que ajudaram a formar e sou grata pela confiança que depositaram em mim. Tenho grande amor e
+            respeito pela trajetória de vocês, por cada testunho declarado e por todos os desafios superados ( admiro
+            muito a maneira que superaram cada um deles).
+          </div>
+
+          <div class="mb-8 about-text">
+            Agradeço por compartilharem suas experiências de vida, seus conselhos e por me ensinarem valores tão
+            preciosos, por terem criado uma família maravilhosa e por me acolherem com tanto carinho e generosidade.
+            Além disso, agradeço por terem criado e educado uma pessoa tão especial como a minha vida. Sua dedicação como
+            pais é evidente na personalidade dele e nas qualidades que admiro profundamente. Sou grata por tudo o que
+            fizeram para moldá-lo em um ser humano tão incrível.
+          </div>
+
+          <div class="mb-8 about-text">
+            Me comprometo em cuidar e amar seu filho da melhor maneira possível. Estou aqui para apoiá-lo, incentivá-lo e
+            enfrentarmos juntos os desafios que a vida nos apresentar. Juntos, estamos construindo nosso próprio caminho,
+            e sou grata por ter a bênção de ter vocês como parte dessa jornada.
+          </div>
+
+          <div class="mb-8 about-text">
+            Mais uma vez, obrigada por serem os sogros maravilhosos que são. Valorizo e amo cada um de vocês, e estou
+            ansiosa por muitos momentos felizes e memórias compartilhadas no futuro. Contem sempre comigo.
+          </div>
+
+          <div class="mb-8 about-text">
+            Com amor, nora/filha Tati.
+          </div>
         </div>
       </div>
     </section>
