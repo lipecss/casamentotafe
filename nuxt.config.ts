@@ -88,6 +88,13 @@ export default defineNuxtConfig({
     { src: '@/plugins/meta', mode: 'client' },
     { src: '~/plugins/vue3-toastify.js', mode: 'client' }
   ],
+  vite: {
+    optimizeDeps: {
+      include: [
+        'faz-um-pix'
+      ]
+    }
+  },
   turnstile: {
     siteKey: process.env.NUXT_TURNSTILE_WEBSITE_KEY,
     addValidateEndpoint: true

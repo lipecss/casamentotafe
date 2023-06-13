@@ -29,6 +29,7 @@
     "@vemlavaraloucagamers/vg-countdown": "^2.0.1",
     "@vueuse/core": "^9.13.0",
     "aos": "^2.3.4",
+    "gpix": "^1.1.8",
     "leaflet": "^1.9.3",
     "leaflet-routing-machine": "^3.2.12",
     "mapbox-gl": "^2.13.0",
