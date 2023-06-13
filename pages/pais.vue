@@ -133,29 +133,11 @@
           </div>
 
 
-          <div class="mb-8 about-text">
-            Agradeço por terem sido os melhores pais que alguém poderia ter, por terem investido tanto tempo e amor em
-            minha educação e crescimento! Agradeço também por todos os sacrifícios que fizeram ao longo desses 32 anos.
-            Sei que nem sempre foi fácil, mas vocês nunca desistiram de mim. Vocês me deram a base necessária para
-            enfrentar os desafios da vida e construir minha família!
-          </div>
+        
 
 
 
-          <div class="mb-8 about-text">
-            Agradeço por terem sido os melhores pais que alguém poderia ter, por terem investido tanto tempo e amor em
-            minha educação e crescimento! Agradeço também por todos os sacrifícios que fizeram ao longo desses 32 anos.
-            Sei que nem sempre foi fácil, mas vocês nunca desistiram de mim. Vocês me deram a base necessária para
-            enfrentar os desafios da vida e construir minha família!
-          </div>
-
-
-          <div class="mb-8 about-text">
-            Agradeço por terem sido os melhores pais que alguém poderia ter, por terem investido tanto tempo e amor em
-            minha educação e crescimento! Agradeço também por todos os sacrifícios que fizeram ao longo desses 32 anos.
-            Sei que nem sempre foi fácil, mas vocês nunca desistiram de mim. Vocês me deram a base necessária para
-            enfrentar os desafios da vida e construir minha família!
-          </div>
+          
         </div>
 
         <div class="md:w-1/2 h-auto px-4">
