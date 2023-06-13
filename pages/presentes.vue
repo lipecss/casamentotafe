@@ -7,17 +7,13 @@
       </p>
 
       <p class="about-text">
-        A presença de vocês, nesse dia incrível, é o maior presente que poderíamos ter. Para aqueles que desejam nos presentear, criamos uma lista de presentes com todo carinho.
+        A presença de vocês, nesse dia incrível, é o maior presente que poderíamos ter. Para aqueles que desejam nos
+        presentear, criamos uma lista de presentes com todo carinho.
       </p>
-
-      <p class="about-text">
-        Será uma ajuda muito especial para iniciarmos a nossa nova vida juntos
-      </p>
-
     </div>
 
     <div v-for="(item, index) in giftList" :key="index"
-      class="gift-card lg:flex items-center border-b bg-gray-100 border">
+      class="gift-card lg:flex items-center border-b border-b-gray-200 bg-gray-100 border">
       <div class="lg:mr-4 bg-white px-5">
         <div class="w-64 h-64 " :style="giftImage(item.imgUrl)"></div>
       </div>
