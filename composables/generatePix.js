@@ -10,7 +10,7 @@ export default async function generateCode (name, value) {
     name,
     city: 'SAO PAULO',
     transactionId,
-    message: 'Um mimozinho para vocês! S2',
+    message: '',
     cep: '99999999',
     value
   })

@@ -45,6 +45,7 @@
           </div>
         </div>
       </section>
+
       <section class="cols-12 p-0 m-0">
         <div class="mt-7" style="height: 500px; overflow: auto;">
           <table class="w-full">
@@ -55,6 +56,8 @@
                 <th class="p-3">Email</th>
                 <th class="">rsvp código</th>
                 <th class="p-3">Confirmado?</th>
+                <th class="">Qtd. adultos</th>
+                <th class="">Qtd. crianças</th>
               </tr>
             </thead>
             <tbody>
@@ -77,6 +80,16 @@
                   <p class="text-sm text-center leading-none ml-2"
                     :class="{ 'text-green-600': guest.confirmed, 'text-red-600': !guest.confirmed }">
                     {{ confirmedText(guest.confirmed) }}
+                  </p>
+                </td>
+                <td class="pl-5">
+                  <p class="text-sm text-center leading-none ml-2">
+                    {{ guest.guests }}
+                  </p>
+                </td>
+                <td class="pl-5">
+                  <p class="text-sm text-center leading-none ml-2">
+                    {{ guest.kids }}
                   </p>
                 </td>
               </tr>
@@ -114,7 +127,7 @@ const meta = computed(() => {
   const metaData = {
     title: 'Padrinhos do casamento de Felipe e Tatiana!',
     description: 'Bem-vindos à página de padrinhos do casamento de Felipe e Tatiana! Aqui, apresentamos as pessoas mais especiais em nossas vidas, que irão nos acompanhar em um dos dias mais felizes de nossas vidas. São essas pessoas que têm estado conosco em momentos importantes e que agora compartilham conosco essa alegria única. Conheça um pouco mais sobre cada um deles e sinta a emoção que estamos sentindo por tê-los ao nosso lado neste momento tão especial.',
-    url: `${config.baseUrl}/padrinhos`
+    url: `${config.baseUrl}/dashboard`
   }
 
   return getSiteMeta(metaData)
@@ -123,7 +136,14 @@ const meta = computed(() => {
 const family = computed(() => currentUser.family)
 
 const confirmedText = (status) => {
-  return status ? 'Sim' : 'Não'
+  switch (status) {
+    case null:
+      return 'Pendente'
+    case true:
+      return 'Sim'
+    case true:
+      return 'Não'
+  }
 }
 
 useHead({
