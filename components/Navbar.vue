@@ -82,7 +82,7 @@ const menuList = reactive([
   { path: '/cerimonia', text: 'Cerimônia & Festa' },
   { path: '/pre-wedding', text: 'Pré Wedding' },
   { path: '/presentes', text: 'Presentes' },
-  { path: '/message', text: 'Mensagens ao noivos' },
+  { path: '/message', text: 'Mensagens aos noivos' },
   { path: '/rsvp', text: 'RSVP' }
 ])
 
