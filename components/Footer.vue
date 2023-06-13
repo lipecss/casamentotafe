@@ -2,7 +2,7 @@
   <section>
     <div class="max-w-screen-xl px-4 py-6 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
       <div class="flex justify-center mt-8 space-x-6">
-        <NuxtLink to="https://www.instagram.com/felipecss/" target="_blank" class="hover:text-tuscany">
+        <NuxtLink to="https://www.instagram.com/casamentotafe/" target="_blank" class="hover:text-tuscany">
           <span class="sr-only">Instagram</span>
           <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd"
