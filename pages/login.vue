@@ -2,8 +2,14 @@
   <div class="h-screen flex bg-white text-slate-900 items-center justify-center">
     <div class="w-screen sm:w-11/12 lg:w-1/2">
       <div class="px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
+        <div class="my-16">
+          <NuxtLink to="/"
+            class="lg:hidden p-1 w-auto text-gray-700 cursor-pointer text-center hover:bg-gray-700 hover:text-white">
+            Voltar ao Início
+          </NuxtLink>
+        </div>
         <h2 class="text-center text-4xl font-display font-semibold lg:text-left xl:text-5xl
-                                              xl:text-bold">
+                                                                                            xl:text-bold">
           Entrar
         </h2>
 
