@@ -1,10 +1,10 @@
 <template>
   <div>
-    <Navbar :position="position"/>
+    <Navbar :position="position" />
     <div class="content" :class="paddingContent">
       <slot />
     </div>
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
