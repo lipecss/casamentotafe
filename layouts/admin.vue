@@ -162,6 +162,15 @@
               </svg>
               <span class="ml-2" x-show="menu">{{ item.text }}</span>
             </NuxtLink>
+
+            <NuxtLink v-if="isAdmin" to="/dashboard/mensagens" class="inline-flex items-center py-3 rounded-lg px-2"
+              :class="{
+                'bg-white': routeName === 'dashboard-mensagens',
+                'text-black': routeName === 'dashboard-mensagens',
+                'text-white': routeName !== 'dashboard-mensagens',
+              }">
+              Mensagens
+            </NuxtLink>
           </nav>
         </div>
 

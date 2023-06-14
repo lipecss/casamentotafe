@@ -7,7 +7,7 @@
       </div>
     </div>
 
-    <section class="grid grid-cols-1 xl:grid-cols-4 gap-6">
+    <section class="grid grid-cols-4 gap-6">
       <div class="flex items-center p-8 bg-white shadow rounded-lg">
         <div
           class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-blue-600 bg-blue-100 rounded-full mr-6">
@@ -25,9 +25,9 @@
 
     <section class="grid pt-10">
       <section class="dark:text-gray-100">
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <div v-for="message in messagesData" :key="message"
-            class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-koamaru">
+            class="max-w-lg mx-auto group hover:no-underline focus:no-underline dark:bg-koamaru">
             <div class="p-6 space-y-2">
               <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">{{ message.name }}</h3>
               <p class="text-xs dark:text-gray-400 py-2">{{ formatDate(message.created_at) }}</p>
