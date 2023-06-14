@@ -1,6 +1,6 @@
 <template>
-  <Loader v-if="isLoading"/>
-  
+  <Loader v-if="isLoading" />
+
   <div class="flex bg-gray-100 min-h-screen">
     <!-- menu lateral -->
     <aside class="hidden md:flex min-h-screen flex-col max-w-xs" v-if="menu">
@@ -30,6 +30,14 @@
                 d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z" />
             </svg>
             <span class="ml-2" x-show="menu">{{ item.text }}</span>
+          </NuxtLink>
+
+          <NuxtLink v-if="isAdmin" to="/dashboard/mensagens" class="inline-flex items-center py-3 rounded-lg px-2" :class="{
+            'bg-white': routeName === 'dashboard-mensagens',
+            'text-black': routeName === 'dashboard-mensagens',
+            'text-white': routeName !== 'dashboard-mensagens',
+          }">
+            Mensagens
           </NuxtLink>
         </nav>
       </div>
@@ -204,7 +212,7 @@ import useDetectOutsideClick from '@/composables/useDetectOutsideClick'
 import generateCode from '@/composables/generatePix'
 
 const route = useRoute()
-const { currentUser } = userStore()
+const { currentUser, isAdmin } = userStore()
 const store = statusStore()
 const { logout } = useAuth()
 const auth = useCookie('auth')
