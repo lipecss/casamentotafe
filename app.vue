@@ -3,10 +3,10 @@
     <CookieAlert />
   </ClientOnly>
 
-  <ClientOnly v-if="showParticles">
-    <Particles class="relative" id="teste" :particlesInit="particlesInit" :particlesLoaded="particlesLoaded"
+  <!-- <ClientOnly v-if="showParticles">
+    <Particles class="absolute" id="teste" :particlesInit="particlesInit" :particlesLoaded="particlesLoaded"
       :options="options" />
-  </ClientOnly>
+  </ClientOnly> -->
 
   <NuxtLayout>
     <NuxtPage />
