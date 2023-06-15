@@ -1,5 +1,7 @@
 <template>
   <div>
+    <Loader v-if="isLoading" />
+
     <div class="flex flex-col space-y-6 md:space-y-0 md:flex-row justify-between mr-6">
       <h1 class="text-xl md:text-4xl mb-2">
         Olá <span class="font-semibold">
@@ -28,8 +30,8 @@
             </svg>
           </div>
           <div>
-            <span class="block text-2xl font-bold">{{ status.totalUsers }}</span>
-            <span class="block text-gray-500">Convidados</span>
+            <span class="block text-2xl font-bold">{{ totalUsers }}</span>
+            <span class="block text-gray-500">Famílias convidadas</span>
           </div>
         </div>
         <div class="flex items-center p-8 bg-white shadow rounded-lg">
@@ -40,13 +42,47 @@
             </svg>
           </div>
           <div>
-            <span class="block text-2xl font-bold">{{ status.totalConfirmed }}</span>
-            <span class="block text-gray-500">Convidados confirmados</span>
+            <span class="block text-2xl font-bold">{{ totalConfirmed }}</span>
+            <span class="block text-gray-500">Famílias convidadas confirmados</span>
           </div>
         </div>
       </section>
 
       <section class="cols-12 p-0 m-0">
+        <div>
+          <button class="inline-flex items-center text-gray-700 hover:text-tuscany p-4 rounded-lg border mt-10"
+            @click="isOptionsExpanded = !isOptionsExpanded" @blur="isOptionsExpanded = false">
+            <span class="text-gray-700 text-base hover:text-tuscany">Filtrar</span>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              class="h-4 w-4 transform transition-transform duration-200 ease-in-out"
+              :class="isOptionsExpanded ? 'rotate-180' : 'rotate-0'">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <transition enter-active-class="transform transition duration-500 ease-custom"
+            enter-class="-translate-y-1/2 scale-y-0 opacity-0" enter-to-class="translate-y-0 scale-y-100 opacity-100"
+            leave-active-class="transform transition duration-300 ease-custom"
+            leave-class="translate-y-0 scale-y-100 opacity-100" leave-to-class="-translate-y-1/2 scale-y-0 opacity-0">
+            <ul v-show="isOptionsExpanded"
+              class="absolute mb-4 bg-white divide-y shadow-lg overflow-hidden rounded-lg border" style="width: 150px;">
+              <li class="transition-colors duration-300 p-4 hover:bg-gray-200 hover:cursor-pointer"
+                :class="{ 'bg-tuscany': selected === 'all' }" @click="toggleGetGuest('all')">
+                De: Todos
+              </li>
+              <li class="transition-colors duration-300 p-4 hover:bg-gray-200 hover:cursor-pointer"
+                :class="{ 'bg-tuscany': selected === 'Felipe' }" @click="toggleGetGuest('Felipe')">
+                De: Felipe
+              </li>
+              <li class="transition-colors duration-300 p-4 hover:bg-gray-200 hover:cursor-pointer"
+                :class="{ 'bg-tuscany': selected === 'Tatiana' }" @click="toggleGetGuest('Tatiana')">
+                De: Tatiana
+              </li>
+            </ul>
+          </transition>
+
+          <span class="ml-2 font-semibold">Filtrando por: {{ selected }}</span>
+        </div>
+
         <div class="mt-7" style="height: 500px; overflow: auto;">
           <table class="w-full">
             <thead class="rounded-t-lg border">
@@ -117,10 +153,16 @@ onBeforeRouteLeave(() => { setApiPending(true) })
 const auth = useCookie('auth')
 const { currentUser, isAdmin } = userStore()
 const { setApiPending } = statusStore()
-const status = ref({})
 const config = useRuntimeConfig()
+const { fetchApi } = useApi()
 
+// datas
 const guestData = ref([])
+const selected = ref('all')
+const isOptionsExpanded = ref(false)
+const totalUsers = ref(null)
+const totalConfirmed = ref(null)
+let isLoading = ref(false)
 
 // computed
 const meta = computed(() => {
@@ -151,16 +193,19 @@ useHead({
   meta: () => [...meta.value]
 })
 
-if (isAdmin) {
-  const { fetchApi } = useApi()
+// methods
+const getGuests = async (from) => {
+  isLoading.value = true
 
-  const { data: guest } = await fetchApi('/guests', {
+  let options = {
     method: 'GET',
     headers: { 'x-access-token': auth.value }
-  })
+  };
+
+  const { data: guest } = await fetchApi(`/guests/${from}`, options);
 
   if (guest) {
-    guestData.value = guest.sort((a, b) => {
+    guestData.value = await guest.resolvedFinal.sort((a, b) => {
       // Ordenar por confirmed em ordem decrescente
       if (a.confirmed && !b.confirmed) {
         return -1;
@@ -172,14 +217,22 @@ if (isAdmin) {
       // Ordenar por username em ordem crescente
       return a.username.localeCompare(b.username);
     });
+    totalUsers.value = guest.totalUsers
+    totalConfirmed.value = guest.totalConfirmed
   }
 
-  const { data, error } = await fetchApi('/admin-status', {
-    method: 'GET',
-    headers: { 'x-access-token': auth.value }
-  })
+  isLoading.value = false
+}
 
-  if (!error) status.value = data
+const toggleGetGuest = async (filter) => {
+  if (filter !== selected.value) {
+    selected.value = filter
+    await getGuests(filter);
+  }
+}
+
+if (isAdmin) {
+  await getGuests('all')
 }
 
 setTimeout(() => { setApiPending(false) }, 1500)

@@ -11,7 +11,7 @@
             </NuxtLink>
           </div>
           <h2 class="text-center text-4xl font-display font-semibold lg:text-left xl:text-5xl
-                                                                                              xl:text-bold">
+                                                                                                xl:text-bold">
             Entrar
           </h2>
 
@@ -117,7 +117,6 @@ const isComplete = computed(() => {
 const showPasswordText = computed(() => {
   return showPassword.value ? 'esconder' : 'mostrar'
 })
-
 
 useHead({
   title: 'Insira seu e-mail e senha para acessar seu site',
