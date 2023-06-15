@@ -141,7 +141,7 @@ const confirmedText = (status) => {
       return 'Pendente'
     case true:
       return 'Sim'
-    case true:
+    case false:
       return 'Não'
   }
 }
