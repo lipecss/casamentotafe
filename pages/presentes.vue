@@ -24,6 +24,37 @@
       </div>
     </div>
 
+    <section class="mt-6">
+      <div class="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
+        <h2 class="text-2xl font-semibold sm:text-4xl text-gray-800">Perguntas e dicas</h2>
+        <p class="mt-4 mb-8 dark:text-black">Encontre respostas rápidas sobre sugestões, opções de envio e dúvidas
+          comuns aqui.</p>
+        <div class="space-y-4">
+          <details class="w-full border rounded-lg border-gray-400">
+            <summary class="px-4 py-6 focus:outline-none focus-visible:ri text-black font-bold hover:cursor-pointer">Envie
+              o presente
+              com a sua mensagem.</summary>
+            <p class="px-4 py-6 pt-0 ml-4 text-black">Enviando o item através da
+              lista de casamento na Amazon como presente, conseguimos identificar e agradecer carinhosamente vocês.</p>
+
+            <p class="px-4 py-6 pt-0 ml-4 text-black">No momento de revisar a compra, clique na opção <span
+                class="font-bold">Adicionar
+                opções de presente</span></p>
+            <nuxt-img format="webp" src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/dica-presente-1.png"
+              alt="" />
+          </details>
+
+          <details class="w-full border rounded-lg border-gray-400">
+            <summary class="px-4 py-6 focus:outline-none focus-visible:ri text-black font-bold hover:cursor-pointer">É
+              seguro comprar na Amazon?</summary>
+            <p class="px-4 py-6 pt-0 ml-4 text-black">Nossa lista de casamento na Amazon oferece uma experiência de compra
+              segura. Você pode comprar os presentes com tranquilidade, sabendo que a Amazon mantém altos padrões de
+              segurança para proteger suas informações pessoais.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
   </section>
 </template>
 
