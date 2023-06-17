@@ -15,7 +15,7 @@
       <div class="flex flex-wrap -mx-4">
         <div class="block parent-image w-full px-4">
           <div class="h-full w-full bg-cover rounded shadow-md bg-center"
-            style="background-image: url('https://chi01pap001files.storage.live.com/y4mJCM7cyAcVuStZjoMu769Fep8WEaybC_gEVPQwCsI-3_nB3r0LNScdEPBBf9B2pWJNR6ZduvrcvcrUZikb0SDmlMBPqM1sUp3_pMjdLYrv1bb6Ug7F2kV08Fy8UoeZRgfOCOJ9F3t_rkjTH83NOle9VD99MZWziv2T2kjOcZCAxgIzAz6AIuaNWT25AbmzSCkWVuMZ3WKSdBVpn5hQRPyQQpldCMlLZx3geAvrLaOOaM?encodeFailures=1&width=1533&height=862')">
+            style="background-image: url('https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/maria-cicero.jpg')">
           </div>
         </div>
 
@@ -95,7 +95,7 @@
       <div class="flex flex-wrap -mx-4">
         <div class="block parent-image w-full px-4">
           <div class="h-full w-full bg-cover rounded shadow-md bg-center"
-            style="background-image: url('https://chi01pap001files.storage.live.com/y4mgnDYfP6b3Vc9T6lNAocyHFb7Ahn4anEU7Xr3MDOxJKur6wnnlx8pd61is0xr0bwiE2_BfjzEPSbXfN1C3hwMy0q_h-HVBwkUIsv1PoBEWoiCz5IjAFNtZaeY1meZthcezr5g3YRH7MgBHkFV6tgIVJ-_KzFQVjFWDMiRWMuANaKqs7uoJapm9pRc4NCFezmdoZ62aAfrzq5_NNIukBcHEc4AaMy5TNNCZkbe1ebGC48?encodeFailures=1&width=1533&height=862')">
+            style="background-image: url('https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/neusi-luiz.jpg')">
           </div>
         </div>
 
@@ -133,11 +133,11 @@
           </div>
 
 
-        
 
 
 
-          
+
+
         </div>
 
         <div class="md:w-1/2 h-auto px-4">
