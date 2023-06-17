@@ -26,19 +26,19 @@
           <div class="mb-8">
             <nuxt-img format="webp" class="shadow-md"
               src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pr%C3%A9+Wedding+Tatiana+e+Felipe-66.jpg"
-              alt="" width="692" height="270" sizes="sm:100vw md:100vw lg:100vw" />
+              alt="Pré wedding foto" width="692" height="270" sizes="sm:100vw md:100vw lg:100vw" />
           </div>
 
           <div class="mb-8">
             <nuxt-img format="webp" class="shadow-md"
               src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pr%C3%A9+Wedding+Tatiana+e+Felipe-1.jpg"
-              alt="" width="692" height="270" sizes="sm:100vw md:100vw lg:100vw" />
+              alt="Pré wedding foto" width="692" height="270" sizes="sm:100vw md:100vw lg:100vw" />
           </div>
 
           <div>
             <nuxt-img format="webp" class="shadow-md"
               src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pr%C3%A9+Wedding+Tatiana+e+Felipe-35.jpg"
-              alt="" width="692" height="270" sizes="sm:100vw md:100vw lg:100vw" />
+              alt="Pré wedding foto" width="692" height="270" sizes="sm:100vw md:100vw lg:100vw" />
           </div>
 
         </div>
@@ -49,22 +49,22 @@
       <div class="flex flex-wrap -mx-4">
         <div class="md:w-1/3 px-4 mb-8"><nuxt-img format="webp" class="rounded shadow-md"
             src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pr%C3%A9+Wedding+Tatiana+e+Felipe-47.jpg"
-            alt="" /></div>
+            alt="Pré wedding foto" /></div>
         <div class="md:w-1/3 px-4 mb-8"><nuxt-img format="webp" class="rounded shadow-md"
             src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pr%C3%A9+Wedding+Tatiana+e+Felipe-13.jpg"
-            alt="" /></div>
+            alt="Pré wedding foto" /></div>
         <div class="md:w-1/3 px-4 mb-8"><nuxt-img format="webp" class="rounded shadow-md"
             src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pr%C3%A9+Wedding+Tatiana+e+Felipe-60.jpg"
-            alt="" /></div>
+            alt="Pré wedding foto" /></div>
         <div class="md:w-1/3 px-4 mb-8"><nuxt-img format="webp" class="rounded shadow-md"
             src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pr%C3%A9+Wedding+Tatiana+e+Felipe-24.jpg"
-            alt="" /></div>
+            alt="Pré wedding foto" /></div>
         <div class="md:w-1/3 px-4 mb-8"><nuxt-img format="webp" class="rounded shadow-md"
             src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pr%C3%A9+Wedding+Tatiana+e+Felipe-26.jpg"
-            alt="" /></div>
+            alt="Pré wedding foto" /></div>
         <div class="md:w-1/3 px-4 mb-8"><nuxt-img format="webp" class="rounded shadow-md"
             src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pr%C3%A9+Wedding+Tatiana+e+Felipe-31.jpg"
-            alt="" /></div>
+            alt="Pré wedding foto" /></div>
       </div>
     </section>
 
@@ -72,28 +72,28 @@
       <div class="flex flex-wrap -mx-4 -mb-8">
         <div class="md:w-1/4 px-4 mb-8"><nuxt-img format="webp" class="rounded shadow-md"
             src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pr%C3%A9+Wedding+Tatiana+e+Felipe-13.jpg"
-            alt="" /></div>
+            alt="Pré wedding foto" /></div>
         <div class="md:w-1/4 px-4 mb-8"><nuxt-img format="webp" class="rounded shadow-md"
             src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pr%C3%A9+Wedding+Tatiana+e+Felipe-20.jpg"
-            alt="" /></div>
+            alt="Pré wedding foto" /></div>
         <div class="md:w-1/4 px-4 mb-8"><nuxt-img format="webp" class="rounded shadow-md"
             src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pr%C3%A9+Wedding+Tatiana+e+Felipe-24.jpg"
-            alt="" /></div>
+            alt="Pré wedding foto" /></div>
         <div class="md:w-1/4 px-4 mb-8"><nuxt-img format="webp" class="rounded shadow-md"
             src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pr%C3%A9+Wedding+Tatiana+e+Felipe-26.jpg"
-            alt="" /></div>
+            alt="Pré wedding foto" /></div>
         <div class="md:w-1/4 px-4 mb-8"><nuxt-img format="webp" class="rounded shadow-md"
             src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pr%C3%A9+Wedding+Tatiana+e+Felipe-16.jpg"
-            alt="" /></div>
+            alt="Pré wedding foto" /></div>
         <div class="md:w-1/4 px-4 mb-8"><nuxt-img format="webp" class="rounded shadow-md"
             src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pr%C3%A9+Wedding+Tatiana+e+Felipe-29.jpg"
-            alt="" /></div>
+            alt="Pré wedding foto" /></div>
         <div class="md:w-1/4 px-4 mb-8"><nuxt-img format="webp" class="rounded shadow-md"
             src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pr%C3%A9+Wedding+Tatiana+e+Felipe-39.jpg"
-            alt="" /></div>
+            alt="Pré wedding foto" /></div>
         <div class="md:w-1/4 px-4 mb-8"><nuxt-img format="webp" class="rounded shadow-md"
             src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pr%C3%A9+Wedding+Tatiana+e+Felipe-41.jpg"
-            alt="" /></div>
+            alt="Pré wedding foto" /></div>
       </div>
     </section>
 
@@ -102,10 +102,10 @@
         <div class="md:w-1/2 h-auto px-4">
           <div class="mb-8"><nuxt-img format="webp" class="rounded shadow-md"
               src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pre%CC%81+Wedding+Tatiana+e+Felipe-14.png"
-              alt="" /></div>
+              alt="Pré wedding foto" /></div>
           <div><nuxt-img format="webp" class="rounded shadow-md"
               src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/Pre%CC%81+Wedding+Tatiana+e+Felipe-15.png"
-              alt="" /></div>
+              alt="Pré wedding foto" /></div>
         </div>
 
         <div class="hidden md:block md:w-1/2 px-4">

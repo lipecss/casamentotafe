@@ -40,8 +40,9 @@
             <p class="px-4 py-6 pt-0 ml-4 text-black">No momento de revisar a compra, clique na opção <span
                 class="font-bold">Adicionar
                 opções de presente</span></p>
-            <nuxt-img format="webp" src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/dica-presente-1.png"
-              alt="" />
+            <nuxt-img format="webp" class="mx-auto"
+              src="https://wedding-felipe-tatiana.s3.sa-east-1.amazonaws.com/dica-presente-1.png"
+              alt="Como enviar como presente" />
           </details>
 
           <details class="w-full border rounded-lg border-gray-400">
