@@ -114,7 +114,7 @@
                 </td>
                 <td class="pl-5">
                   <p class="text-sm text-center leading-none ml-2"
-                    :class="{ 'text-green-600': guest.confirmed, 'text-red-600': !guest.confirmed }">
+                    :class="{ 'text-green-600': guest.confirmed, 'text-red-600': !guest.confirmed && guest.confirmed !== null, 'text-purple-600': guest.confirmed === null }">
                     {{ confirmedText(guest.confirmed) }}
                   </p>
                 </td>

@@ -1,7 +1,7 @@
 <template>
   <Loader v-if="isLoading" />
 
-  <div class="flex bg-gray-100 min-h-screen">
+  <div class="md:flex bg-gray-100 min-h-screen">
     <!-- menu lateral -->
     <aside class="hidden md:flex min-h-screen flex-col max-w-xs" v-if="menu">
       <div class="flex-grow flex flex-col justify-between text-gray-500 bg-koamaru">
@@ -236,7 +236,7 @@ const { totalItems, cartList, totalValue } = storeToRefs(some)
 let panel = ref(false)
 const svgColor = ref('#566584')
 const currentColor = ref('#2E3C5C')
-let menu = ref(true)
+let menu = ref(false)
 let cartMenu = ref(false)
 let pixCode = ref('')
 let pixImage = ref('')
