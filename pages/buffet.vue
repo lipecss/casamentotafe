@@ -209,6 +209,7 @@ const pratoPincipal = reactive([
 ])
 
 const doces = reactive([
+  'Doces finos',
   'Doces tradicionais',
   'Bolo',
   'Pudim',

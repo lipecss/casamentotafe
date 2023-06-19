@@ -194,6 +194,7 @@ const createMapLayer = () => {
     var coordinates = e.features[0].geometry.coordinates.slice()
     const ele = await createMarker(
       'Monte Millazzo',
+      'https://www.google.com/maps/place/Monte+Millazzo/@-23.3755959,-46.308824,18z/data=!4m6!3m5!1s0x94ce874fda6a0f9b:0x8fc9c9bfdc4e6eaa!8m2!3d-23.3760606!4d-46.3085915!16s%2Fg%2F11js2nxqbx',
       'Rua Paulo Antônio, R. Paulo A Barbosa, 290 - Jardim Aruja, Arujá - SP, 07407-375',
       'O local onde a nossa união será abençoada para sempre diante dos olhos de Deus. E para nós, é uma honra ter pessoas tão queridas vivenciando esse momento ao nosso lado.'
     )
