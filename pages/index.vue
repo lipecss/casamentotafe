@@ -102,6 +102,10 @@
           Hoje, após quase sete anos juntos e nessa caminhada de várias experiências com Deus em nossas vidas, estamos
           prestes a ver mais uma de Suas promessas se cumprindo e poder assim realizar o nosso grande sonho: O casamento!
         </p>
+
+        <p class="inline-flex font-bold text-right mr-10 p-2 border-2 w-auto">
+          Texto digitado pela noiva :D
+        </p>
       </div>
     </div>
 
