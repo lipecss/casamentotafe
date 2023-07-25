@@ -14,7 +14,7 @@
             <form class="flex flex-col items-center justify-center" style="width: 300px;" @submit.prevent="onSubmit">
               <div class="w-full my-4">
                 <input v-model="form.rsvp_code" required
-                  class="mt-1 uppercase py-2 px-4 text-base bg-transparent border border-tuscany appearance-none focus:outline-none focus:shadow-outline w-full"
+                  class="mt-1 py-2 px-4 text-base bg-transparent border border-tuscany appearance-none focus:outline-none focus:shadow-outline w-full"
                   placeholder="Informe o seu código" @input="onChangeRsvpCode($event)">
               </div>
 
